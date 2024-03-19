@@ -543,7 +543,7 @@ ItemDisplay[pab (NMAG !RW) (SOCK=0 OR SOCK>2) RES>39]: %MAPICON(19,0)%%NAME%
 ItemDisplay[CL3 ELT ETH (NMAG !RW) RES>39 (SOCK=0 OR SOCK>2)]: %NAME%
 ItemDisplay[uit (NMAG !RW) (STAT91>-11 AND STAT91<-5) (SOCK=0 OR SOCK=4)]: %NAME%
 //Map Elites
-ItemDisplay[(ARMOR OR WEAPON OR rin OR amu) (SET OR UNI OR MAG OR RARE) !ID ILVL>88]: %NAME%
+//ItemDisplay[(ARMOR OR WEAPON OR rin OR amu) (SET OR UNI OR MAG OR RARE) !ID ILVL>88]: %NAME%
 
 //Shoppables
 ItemDisplay[(WEAPON OR WP12) MAG ID CHSK91>0]: %NOTIFY(ITEM)%%PURPLE%°°°°°° LR WAND °°°°°°%NL%%BLUE%%NAME% //LR wand
