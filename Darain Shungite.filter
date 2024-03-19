@@ -47,9 +47,9 @@ ItemDisplay[bey OR dhn OR mbr OR cx6 OR bks OR bkd OR qey OR qhr OR qbr OR bbb O
 
 
 //Uber Keys
-ItemDisplay[pk1]: %NOTIFY(ITEM)%%NAME% %GRAY%[Countess]
-ItemDisplay[pk2]: %NOTIFY(ITEM)%%NAME% %GRAY%[Summoner]
-ItemDisplay[pk3]: %NOTIFY(ITEM)%%NAME% %GRAY%[Nihlathak]
+ItemDisplay[pk1]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME% %GRAY%[Countess]
+ItemDisplay[pk2]: %NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%NAME% %GRAY%[Summoner]
+ItemDisplay[pk3]: %NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%NAME% %GRAY%[Nihlathak]
 
 //Wirt Leg
 ItemDisplay[leg]: %NAME%
@@ -306,14 +306,16 @@ ItemDisplay[WP13 !UNI SK124>0]: %BLUE%%STAT(107,124)%Rdmp %NAME%%CONTINUE%//Rede
 ItemDisplay[WP13 !UNI SK125>0]: %BLUE%%STAT(107,125)%Salv %NAME%%CONTINUE%//Salvation
 
 //Charm Stat display
-ItemDisplay[(cm1 OR cm2 OR cm3) (STAT99>0 OR TABSK8>0 OR TABSK9>0 OR TABSK10>0 OR TABSK17>0 OR TABSK18>0 OR TABSK16>0 OR TABSK24>0 OR TABSK25>0 OR TABSK26>0 OR TABSK48>0 OR TABSK50>0 OR TABSK42>0 OR TABSK41>0 OR TABSK40>0 OR TABSK32>0 OR TABSK32>0 OR TABSK33>0 OR TABSK34>0 OR TABSK2>0 OR TABSK0>0 OR MANA>0 OR STAT80>0 OR RES>0 OR STAT39>0 OR STAT41>0 OR STAT43>0 OR STAT45>0 OR STAT7>0)]: %NL%%NAME%%CONTINUE% //display stats on following line
+ItemDisplay[(cm1 OR cm2 OR cm3) (STAT19>0 OR STAT80>0 OR STAT99>0 OR TABSK8>0 OR TABSK9>0 OR TABSK10>0 OR TABSK17>0 OR TABSK18>0 OR TABSK16>0 OR TABSK24>0 OR TABSK25>0 OR TABSK26>0 OR TABSK48>0 OR TABSK50>0 OR TABSK42>0 OR TABSK41>0 OR TABSK40>0 OR TABSK32>0 OR TABSK32>0 OR TABSK33>0 OR TABSK34>0 OR TABSK2>0 OR TABSK0>0 OR MANA>0 OR STAT80>0 OR RES>0 OR STAT39>0 OR STAT41>0 OR STAT43>0 OR STAT45>0 OR STAT7>0)]: %NL%%NAME%%CONTINUE% //display stats on following line
 ItemDisplay[(cm1 OR cm2 OR cm3) RES=0 STAT39>0]: %BLUE%%STAT(39)%Fres %NAME% %CONTINUE% //fire res
 ItemDisplay[(cm1 OR cm2 OR cm3) RES=0 STAT41>0]: %BLUE%%STAT(41)%Lres %NAME% %CONTINUE% //lightning res
 ItemDisplay[(cm1 OR cm2 OR cm3) RES=0 STAT43>0]: %BLUE%%STAT(43)%Cres %NAME% %CONTINUE% //cold res
 ItemDisplay[(cm1 OR cm2 OR cm3) RES=0 STAT45>0]: %BLUE%%STAT(45)%Pres %NAME% %CONTINUE% //poison res
 ItemDisplay[(cm1 OR cm2 OR cm3) RES>0]: %BLUE%%STAT(39)%@res %NAME% %CONTINUE% //all res
+ItemDisplay[(cm1 OR cm2 OR cm3) STAT19>0]: %BLUE%%STAT(19)%AR %NAME%%CONTINUE%//AR
 ItemDisplay[(cm1 OR cm2 OR cm3) MANA>0]: %BLUE%%STAT(9)%Mana %NAME%%CONTINUE%//Mana
 ItemDisplay[(cm1 OR cm2 OR cm3) STAT7>0]: %BLUE%%STAT(7)%Life %NAME%%CONTINUE%//Life
+ItemDisplay[(cm1 OR cm2 OR cm3) STAT80>0]: %BLUE%%STAT(80)%mf %NAME%%CONTINUE%//mf
 ItemDisplay[(cm1 OR cm2 OR cm3) STAT99>0]: %BLUE%%STAT(99)%FHR %NAME%%CONTINUE%//FHR
 ItemDisplay[MAG ID cm3 TABSK8>0]: %BLUE%Fire %NAME%%CONTINUE%
 ItemDisplay[MAG ID cm3 TABSK10>0]: %BLUE%Cold %NAME%%CONTINUE%
@@ -334,8 +336,6 @@ ItemDisplay[MAG ID cm3 TABSK33>0]: %BLUE%Masteries %NAME%%CONTINUE%
 ItemDisplay[MAG ID cm3 TABSK34>0]: %BLUE%WC %NAME%%CONTINUE%
 ItemDisplay[MAG ID cm3 TABSK2>0]: %BLUE%Jav %NAME%%CONTINUE%
 ItemDisplay[MAG ID cm3 TABSK0>0]: %BLUE%Bow %NAME%%CONTINUE%
-ItemDisplay[(cm1 OR cm2 OR cm3) STAT80>0]: %BLUE%%STAT(80)%MF %NAME%%CONTINUE%//MF
-
 
 //ID'd Uniques Stats
 ItemDisplay[UNI ID 7gw]: %BLUE%-%STAT(336)%psn %NL%%GOLD%%NAME% //DWEB
@@ -386,9 +386,10 @@ ItemDisplay[(amu OR rin) FCR>0]: %BLUE%%STAT(105)%fcr %NAME% %CONTINUE% //fcr
 ItemDisplay[GOLD<10000]:
 ItemDisplay[rvl]: %PURPLE%R %WHITE%BIG
 ItemDisplay[rvs]: %PURPLE%r %WHITE%smol
-ItemDisplay[(jew OR aq2 OR rin OR (amu ILVL>89)) RARE !ID]: %NOTIFYSOUND(OOC)%%MAPICON(79,5)%%RED%> > %YELLOW%%NAME%%RED% < <//rare jewel
+ItemDisplay[(jew OR rin OR (amu ILVL>89)) RARE !ID]: %NOTIFYSOUND(OOC)%%MAPICON(79,5)%%RED%> > %YELLOW%%NAME%%RED% < <//rare jewel
+ItemDisplay[(aq2 OR EQ5) RARE !ID]: %NOTIFY(ITEM)%%NAME%//rare arrows or boots
 ItemDisplay[skl]: %MAPICON(45)%%NOTIFY(ITEM)%%NL%%WHITE% > > %WHITE%Skull %ORANGE%[%GRAY%O%ORANGE%]%WHITE% < < %NL% %NL% 
-ItemDisplay[cm3 MAG ILVL>90]: %MAPICON(19,3)%%NOTIFY(ITEM)%%NAME% %PURPLE%°°° //41+ lifer skillers
+ItemDisplay[cm3 MAG ILVL>90]: %NOTIFYSOUND(OOC)%%MAPICON(19,3)%%NOTIFY(ITEM)%%NAME% %PURPLE%°°° //41+ lifer skillers
 
 //PoD-only Items
 ItemDisplay[SPECIAL]: %MAPICON(26,1)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%GOLD%%NAME%
@@ -468,7 +469,7 @@ ItemDisplay[UNI !ID 7cr]: %MAPICON(5,0)%%NOTIFY(ITEM)%%RED%O %GOLD%Lightsabre or
 ItemDisplay[UNI !ID 7mp]: %RED%O %GOLD%Cranebeak %RED%O%NL%%NAME%
 ItemDisplay[UNI !ID ama]: %NOTIFY(ITEM)%%RED%O %GOLD%Titans %RED%O%NL%%NAME%
 ItemDisplay[UNI !ID (amu OR jew OR rin)]: %MAPICON(5,0)%%NOTIFY(ITEM)%%RED%O   O   O %GOLD%%NAME%%RED%  O   O   O%NOTIFYSOUND(TINK)%
-ItemDisplay[UNI !ID cm3]: %NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%RED%O   O   O %GOLD%%Gheed's Fortune%%RED%  O   O   O
+//ItemDisplay[UNI !ID cm3]: %NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%RED%O   O   O %GOLD%%Gheed's Fortune%%RED%  O   O   O
 ItemDisplay[ETH (ulc OR xea OR uap OR ulm OR ci3 OR xtb OR 7gw OR obf) UNI !ID]: %MAPICON(5,0)%%NOTIFY(ITEM)%%RED%O %GOLD%%NAME% %RED%O
 
 // GG Sets
@@ -478,12 +479,6 @@ ItemDisplay[SET !ID xh9]: %MAPICON(33,1)%%NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%GREEN%
 ItemDisplay[SET !ID xtb]: %MAPICON(33,1)%%NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%GREEN%Aldur's Boots%NL%%DARK_GREEN%>> >> %NAME%%DARK_GREEN% << <<
 ItemDisplay[SET !ID xhm]: %MAPICON(33,1)%%NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%GREEN%Guillaume's Face%NL%%DARK_GREEN%>> >> %NAME%%DARK_GREEN% << <<
 ItemDisplay[SET !ID xmg]: %MAPICON(33,1)%%NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%GREEN%TrangOul's Gloves%NL%%DARK_GREEN%>> >> %NAME%%DARK_GREEN% << <<
-//+3bo weapons and +3/20 gloves and +6foh scpeters
-ItemDisplay[WEAPON TABSK34>2]: %NOTIFY(ITEM)%%PURPLE%>> >> >> >> %GREEN%3BO %NAME%%PURPLE% << << << <<
-ItemDisplay[EQ4 (TABSK0=3 OR TABSK2=3 OR TABSK50=3) IAS=20]: %NOTIFY(ITEM)%%RED%  O   O   O %GREEN%3/20 %NAME%%RED%  O   O   O
-ItemDisplay[WP12 (TABSK16=3 SK477=3)]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%RED%  O   O   O %GREEN%6 Hemo %NAME%%RED%  O   O   O
-ItemDisplay[WP12 (((TABSK16=2 OR CLSK2=2) SK477=3) OR (TABSK16=3 SK477=2))]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%RED%  O   O   O %GREEN%5 Hemo %NAME%%RED%  O   O   O
-
 
 // GG Socketables
 //Melee Weapons
@@ -494,11 +489,7 @@ ItemDisplay[(7gs OR 7ax OR 7cm OR 7bs) ETH !RW NMAG (SOCK=0 OR SOCK=4) ED>9]: %M
 ItemDisplay[(6ws OR 7gi OR 7gm OR 7gd OR 7p7) ETH !RW NMAG (SOCK=0 OR SOCK=3 OR SOCK=5 OR SOCK=6) ED>9]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%WHITE%%NAME%
 ItemDisplay[WP13 !RW NMAG SK117>0]: %MAPICON(26)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%WHITE%%NAME% %RED%%NL%%GRAY%[%PURPLE%°°°°Holy Shield°°°°%GRAY%]
 //Plague Orbs
-ItemDisplay[(obf OR oba OR ob5) NMAG !RW (SOCK=3 OR SOCK=0) (SK62>0 SK50>0)]:  %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME% {Plague:ChamFalUm; %NL%swap Cleanse & kill LightImmunes}//Hydra+ShivArm
-ItemDisplay[(obf OR oba OR ob5) NMAG !RW (SOCK=3 OR SOCK=0) (SK63>0 (SK57=3 OR SK49=3 OR SK48=3 OR SK53=3))]:  %MAPICON(19,0)%%NOTIFY(ITEM)%%NAME% //LightMastery+Nova/LS/CL/Discharge
-ItemDisplay[(obf OR oba OR ob5) NMAG !RW (SOCK=3 OR SOCK=0) (SK62>0 (SK56=3 OR SK61>0))]:  %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%GOLD%PlagueOrb%NL%%NAME% //FireMastery+Meteor/Hydra
-ItemDisplay[(obf OR oba OR ob5) NMAG !RW (SOCK=3 OR SOCK=0) (SK65>0 (SK59=3 OR SK44=3 OR SK64=3))]:  %MAPICON(19,0)%%NOTIFY(ITEM)%%NAME% //ColdMastery+Blizz/FNova/Forb
-ItemDisplay[(obf OR oba OR ob5) NMAG !RW (SOCK=3 OR SOCK=0) (SK62>0)]:  %MAPICON(19,0)%%NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%NAME% {Plague:ChamFalUm; for swap}//Hydra
+ItemDisplay[(obf OR oba OR ob5) NMAG !RW (SOCK=3 OR SOCK=0) ((SK62>0 (SK58=3 OR SK50>0 OR SK56=3 OR SK61>0)) OR (SK63>0 (SK57=3 OR SK49=3 OR SK48=3 OR SK53=3)) OR (SK65>0 (SK59=3 OR SK44=3 OR SK64=3)))]:  %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%GOLD%PlagueOrb%NL%%NAME% //Light/Fire/Cold Tree main damage abilities and their mastery
 //Plague Scepter
 ItemDisplay[WP13 (SK121=3 (SK101>0 OR SK123>0 OR SK125>0 OR SK112>0)) (SOCK=0 OR SOCK=3 OR SOCK=4) (NMAG !RW)]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME% //FOH+HB/Convic/Salv/
 ItemDisplay[WP13 SK121=3 (SOCK=0 OR SOCK=3 OR SOCK=4) (NMAG !RW)]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME% //3FOH
@@ -507,9 +498,9 @@ ItemDisplay[WP12 (SK84=3 (SK87>0 OR SK79>0 OR SK68>0 OR SK93>2)) !(wnd ywn 9wn) 
 //Memory
 ItemDisplay[(cst OR bst OR 8cs OR 8bs OR 6cs OR 6bs OR wst OR 8ws OR 6ws) (NMAG !RW) SK58=3 (SK50>0 OR SK60>0 OR SK49=3) (SOCK=0 OR SOCK=4)]: %MAPICON(19,0)%%NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%NAME% //3ES+Shiver/Chilling/LS
 ItemDisplay[(wst OR 8ws OR 6ws) (NMAG !RW) SK58>2 SK49>2 SOCK=0 (!INF !SUP)]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME%
-ItemDisplay[(cst OR bst OR 8cs OR 8bs OR 6cs OR 6bs) (NMAG !RW) SK50=3 (SOCK=0 OR SOCK=4)]: %MAPICON(19,0)%%NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%NAME%
 ItemDisplay[(cst OR bst OR 8cs OR 8bs OR 6cs OR 6bs) (NMAG !RW) SK58=3 SK49=3 (SOCK=0 OR SOCK=4)]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NAME%
-ItemDisplay[(cst OR bst OR 8cs OR 8bs OR 6cs OR 6bs) (NMAG !RW) SK50>0 SK62>0 (SOCK=0 OR SOCK=4)]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME% //Shiver+Hydra Memory
+ItemDisplay[(cst OR bst OR 8cs OR 8bs OR 6cs OR 6bs) (NMAG !RW) SK50>0 (SK62>0 OR SK59>0) (SOCK=0 OR SOCK=4)]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME% {LightSorc Swap%NL%Memory:LumIoSolEth} //Shiver+Hydra Memory
+//ItemDisplay[(cst OR bst OR 8cs OR 8bs OR 6cs OR 6bs) (NMAG !RW) SK50>0 (SOCK=0 OR SOCK=4)]: %NAME% //Shiver+Hydra Memory
 ItemDisplay[(wst OR 8ws OR 6ws) (NMAG !RW) SK58>2 SK49>2 SOCK=4]: %NOTIFY(ITEM)%%NAME%
 ItemDisplay[(((cst OR bst OR 8cs OR 8bs OR 6cs OR 6bs OR wst OR 8ws OR 6ws) (SOCK=0 OR SOCK=4)) OR ((wst OR 8ws OR 6ws) SOCK=4)) (NMAG !RW) SK58=3]: %NAME%
 //EBOTD Mat Spear
@@ -539,15 +530,23 @@ ItemDisplay[CL1 (NMAG !RW) SK226>2 !SOCK=1]: %NAME%
 ItemDisplay[CL1 (!ETH) NMAG !RW (SK238>2  (SK222>0 OR SK237>0 OR SK247>0)) !SOCK=1]: %NOTIFY(ITEM)%%NAME% //3rabies+PsnCrp/Dwolf/Grizz
 //Shields
 ItemDisplay[pab (NMAG !RW) (SOCK=0 OR SOCK=4) RES>44]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NAME% %NOTIFYSOUND(TINK)%
-ItemDisplay[pab (NMAG !RW) (SOCK=0 OR SOCK>2) RES>39]: %MAPICON(19,0)%%NAME%
+ItemDisplay[pab (NMAG !RW) (SOCK=0 OR SOCK>2) RES>39]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NAME%
 ItemDisplay[CL3 ELT ETH (NMAG !RW) RES>39 (SOCK=0 OR SOCK>2)]: %NAME%
 ItemDisplay[uit (NMAG !RW) (STAT91>-11 AND STAT91<-5) (SOCK=0 OR SOCK=4)]: %NAME%
 //Map Elites
-//ItemDisplay[(ARMOR OR WEAPON OR rin OR amu) (SET OR UNI OR MAG OR RARE) !ID ILVL>88]: %NAME%
+ItemDisplay[(ARMOR OR WEAPON OR rin OR amu) (SET OR UNI OR MAG OR RARE) !ID ILVL>88]: %NAME%
 
 //Shoppables
-ItemDisplay[(WEAPON OR WP12) MAG ID CHSK91>0]: %NOTIFY(ITEM)%%PURPLE%°°°°°° LR WAND °°°°°°%NL%%BLUE%%NAME% //LR wand
-ItemDisplay[(WEAPON OR WP12) MAG ID CHSK82>0]: %NOTIFY(ITEM)%%RED%°°°°°° LifeTap WAND °°°°°°%NL%%BLUE%%NAME% //lifetap wand
+ItemDisplay[(WEAPON OR WP12) MAG ID CHSK91>0]: %NOTIFY(ITEM)%%PURPLE%°°°° LR WAND °°°°%NL%%BLUE%%NAME% //LR wand
+ItemDisplay[(WEAPON OR WP12) MAG ID CHSK82>0]: %NOTIFY(ITEM)%%RED%°°°° LifeTap WAND °°°°%NL%%BLUE%%NAME% //lifetap wand
+ItemDisplay[WEAPON TABSK34>2]: %NOTIFY(ITEM)%%PURPLE%>> >> >> >> %GREEN%3BO %NAME%%PURPLE% << << << << //+3bo weapons 
+ItemDisplay[EQ4 (TABSK0=3 OR TABSK2=3 OR TABSK50=3) IAS=20]: %NOTIFY(ITEM)%%RED%  O   O   O %GREEN%3/20 %NAME%%RED%  O   O   O //+3/20 gloves and +6foh scpeters
+ItemDisplay[WP12 (TABSK16=3 SK477=3)]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%RED%  O   O   O %GREEN%6 Hemo %NAME%%RED%  O   O   O
+ItemDisplay[WP12 (((TABSK16=2 OR CLSK2=2) SK477=3) OR (TABSK16=3 SK477=2))]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%RED%  O   O   O %GREEN%5 Hemo %NAME%%RED%  O   O   O
+ItemDisplay[CL5 (TABSK49=3 (SK258=3 OR SK273=3 OR SK277=3))]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%RED%  O   O   O %NAME%%RED%  O   O   O //6MB or 6BOS Claw
+ItemDisplay[CL5 SK262=3 (TABSK48=3 OR CLSK6=2 OR TABSK48=2)]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%RED%  O   O   O %NAME%%RED%  O   O   O //5 or 6 WOF Claw
+
+
 // Hide all magic,rare,non-runeword bases
 //Hide all Runes El to Fal (r01 - r19) but show Ral + Ort rune
 ItemDisplay[FILTERLVL>4 (r08 OR r09 OR r12)]: %ORANGE%%RUNENAME% %WHITE%[%RUNETIER%]
@@ -568,15 +567,15 @@ ItemDisplay[(cm1 OR cm3) !ID MAG]: %NOTIFYSOUND(OOC)%%MAPICON(19,3)%%NOTIFY(ITEM
 ItemDisplay[EQ7 !ID (MAG OR RARE)]: %RED%> > %NAME%%RED% < <
 
 // Good usable uniques
-ItemDisplay[UNI !ID xpl]: %RED%O %GOLD%Skullder's Ire %RED%O
-ItemDisplay[UNI !ID 7m7]: %RED%O %GOLD%Windhammer %RED%O
-ItemDisplay[UNI !ID 9gw]: %RED%O %GOLD%Blackhand Key %RED%O
-ItemDisplay[UNI !ID 7wh]: %RED%O %GOLD%Stone Crusher || Schaefer's Hammer %RED%O
-ItemDisplay[UNI !ID 7dg]: %RED%O %GOLD%Wizardspike %RED%O
-ItemDisplay[UNI !ID zlb]: %RED%O %GOLD%String of Ears %RED%O
-ItemDisplay[UNI !ID zvb]: %RED%O %GOLD%Razortail %RED%O
-ItemDisplay[UNI !ID xts]: %RED%O %GOLD%Radament's Sphere %RED%O
-ItemDisplay[UNI !ID oba !ETH]: %RED%O %GOLD%Oculus %RED%O
+ItemDisplay[UNI !ID xpl]: %RED%O %GOLD%Skullder's Ire %RED%O%NL%%NAME%
+ItemDisplay[UNI !ID 7m7]: %RED%O %GOLD%Windhammer %RED%O%NL%%NAME%
+ItemDisplay[UNI !ID 9gw]: %RED%O %GOLD%Blackhand Key %RED%O%NL%%NAME%
+ItemDisplay[UNI !ID 7wh]: %RED%O %GOLD%Stone Crusher || Schaefer's Hammer %RED%O%NL%%NAME%
+ItemDisplay[UNI !ID 7dg]: %RED%O %GOLD%Wizardspike %RED%O%NL%%NAME%
+ItemDisplay[UNI !ID zlb]: %RED%O %GOLD%String of Ears %RED%O%NL%%NAME%
+ItemDisplay[UNI !ID zvb]: %RED%O %GOLD%Razortail %RED%O%NL%%NAME%
+ItemDisplay[UNI !ID xts]: %RED%O %GOLD%Radament's Sphere %RED%O%NL%%NAME%
+ItemDisplay[UNI !ID oba !ETH]: %RED%O %GOLD%Oculus %RED%O%NL%%NAME%
 ItemDisplay[UNI !ID]: %NAME%
 
 //Jewels
@@ -600,8 +599,9 @@ ItemDisplay[(amb) (NMAG !RW) TABSK0=3 SOCK=4]: %NAME% {%GOLD%Ice:%ORANGE%AmnShae
 ItemDisplay[(crs OR fla) (NMAG !RW) (SOCK=4 OR SOCK=5) (STAT91>-11 AND STAT91<-7)]: %NAME%
 //Plague Orbs
 ItemDisplay[(obf OR oba OR ob5) NMAG !RW (SOCK=3 OR SOCK=0) (SK62>2 OR SK50>2 OR SK52>2 OR SK59>2)]: %NOTIFY(ITEM)%%NAME% //3hydra/shiver/Enflame/Blizz
+ItemDisplay[(obf OR oba OR ob5) NMAG !RW (SOCK=3 OR SOCK=0) (SK62>0)]:  %MAPICON(19,0)%%NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%NAME% {Plague:ChamFalUm; for swap}//Hydra
 //Faith Grand Matron Bow GMB
-ItemDisplay[amc (NMAG !RW) TABSK0=3 SOCK=4]: %NAME% {%GOLD%Faith:%ORANGE%OhmJahLemEld}
+ItemDisplay[amc (NMAG !RW) TABSK0=3 SOCK=4]: %GRAY%3bow %NAME% {%GOLD%Faith:%ORANGE%OhmJahLemEld}
 //Polearm/Spears
 ItemDisplay[(7wc OR 7pa OR 7s8 OR 7br OR 7p7 OR 7vo OR 7st OR 7tr) (ETH NMAG !RW) (SOCK=4 OR SOCK=5)]: %WHITE%%NAME%
 //Claws
@@ -614,6 +614,7 @@ ItemDisplay[CL3 (EXC OR ELT) NMAG RES=45 (SOCK=0 OR SOCK=3 OR SOCK=4)]: %NAME%
 ItemDisplay[(7wc OR 7s8 OR 7br OR 7h7) ETH (NMAG !RW) (SOCK=0)]: %NOTIFY(ITEM)%%WHITE%%NAME% //roll polearm for socket
 ItemDisplay[(amc) TABSK0=3 !ETH (NMAG !RW) (SOCK=0)]: %GRAY%3bow %NAME% //roll +3GMB for socket
 
+
 // Hide everything else
 ItemDisplay[FILTERLVL>4 ((NMAG !RW) OR !ID)]:
 
@@ -625,6 +626,13 @@ ItemDisplay[FILTERLVL>4 ((NMAG !RW) OR !ID)]:
 ItemDisplay[mp5]: %BLUE%!%WHITE%MP
 ItemDisplay[FILTERLVL>3 ((NMAG !RW) OR !ID)]:
 
+//Rare Items (CS/DB/PB, boots EQ5 && gloves belt EQ4 and EQ6)
+ItemDisplay[(CL2 OR CL4 OR CL6 OR CL7) (MAG OR RARE) !ID]: %NAME%
+ItemDisplay[(CL1 OR CL5) RARE !ID]: %NAME%
+ItemDisplay[CL5 (EXC OR ELT) MAG !ETH !ID]: %NAME%
+ItemDisplay[(wsp OR 9ws OR 7ws) (MAG OR RARE) !ETH !ID]: %NAME%
+ItemDisplay[(7cr OR 9cr OR crs OR 7ls OR 9wa OR wax OR 7wa) RARE !ID]:%NAME%
+ItemDisplay[(EQ4 OR EQ5 OR EQ6) RARE !ID]: %NAME%
 
 /////////////////////////////
 //FILTERLVL = 3 [HP5 version of LVL5]
@@ -659,14 +667,6 @@ ItemDisplay[ci3 NMAG !ETH (SOCK=0)]: %WHITE%%NAME% %YELLOW%[%GRAY%imbue%YELLOW%]
 //ItemDisplay[CL5 !(ktr OR wrb OR axf OR ces OR clw OR btl OR skr OR 9ar OR 9wb) NMAG !RW INF]: %NOTIFY(ITEM)%%GRAY%[Reroll] %NAME%
 //ItemDisplay[(7tw OR 7qr) MAG]: %GRAY%[Reroll] %BLUE%%NAME%%WHITE%{%TAN%Reroll: %WHITE%3chipped || 3flawless->+6 Burst of Speed}
 
-//Rare Items (CS/DB/PB, boots EQ5 && gloves belt EQ4 and EQ6)
-ItemDisplay[(CL2 OR CL4 OR CL6 OR CL7) (MAG OR RARE) !ID]: %NAME%
-ItemDisplay[(CL1 OR CL5) RARE !ID]: %NAME%
-ItemDisplay[CL5 (EXC OR ELT) MAG !ETH !ID]: %NAME%
-ItemDisplay[(wsp OR 9ws OR 7ws) (MAG OR RARE) !ETH !ID]: %NAME%
-ItemDisplay[(7cr OR 9cr OR crs OR 7ls OR 9wa OR wax OR 7wa) RARE !ID]:%NAME%
-ItemDisplay[(EQ4 OR EQ5 OR EQ6) RARE !ID]:%NAME%
-
 //Charms
 ItemDisplay[cm2 MAG !ID CLVL>90]:
 
@@ -694,6 +694,8 @@ ItemDisplay[uit NMAG !RW (SOCK=0 OR SOCK=4)]: %DARK_GREEN%%DEF%def %WHITE%%NAME%
 ItemDisplay[CL3 NMAG !RW (SOCK=0 OR SOCK=4) RES>39]: %NAME%
 //holy thunder
 ItemDisplay[WP13 (NMAG !RW) (SK118>2) (SOCK=4)]: %NAME%[%WHITE%HThndr%GRAY%]
+
+ItemDisplay[(cst OR bst OR 8cs OR 8bs OR 6cs OR 6bs) (NMAG !RW) SK50=3 (SOCK=0 OR SOCK=4)]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NAME% {Prebuff ES|Shiver%NL%Memory:LumIoSolEth}
 
 //Average UNIQUE Items
 //arows unique
