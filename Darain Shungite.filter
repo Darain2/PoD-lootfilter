@@ -19,7 +19,7 @@ Sound[OOC]: "ooc"
 Sound[MAP]: "map"
 
 //Cube
-ItemDisplay[box]: %NAME%{%GOLD%Exc Armor > %ORANGE%Lem Ko %WHITE%Diam %NL%%GOLD% Exc Weapon > %ORANGE%Lum Pul %GREEN%Emer%TAN% %NL% Norm Armor > %ORANGE%Tal Shael %WHITE%Diam %NL% %GOLD% Unique Upgr: Norm Weapon > %ORANGE%Sol Ral %GREEN%Emer%NL%%NL% %GREEN%Exceptional Armor > %ORANGE%Hel Io %YELLOW%Topz%NL%%GREEN%Exc Weap > %ORANGE%Dol Mal %RED%Ruby%NL%%GREEN%Norm Armor > %ORANGE%Eld Ith %YELLOW%Topz%NL%%GREEN%Set Upgr: Norm Weap > %ORANGE%El Ith %RED%Ruby%NL%%GRAY%%NL% %WHITE%Shield > %ORANGE%Tal Amn %RED%Ruby%GRAY%%NL% %WHITE%Armor > %ORANGE%Tal Thul %YELLOW%Topz%GRAY%%NL% %WHITE%Socket: Weap > %ORANGE%Ral Amn %PURPLE%Amth}
+ItemDisplay[box]: %NAME%{%GOLD%Exc Armor > %ORANGE%Lem Ko %WHITE%Diam %NL%%GOLD% Exc Weapon > %ORANGE%Lum Pul %GREEN%Emer%GOLD% %NL% Norm Armor > %ORANGE%Tal Shael %WHITE%Diam %NL% %GOLD% Unique Upgr: Norm Weapon > %ORANGE%Sol Ral %GREEN%Emer%NL%%NL% %GREEN%Exceptional Armor > %ORANGE%Hel Io %YELLOW%Topz%NL%%GREEN%Exc Weap > %ORANGE%Dol Mal %RED%Ruby%NL%%GREEN%Norm Armor > %ORANGE%Eld Ith %YELLOW%Topz%NL%%GREEN%Set Upgr: Norm Weap > %ORANGE%El Ith %RED%Ruby%NL%%GRAY%%NL% %WHITE%Shield > %ORANGE%Tal Amn %RED%Ruby%GRAY%%NL% %WHITE%Armor > %ORANGE%Tal Thul %YELLOW%Topz%GRAY%%NL% %WHITE%Socket: Weap > %ORANGE%Ral Amn %PURPLE%Amth}
 //Perf Gems
 ItemDisplay[gpv]: %ORANGE%P %WHITE%Amethyst %ORANGE%[%PURPLE%O%ORANGE%]
 ItemDisplay[gpw]: %ORANGE%P %WHITE%Diamond %ORANGE%[%WHITE%O%ORANGE%]
@@ -380,16 +380,17 @@ ItemDisplay[EQ2 RW STAT17>249 SOCK=4]: %NAME% %BLUE%%STAT(17)%ed%CONTINUE% //for
 ItemDisplay[WP2 RW STAT39>29 SOCK=4]: %NAME% %BLUE%%STAT(39)%STAT(39)%CONTINUE% //hoto
 
 //Rare jewelry displayed stats
-ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) (TABSK8>0 OR TABSK9>0 OR TABSK10>0 OR TABSK16>0 OR TABSK17>0 OR TABSK18>0 OR TABSK24>0 OR TABSK25>0 OR TABSK26>0 OR TABSK34>0 OR TABSK40>0 OR TABSK41>0 OR TABSK42>0 OR TABSK48>0 OR TABSK49>0 OR TABSK50>0 OR STAT7>0 OR RES>0 OR STAT105>0 OR STAT39>0 OR STAT41>0 OR STAT43>0 OR STAT45>0)]: %NL%%NAME% %CONTINUE% //display stats in next line
+ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) (STAT80>0 OR TABSK8>0 OR TABSK9>0 OR TABSK10>0 OR TABSK16>0 OR TABSK17>0 OR TABSK18>0 OR TABSK24>0 OR TABSK25>0 OR TABSK26>0 OR TABSK34>0 OR TABSK40>0 OR TABSK41>0 OR TABSK42>0 OR TABSK48>0 OR TABSK49>0 OR TABSK50>0 OR STAT7>0 OR RES>0 OR STAT105>0 OR STAT39>0 OR STAT41>0 OR STAT43>0 OR STAT45>0)]: %NL%%NAME% %CONTINUE% //display stats in next line
+ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) STAT80>0]: %GOLD%%STAT(80)%mf %NAME%%CONTINUE%//mf
 ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) DEX>9]: %GRAY%%STAT(2)%dex %NAME% %CONTINUE% //dex
 ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) RES=0 STAT39>0]: %RED%%STAT(39)%Fres %NAME% %CONTINUE% //fire res
 ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) RES=0 STAT41>0]: %YELLOW%%STAT(41)%Lres %NAME% %CONTINUE% //lightning res
 ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) RES=0 STAT43>0]: %WHITE%%STAT(43)%Cres %NAME% %CONTINUE% //cold res
 ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) RES=0 STAT45>0]: %GREEN%%STAT(45)%Pres %NAME% %CONTINUE% //poison res
-ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) RES>0 STAT39>20]: %RED%%STAT(39)%Fres %NAME% %CONTINUE% //fire res
-ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) RES>0 STAT41>20]: %YELLOW%%STAT(41)%Lres %NAME% %CONTINUE% //lightning res
-ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) RES>0 STAT43>20]: %WHITE%%STAT(43)%Cres %NAME% %CONTINUE% //cold res
-ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) RES>0 STAT45>20]: %GREEN%%STAT(45)%Pres %NAME% %CONTINUE% //poison res
+ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) (RES>0 RES<21) STAT39>20]: %RED%%STAT(39)%Fres %NAME% %CONTINUE% //fire res
+ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) (RES>0 RES<21) STAT41>20]: %YELLOW%%STAT(41)%Lres %NAME% %CONTINUE% //lightning res
+ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) (RES>0 RES<21) STAT43>20]: %WHITE%%STAT(43)%Cres %NAME% %CONTINUE% //cold res
+ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) (RES>0 RES<21) STAT45>20]: %GREEN%%STAT(45)%Pres %NAME% %CONTINUE% //poison res
 ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) MANA>50]: %BLUE%%STAT(9)% mana %NAME% %CONTINUE% //mana
 ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) STR>9]: %RED%%STAT(0)% str %NAME% %CONTINUE% //strength
 ItemDisplay[!(UNI OR SET) (amu OR rin) STAT7>0]: %RED%%STAT(7)% life %NAME% %CONTINUE% //life
@@ -398,6 +399,7 @@ ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) STAT99>0]: %SAGE%%STAT(99)%fhr %NA
 ItemDisplay[!(UNI OR SET) EQ5 STAT96>0]: %BOLD%%STAT(96)%FRW %NAME% %CONTINUE% //FRW
 ItemDisplay[!(UNI OR SET) (amu OR rin) FCR>0]: %BOLD%%STAT(105)%fcr %NAME% %CONTINUE% //fcr
 //Continue Display of +Skills on Amulets (especially needed on rares)
+ItemDisplay[!(UNI OR SET) (amu OR rin) STAT34>15]: %BOLD%%STAT(34)%pdr*** %NAME% %CONTINUE% //PDR
 ItemDisplay[!(UNI OR SET) amu CLSK0=2]: %BOLD%2 Zon %NAME% %CONTINUE% //+2amazon
 ItemDisplay[!(UNI OR SET) amu CLSK1=2]: %BOLD%2 Sor %NAME% %CONTINUE% //+2sorceress
 ItemDisplay[!(UNI OR SET) amu CLSK2=2]: %BOLD%2 Nec %NAME% %CONTINUE% //+2necromancer
@@ -421,7 +423,7 @@ ItemDisplay[!(UNI OR SET) amu TABSK41>0]: %BOLD%%STAT(188,41)% Shapeshift %NAME%
 ItemDisplay[!(UNI OR SET) amu TABSK42>0]: %BOLD%%STAT(188,42)% Ele %NAME% %CONTINUE% //+2 or +3druid elemental
 ItemDisplay[!(UNI OR SET) amu TABSK48>0]: %BOLD%%STAT(188,48)% Trap %NAME% %CONTINUE% //+2 or +3trap
 ItemDisplay[!(UNI OR SET) amu TABSK49>0]: %BOLD%%STAT(188,49)% Shadow %NAME% %CONTINUE% //+2 or +3shadow
-ItemDisplay[!(UNI OR SET) amu TABSK50>0]: %BOLD%%STAT(188,50)% MartialArts %NAME% %CONTINUE% //+2 or +3martial arts
+ItemDisplay[!(UNI OR SET) amu TABSK50>0]: %BOLD%%STAT(188,50)% Martial Arts %NAME% %CONTINUE% //+2 or +3martial arts
 
 /////////////////////////////
 //FILTERLVL = 6
