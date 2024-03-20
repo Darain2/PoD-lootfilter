@@ -19,7 +19,7 @@ Sound[OOC]: "ooc"
 Sound[MAP]: "map"
 
 //Cube
-ItemDisplay[box]: %NAME%
+ItemDisplay[box]: %NAME%{%GOLD%Exc Armor > %ORANGE%Lem Ko %WHITE%Diam %NL%%GOLD% Exc Weapon > %ORANGE%Lum Pul %GREEN%Emer%TAN% %NL% Norm Armor > %ORANGE%Tal Shael %WHITE%Diam %NL% %GOLD% Unique Upgr: Norm Weapon > %ORANGE%Sol Ral %GREEN%Emer%NL%%NL% %GREEN%Exceptional Armor > %ORANGE%Hel Io %YELLOW%Topz%NL%%GREEN%Exc Weap > %ORANGE%Dol Mal %RED%Ruby%NL%%GREEN%Norm Armor > %ORANGE%Eld Ith %YELLOW%Topz%NL%%GREEN%Set Upgr: Norm Weap > %ORANGE%El Ith %RED%Ruby%NL%%GRAY%%NL% %WHITE%Shield > %ORANGE%Tal Amn %RED%Ruby%GRAY%%NL% %WHITE%Armor > %ORANGE%Tal Thul %YELLOW%Topz%GRAY%%NL% %WHITE%Socket: Weap > %ORANGE%Ral Amn %PURPLE%Amth}
 //Perf Gems
 ItemDisplay[gpv]: %ORANGE%P %WHITE%Amethyst %ORANGE%[%PURPLE%O%ORANGE%]
 ItemDisplay[gpw]: %ORANGE%P %WHITE%Diamond %ORANGE%[%WHITE%O%ORANGE%]
@@ -380,23 +380,49 @@ ItemDisplay[EQ2 RW STAT17>249 SOCK=4]: %NAME% %BLUE%%STAT(17)%ed%CONTINUE% //for
 ItemDisplay[WP2 RW STAT39>29 SOCK=4]: %NAME% %BLUE%%STAT(39)%STAT(39)%CONTINUE% //hoto
 
 //Rare jewelry displayed stats
-ItemDisplay[!UNI (amu OR rin) (STAT7>0 OR RES>0 OR STAT105>0 OR STAT39>0 OR STAT41>0 OR STAT43>0 OR STAT45>0)]: %NL%%NAME% %CONTINUE% //display stats in next line
-ItemDisplay[!UNI (amu OR rin) DEX>9]: %GRAY%%STAT(2)%dex %NAME% %CONTINUE% //dex
-ItemDisplay[!UNI (amu OR rin) RES=0 STAT39>0]: %RED%%STAT(39)%Fres %NAME% %CONTINUE% //fire res
-ItemDisplay[!UNI (amu OR rin) RES=0 STAT41>0]: %YELLOW%%STAT(41)%Lres %NAME% %CONTINUE% //lightning res
-ItemDisplay[!UNI (amu OR rin) RES=0 STAT43>0]: %WHITE%%STAT(43)%Cres %NAME% %CONTINUE% //cold res
-ItemDisplay[!UNI (amu OR rin) RES=0 STAT45>0]: %GREEN%%STAT(45)%Pres %NAME% %CONTINUE% //poison res
-ItemDisplay[!UNI (amu OR rin) RES>0 STAT39>20]: %RED%%STAT(39)%Fres %NAME% %CONTINUE% //fire res
-ItemDisplay[!UNI (amu OR rin) RES>0 STAT41>20]: %YELLOW%%STAT(41)%Lres %NAME% %CONTINUE% //lightning res
-ItemDisplay[!UNI (amu OR rin) RES>0 STAT43>20]: %WHITE%%STAT(43)%Cres %NAME% %CONTINUE% //cold res
-ItemDisplay[!UNI (amu OR rin) RES>0 STAT45>20]: %GREEN%%STAT(45)%Pres %NAME% %CONTINUE% //poison res
-ItemDisplay[!UNI (amu OR rin) MANA>50]: %BLUE%%STAT(9)% mana %NAME% %CONTINUE% //mana
-ItemDisplay[!UNI (amu OR rin) STR>9]: %RED%%STAT(0)% str %NAME% %CONTINUE% //strength
-ItemDisplay[!UNI (amu OR rin) STAT7>0]: %RED%%STAT(7)% life %NAME% %CONTINUE% //life
-ItemDisplay[!UNI (amu OR rin) RES>0]: %BOLD%%STAT(39)%@res %NAME% %CONTINUE% //allres
+ItemDisplay[!UNI (EQ5 OR amu OR rin) (TABSK8>0 OR TABSK9>0 OR TABSK10>0 OR TABSK16>0 OR TABSK17>0 OR TABSK18>0 OR TABSK24>0 OR TABSK25>0 OR TABSK26>0 OR TABSK34>0 OR TABSK40>0 OR TABSK41>0 OR TABSK42>0 OR TABSK48>0 OR TABSK49>0 OR TABSK50>0 OR STAT7>0 OR RES>0 OR STAT105>0 OR STAT39>0 OR STAT41>0 OR STAT43>0 OR STAT45>0)]: %NL%%NAME% %CONTINUE% //display stats in next line
+ItemDisplay[!UNI (EQ5 OR amu OR rin) DEX>9]: %GRAY%%STAT(2)%dex %NAME% %CONTINUE% //dex
+ItemDisplay[!UNI (EQ5 OR amu OR rin) RES=0 STAT39>0]: %RED%%STAT(39)%Fres %NAME% %CONTINUE% //fire res
+ItemDisplay[!UNI (EQ5 OR amu OR rin) RES=0 STAT41>0]: %YELLOW%%STAT(41)%Lres %NAME% %CONTINUE% //lightning res
+ItemDisplay[!UNI (EQ5 OR amu OR rin) RES=0 STAT43>0]: %WHITE%%STAT(43)%Cres %NAME% %CONTINUE% //cold res
+ItemDisplay[!UNI (EQ5 OR amu OR rin) RES=0 STAT45>0]: %GREEN%%STAT(45)%Pres %NAME% %CONTINUE% //poison res
+ItemDisplay[!UNI (EQ5 OR amu OR rin) RES>0 STAT39>20]: %RED%%STAT(39)%Fres %NAME% %CONTINUE% //fire res
+ItemDisplay[!UNI (EQ5 OR amu OR rin) RES>0 STAT41>20]: %YELLOW%%STAT(41)%Lres %NAME% %CONTINUE% //lightning res
+ItemDisplay[!UNI (EQ5 OR amu OR rin) RES>0 STAT43>20]: %WHITE%%STAT(43)%Cres %NAME% %CONTINUE% //cold res
+ItemDisplay[!UNI (EQ5 OR amu OR rin) RES>0 STAT45>20]: %GREEN%%STAT(45)%Pres %NAME% %CONTINUE% //poison res
+ItemDisplay[!UNI (EQ5 OR amu OR rin) MANA>50]: %BLUE%%STAT(9)% mana %NAME% %CONTINUE% //mana
+ItemDisplay[!UNI (EQ5 OR amu OR rin) STR>9]: %RED%%STAT(0)% str %NAME% %CONTINUE% //strength
+ItemDisplay[!UNI (EQ5 OR amu OR rin) STAT7>0]: %RED%%STAT(7)% life %NAME% %CONTINUE% //life
+ItemDisplay[!UNI (EQ5 OR amu OR rin) RES>0]: %BOLD%%STAT(39)%@res %NAME% %CONTINUE% //allres
+ItemDisplay[!UNI (EQ5 OR amu OR rin) STAT99>0]: %SAGE%%STAT(99)%fhr %NAME% %CONTINUE% //FHR
+ItemDisplay[!UNI (EQ5 OR amu OR rin) STAT96>0]: %BOLD%%STAT(96)%FRW %NAME% %CONTINUE% //FRW
+ItemDisplay[!UNI EQ5 STAT96>0]: %BOLD%%STAT(96)%FRW %NAME% %CONTINUE% //FRW
 ItemDisplay[!UNI (amu OR rin) FCR>0]: %BOLD%%STAT(105)%fcr %NAME% %CONTINUE% //fcr
-//ItemDisplay[(amu OR rin) LIFE>30]: %BLUE%%STAT(7)%life %NAME% %CONTINUE% //life
-
+//Continue Display of +Skills on Amulets (especially needed on rares)
+ItemDisplay[!UNI amu CLSK0=2]: %BOLD%2 Zon %NAME% %CONTINUE% //+2amazon
+ItemDisplay[!UNI amu CLSK1=2]: %BOLD%2 Sor %NAME% %CONTINUE% //+2sorceress
+ItemDisplay[!UNI amu CLSK2=2]: %BOLD%2 Nec %NAME% %CONTINUE% //+2necromancer
+ItemDisplay[!UNI amu CLSK3=2]: %BOLD%2 Pal %NAME% %CONTINUE% //+2paladin
+ItemDisplay[!UNI amu CLSK4=2]: %BOLD%2 Bar %NAME% %CONTINUE% //+2barbarian
+ItemDisplay[!UNI amu CLSK5=2]: %BOLD%2 Dru %NAME% %CONTINUE% //+2druid
+ItemDisplay[!UNI amu CLSK6=2]: %BOLD%2 Sin %NAME% %CONTINUE% //+2assassin
+ItemDisplay[!UNI amu TABSK8>0]: %BOLD%%STAT(188,8)% Fire %NAME% %CONTINUE% //+2 or +3fire
+ItemDisplay[!UNI amu TABSK1>0]: %BOLD%%STAT(188,1)% ZonPassive %NAME% %CONTINUE% //+2 or +3passive&magic
+ItemDisplay[!UNI amu TABSK9>0]: %BOLD%%STAT(188,9)% Light %NAME% %CONTINUE% //+2 or +3light
+ItemDisplay[!UNI amu TABSK10>0]: %BOLD%%STAT(188,10)% Cold %NAME% %CONTINUE% //+2 or +3cold
+ItemDisplay[!UNI amu TABSK16>0]: %BOLD%%STAT(188,16)% Curse %NAME% %CONTINUE% //+2 or +3curse
+ItemDisplay[!UNI amu TABSK17>0]: %BOLD%%STAT(188,17)% PnB %NAME% %CONTINUE% //+2 or +3pnb
+ItemDisplay[!UNI amu TABSK18>0]: %BOLD%%STAT(188,18)% NSumm %NAME% %CONTINUE% //+2 or +3necro summoning
+ItemDisplay[!UNI amu TABSK24>0]: %BOLD%%STAT(188,24)% PComb %NAME% %CONTINUE% //+2 or +3paladin combat
+ItemDisplay[!UNI amu TABSK25>0]: %BOLD%%STAT(188,25)% PalOff %NAME% %CONTINUE% //+2 or +3paladin offensive
+ItemDisplay[!UNI amu TABSK26>0]: %BOLD%%STAT(188,26)% PalDef %NAME% %CONTINUE% //+2 or +3paladin defensive
+ItemDisplay[!UNI amu TABSK34>0]: %BOLD%%STAT(188,34)% Warcries %NAME% %CONTINUE% //+2 or +3warcries
+ItemDisplay[!UNI amu TABSK40>0]: %BOLD%%STAT(188,40)% DSumm %NAME% %CONTINUE% //+2 or +3druid summoning
+ItemDisplay[!UNI amu TABSK41>0]: %BOLD%%STAT(188,41)% Shapeshift %NAME% %CONTINUE% //+2 or +3shapeshifting
+ItemDisplay[!UNI amu TABSK42>0]: %BOLD%%STAT(188,42)% Ele %NAME% %CONTINUE% //+2 or +3druid elemental
+ItemDisplay[!UNI amu TABSK48>0]: %BOLD%%STAT(188,48)% Trap %NAME% %CONTINUE% //+2 or +3trap
+ItemDisplay[!UNI amu TABSK49>0]: %BOLD%%STAT(188,49)% Shadow %NAME% %CONTINUE% //+2 or +3shadow
+ItemDisplay[!UNI amu TABSK50>0]: %BOLD%%STAT(188,50)% MartialArts %NAME% %CONTINUE% //+2 or +3martial arts
 
 /////////////////////////////
 //FILTERLVL = 6
@@ -548,8 +574,14 @@ ItemDisplay[pab (NMAG !RW) (SOCK=0 OR SOCK=4) RES>44]: %MAPICON(19,0)%%NOTIFY(IT
 ItemDisplay[pab (NMAG !RW) (SOCK=0 OR SOCK>2) RES>39]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NAME%
 ItemDisplay[CL3 ELT ETH (NMAG !RW) RES>39 (SOCK=0 OR SOCK>2)]: %NAME%
 ItemDisplay[uit (NMAG !RW) (STAT91>-11 AND STAT91<-5) (SOCK=0 OR SOCK=4)]: %NAME%
-//Map Elites
-ItemDisplay[(ARMOR OR WEAPON OR rin OR amu) (SET OR UNI OR MAG OR RARE) !ID ILVL>88]: %MAPICON(18,2)%%NAME%
+//Map Elites - for horking and general awareness
+ItemDisplay[(ARMOR OR WEAPON OR rin OR amu) (SET OR UNI OR MAG OR RARE) !ID AREALVL=86 ILVL=88]: %MAPICON(1)%%NAME%
+ItemDisplay[(ARMOR OR WEAPON OR rin OR amu) (SET OR UNI OR MAG OR RARE) !ID AREALVL=86 ILVL=89]: %MAPICON(3)%%NAME%
+ItemDisplay[(ARMOR OR WEAPON OR rin OR amu) (SET OR UNI OR MAG OR RARE) !ID AREALVL=87 ILVL=89]: %MAPICON(1)%%NAME%
+ItemDisplay[(ARMOR OR WEAPON OR rin OR amu) (SET OR UNI OR MAG OR RARE) !ID AREALVL=87 ILVL=90]: %MAPICON(3)%%NAME%
+ItemDisplay[(ARMOR OR WEAPON OR rin OR amu) (SET OR UNI OR MAG OR RARE) !ID AREALVL=88 ILVL=90]: %MAPICON(1)%%NAME%
+ItemDisplay[(ARMOR OR WEAPON OR rin OR amu) (SET OR UNI OR MAG OR RARE) !ID AREALVL=88 ILVL=91]: %MAPICON(3)%%NAME%
+
 
 //Shoppables
 ItemDisplay[WEAPON TABSK34>2]: %NOTIFY(ITEM)%%PURPLE%>> >> >> >> %BOLD%3BO %NAME%%PURPLE% << << << << //+3bo weapons 
