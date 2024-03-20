@@ -770,7 +770,7 @@ ItemDisplay[(pa9 OR nea OR ama) UNI ETH !ID]: %NAME%
 
 
 // Hide everything else that's not listed under Sections FILTERLVL (2 & 3 & 4)
-ItemDisplay[FILTERLVL>1 !FILTERLVL=7 ((NMAG !RW) OR !ID)]:
+ItemDisplay[FILTERLVL>1 ((NMAG !RW) OR !ID)]:
 
 /////////////////////////////
 //FILTERLVL = 1
@@ -908,4 +908,4 @@ ItemDisplay[(ARMOR OR WEAPON) ETH SOCK>0 CLVL<19]: %NAME%
 ItemDisplay[(ARMOR OR WEAPON) ETH CLVL<19]: %NAME%
 ItemDisplay[(ARMOR OR WEAPON) INF]:
 ItemDisplay[(ARMOR OR WEAPON) CLVL>18]:
-ItemDisplay[FILTERLVL=1 !FILTERLVL=7 ((NMAG !RW) OR !ID)]:
+ItemDisplay[FILTERLVL=1 ((NMAG !RW) OR !ID)]:
