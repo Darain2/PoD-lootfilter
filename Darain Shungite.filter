@@ -371,7 +371,7 @@ ItemDisplay[CRAFT (uvc OR zvb) STAT39>20]: %RED%%STAT(39)%Fres %NAME% %CONTINUE%
 ItemDisplay[CRAFT (uvc OR zvb) STAT41>20]: %YELLOW%%STAT(41)%Lres %NAME% %CONTINUE% //lightning res
 ItemDisplay[CRAFT (uvc OR zvb) STAT43>20]: %WHITE%%STAT(43)%Cres %NAME% %CONTINUE% //cold res
 ItemDisplay[CRAFT (uvc OR zvb) STAT45>20]: %GREEN%%STAT(45)%Pres %NAME% %CONTINUE% //poison res
-ItemDisplay[CRAFT (uvc OR zvb) STR>9]: %RED%%STAT(9)%str %NAME%%CONTINUE% //str
+ItemDisplay[CRAFT (uvc OR zvb) STR>9]: %RED%%STAT(0)%str %NAME%%CONTINUE% //str
 ItemDisplay[CRAFT (uvc OR zvb) STAT105>0]: %BLUE%%STAT(105)%fcr %NAME%%CONTINUE% //Caster belt
 
 //RW Displayed Stats
