@@ -67,7 +67,7 @@ ItemDisplay[cq2 MAG CLVL>12]:
 ItemDisplay[cq2 RARE CLVL>12]:
 
 //Unique charms
-ItemDisplay[(cm1 OR cm2 OR cm3) !ID UNI]: %NOTIFY(ITEM)%%NAME%
+ItemDisplay[(cm1 OR cm2 OR cm3) !ID UNI]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME%%WHITE%[%ILVL%]
 
 //Display Items with ILVL and Sockets (if N/A don't show - belts,gloves,boots)
 ItemDisplay[(MAG OR (RARE !(ma1 OR ma2 OR ma3 OR ma4 OR ma5 OR ma6 OR ma7 OR ma8 OR ma9 OR ma10 OR maz)) OR SET OR UNI OR CRAFT) ID]: %NAME% %WHITE%[%ILVL%]%CONTINUE%
@@ -313,7 +313,7 @@ ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG RES=0 STAT39>0]: %ORANGE%%STAT(39)%Fres %
 ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG RES=0 STAT41>0]: %YELLOW%%STAT(41)%Lres %NAME% %CONTINUE% //lightning res
 ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG RES=0 STAT43>0]: %WHITE%%STAT(43)%Cres %NAME% %CONTINUE% //cold res
 ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG RES=0 STAT45>0]: %GREEN%%STAT(45)%Pres %NAME% %CONTINUE% //poison res
-ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG RES>0]: %WHITE%%RES%@res %NAME% %CONTINUE% //all res
+ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG RES>0]: %PURPLE%%RES%@res %NAME% %CONTINUE% //all res
 ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG STAT19>0]: %TAN%%STAT(19)%AR %NAME%%CONTINUE%//AR
 ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG MANA>0]: %BLUE%%STAT(9)% Mana %NAME%%CONTINUE%//Mana
 ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG STAT7>0]: %RED%%STAT(7)% Life %NAME%%CONTINUE%//Life
@@ -381,7 +381,7 @@ ItemDisplay[EQ2 RW STAT332>24 SOCK=4]: %NAME% %BLUE%+%STAT(332)%psn%CONTINUE% //
 ItemDisplay[EQ2 RW STAT17>249 SOCK=4]: %NAME% %BLUE%%STAT(17)%ed%CONTINUE% //fort armor
 ItemDisplay[WP2 RW RES>29 SOCK=4]: %NAME% %BLUE%%RES%STAT(39)%CONTINUE% //hoto
 
-//Rare jewelry displayed stats
+//Rare jewelry and boots (EQ5) displayed stats
 ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) (STAT80>0 OR TABSK8>0 OR TABSK9>0 OR TABSK10>0 OR TABSK16>0 OR TABSK17>0 OR TABSK18>0 OR TABSK24>0 OR TABSK25>0 OR TABSK26>0 OR TABSK34>0 OR TABSK40>0 OR TABSK41>0 OR TABSK42>0 OR TABSK48>0 OR TABSK49>0 OR TABSK50>0 OR STAT7>0 OR RES>0 OR STAT105>0 OR STAT39>0 OR STAT41>0 OR STAT43>0 OR STAT45>0)]: %NL%%NAME% %CONTINUE% //display stats in next line
 ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) STAT80>0]: %GOLD%%STAT(80)%mf %NAME%%CONTINUE%//mf
 ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) DEX>9]: %GRAY%%STAT(2)%dex %NAME% %CONTINUE% //dex
@@ -396,10 +396,10 @@ ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) (RES>0 RES<21) STAT45>20]: %GREEN%
 ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) MANA>50]: %BLUE%%STAT(9)% mana %NAME% %CONTINUE% //mana
 ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) STR>9]: %RED%%STAT(0)% str %NAME% %CONTINUE% //strength
 ItemDisplay[!(UNI OR SET) (amu OR rin) STAT7>0]: %RED%%STAT(7)% life %NAME% %CONTINUE% //life
-ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) RES>0]: %BOLD%%RES%@res %NAME% %CONTINUE% //allres
+ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) RES>0]: %PURPLE%%RES%@res %NAME% %CONTINUE% //allres
 ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) STAT99>0]: %SAGE%%STAT(99)%fhr %NAME% %CONTINUE% //FHR
-ItemDisplay[!(UNI OR SET) EQ5 STAT96>0]: %BOLD%%STAT(96)%FRW %NAME% %CONTINUE% //FRW
-ItemDisplay[!(UNI OR SET) (amu OR rin) FCR>0]: %BOLD%%STAT(105)%fcr %NAME% %CONTINUE% //fcr
+ItemDisplay[!(UNI OR SET) EQ5 STAT96>0]: %PURPLE%%STAT(96)%FRW %NAME% %CONTINUE% //FRW
+ItemDisplay[!(UNI OR SET) (amu OR rin) FCR>0]: %PURPLE%%STAT(105)%fcr %NAME% %CONTINUE% //fcr
 //Continue Display of +Skills on Amulets (especially needed on rares)
 ItemDisplay[!(UNI OR SET) (amu OR rin) STAT34>15]: %BOLD%%STAT(34)%pdr*** %NAME% %CONTINUE% //PDR
 ItemDisplay[!(UNI OR SET) amu CLSK0=2]: %BOLD%2 Zon %NAME% %CONTINUE% //+2amazon
