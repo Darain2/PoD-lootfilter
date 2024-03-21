@@ -805,6 +805,8 @@ ItemDisplay[hp3 CLVL<36]:%RED%!%WHITE%HP3
 ItemDisplay[mp4 CLVL<61]:%BLUE%!%WHITE%MP4
 ItemDisplay[hp4 CLVL<61]:%RED%!%WHITE%HP4
 ItemDisplay[(hp4 OR mp4) CLVL>60]:
+ItemDisplay[hp5]:%RED%!%WHITE%HP5
+ItemDisplay[mp5]:%BLUE%!%WHITE%MP5
 
 //Craftables
 ItemDisplay[(xvg OR uvg) MAG]: %NAME% %RED%[nef]{%RED% Nef + Ruby > CB glove}//blood glove
