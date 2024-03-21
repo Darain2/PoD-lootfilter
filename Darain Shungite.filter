@@ -9,8 +9,8 @@ FilterLevel[3]: Map HealthPots
 FilterLevel[4]: Map Mana Pots
 FilterLevel[5]: Mapping No Pots
 FilterLevel[6]: 99 Push No Pots
-//FilterLevel[7]: Temp Show Gems //KIV WIP
-
+FilterLevel[7]: Temp Show Gems
+//FilterLevel[8]: Hide Map Champs //KIV - separate filter file, or can be achieved with filterlevel?
 
 //Default ItemFilter - Hide easy common items first before Filter Levels
 ItemDisplay[GOLD<10000]:
@@ -440,16 +440,20 @@ ItemDisplay[!(UNI OR SET) amu TABSK49>0]: %BOLD%%STAT(188,49)% Shadow %NAME% %CO
 ItemDisplay[!(UNI OR SET) amu TABSK50>0]: %BOLD%%STAT(188,50)% Martial Arts %NAME% %CONTINUE% //+2 or +3martial arts
 
 /////////////////////////////
-//FILTERLVL = 7 (Temporarily Show Gems - Switch back when done) //WIP - Unable to function
+//FILTERLVL = 7 (Temporarily Show Gems - Switch back to relevant filterlevel when done)
 /////////////////////////////
 
 //Gems
-//ItemDisplay[FILTERLVL=7 glg]: %WHITE%Emer %ORANGE%[%GREEN%O%ORANGE%]
-//ItemDisplay[FILTERLVL=7 glw]: %WHITE%Diam %ORANGE%[%WHITE%O%ORANGE%]
-//ItemDisplay[FILTERLVL=7 glb]: %WHITE%Saph %ORANGE%[%BLUE%O%ORANGE%]
-//ItemDisplay[FILTERLVL=7 gly]: %WHITE%Topz %ORANGE%[%YELLOW%O%ORANGE%]
-//ItemDisplay[FILTERLVL=7 glr]: %WHITE%Ruby %ORANGE%[%RED%O%ORANGE%]
-//ItemDisplay[FILTERLVL=7 gzv]: %NL%%WHITE%Amth %ORANGE%[%PURPLE%O%ORANGE%]%NL% %NL%
+ItemDisplay[FILTERLVL=7 glg]: %WHITE%Emer %ORANGE%[%GREEN%O%ORANGE%]
+ItemDisplay[FILTERLVL=7 glw]: %WHITE%Diam %ORANGE%[%WHITE%O%ORANGE%]
+ItemDisplay[FILTERLVL=7 glb]: %WHITE%Saph %ORANGE%[%BLUE%O%ORANGE%]
+ItemDisplay[FILTERLVL=7 gly]: %WHITE%Topz %ORANGE%[%YELLOW%O%ORANGE%]
+
+ItemDisplay[(FILTERLVL=3 OR FILTERLVL=4 OR FILTERLVL=5 OR FILTERLVL=6) glg]:
+ItemDisplay[(FILTERLVL=3 OR FILTERLVL=4 OR FILTERLVL=5 OR FILTERLVL=6) glw]:
+ItemDisplay[(FILTERLVL=3 OR FILTERLVL=4 OR FILTERLVL=5 OR FILTERLVL=6) glb]:
+ItemDisplay[(FILTERLVL=3 OR FILTERLVL=4 OR FILTERLVL=5 OR FILTERLVL=6) gly]:
+
 
 /////////////////////////////
 //FILTERLVL = 6
@@ -629,7 +633,7 @@ ItemDisplay[FILTERLVL>4 (r09 OR r12)]: %ORANGE%%RUNENAME% %WHITE%[%RUNETIER%]
 ItemDisplay[FILTERLVL=6 (r01 OR r02 OR r03 OR r04 OR r05 OR r06 OR r07 OR r10 OR r11 OR r13 OR r14 OR r15 OR r16 OR r17 OR r18 OR r19)]:
 //Always show ALL Identified items and runewords
 ItemDisplay[((MAG OR RARE OR SET OR UNI OR CRAFT) ID) OR RW]: %NAME%
-ItemDisplay[FILTERLVL>5 !FILTERLVL=7 ((NMAG !RW) OR !ID)]:
+ItemDisplay[FILTERLVL>5 ((NMAG !RW) OR !ID)]:
 
 ItemDisplay[tsc TPSCROLLS<11]: %BLUE%°%GRAY%tp
 
@@ -690,7 +694,7 @@ ItemDisplay[(amc) TABSK0=3 (NMAG !RW) (SOCK=0)]: %GRAY%3bow %NAME% //roll +3GMB 
 
 
 // Hide everything else
-ItemDisplay[FILTERLVL>4 !FILTERLVL=7 ((NMAG !RW) OR !ID)]:
+ItemDisplay[FILTERLVL>4 ((NMAG !RW) OR !ID)]:
 
 
 /////////////////////////////
@@ -698,7 +702,7 @@ ItemDisplay[FILTERLVL>4 !FILTERLVL=7 ((NMAG !RW) OR !ID)]:
 /////////////////////////////
 
 ItemDisplay[mp5]: %BLUE%!%WHITE%MP
-ItemDisplay[FILTERLVL>3 !FILTERLVL=7 ((NMAG !RW) OR !ID)]:
+ItemDisplay[FILTERLVL>3 ((NMAG !RW) OR !ID)]:
 
 //Rare Items (CS/DB/PB, boots EQ5 && gloves belt EQ4 and EQ6)
 ItemDisplay[(CL2 OR CL4 OR CL6 OR CL7) (MAG OR RARE) !ID]: %NAME%
@@ -712,7 +716,7 @@ ItemDisplay[(EQ4 OR EQ5 OR EQ6) RARE !ID]: %NAME%
 //FILTERLVL = 3 [HP5 version of LVL5]
 /////////////////////////////
 ItemDisplay[hp5]: //%RED%!%WHITE%HP
-ItemDisplay[FILTERLVL>2 !FILTERLVL=7 ((NMAG !RW) OR !ID)]:
+ItemDisplay[FILTERLVL>2 ((NMAG !RW) OR !ID)]:
 
 /////////////////////////////
 //FILTERLVL = 2
