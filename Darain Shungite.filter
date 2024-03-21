@@ -320,7 +320,7 @@ ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG RES>0]: %PURPLE%%RES%@res %NAME% %CONTINU
 ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG STAT22=0 STAT19>0]: %TAN%%STAT(19)%ar %NAME%%CONTINUE%//AR
 ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG MANA>0]: %BLUE%%STAT(9)% Mana %NAME%%CONTINUE%//Mana
 ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG STAT7>0]: %RED%%STAT(7)% Life %NAME%%CONTINUE%//Life
-ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG STAT22>0 STAT19>0]: %TAN%%STAT(24)%max %STAT(19)%ar%NAME% %CONTINUE% //max+AR
+ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG STAT22>0 STAT19>0]: %TAN%%STAT(24)%max %STAT(19)%ar %NAME% %CONTINUE% //max+AR
 ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG STAT80>0]: %GOLD%%STAT(80)%mf %NAME%%CONTINUE%//mf
 ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG STAT99>0]: %SAGE%%STAT(99)%FHR %NAME%%CONTINUE%//FHR
 ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG STAT96>0]: %BOLD%%STAT(96)%FRW %NAME% %CONTINUE% //FRW
