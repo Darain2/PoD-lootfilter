@@ -371,7 +371,7 @@ ItemDisplay[UNI ID (obc) CLSK1=1]: %BLUE%1 / %STAT(330)%lite% / %STAT(329)%fire%
 ItemDisplay[UNI ID (obc) CLSK1=2]: %BLUE%2 / %STAT(330)%lite% / %STAT(329)%fire%NL%%GOLD%%NAME% //eschuta
 ItemDisplay[UNI ID (obc) CLSK1=3]: %BLUE%3 / %STAT(330)%lite% / %STAT(329)%fire%NL%%GOLD%%NAME% //eschuta
 ItemDisplay[UNI ID (amu) RES>19 ALLSK>1]: %BLUE%%RES%res %NL%%GOLD%%NAME% //maras
-ItemDisplay[UNI ID (rin) ALLSK=1 STAT360>0]: %RED%%STAT(360)%???? %NL%%GOLD%%NAME% //work in progress SOJ/BK
+ItemDisplay[UNI ID (rin) ALLSK=1 STAT360>0]: %RED%%STAT(360,1)%???? %NL%%GOLD%%NAME% //work in progress SOJ/BK
 ItemDisplay[UNI ID (rin) ALLSK=1 STAT360>0 STAT36>4]: %RED%%STAT(36)%pdr %NL%%GOLD%%NAME% //pdr SOJ/BK
 ItemDisplay[UNI ID (rin) ALLSK=1 STAT360>0 STAT105=10]: %RED%%STAT(105)%fcr %NL%%GOLD%%NAME% //fcr SOJ/BK
 ItemDisplay[UNI ID (rin) ALLSK=1 STAT360>0 STAT96=10]: %RED%%STAT(96)%frw %NL%%GOLD%%NAME% //frw SOJ/BK
