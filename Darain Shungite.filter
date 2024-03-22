@@ -372,9 +372,9 @@ ItemDisplay[UNI ID (xtb OR 7pa OR mgl OR rin) STAT80>0]: %BLUE%%STAT(80)%MF %NL%
 ItemDisplay[UNI ID (hgl OR xhg OR uhg) STAT77>29]: %BLUE%%STAT(77)%%mana %NL%%GOLD%%NAME% //Frostburn
 ItemDisplay[UNI ID (rin OR xvb) STAT2>14]: %BLUE%%STAT(19)%ar | %STAT(2)%dex %NL%%GOLD%%NAME% //ravenfrost.waterwalk
 ItemDisplay[UNI ID ci3]: %BLUE%+%STAT(330)% / -%STAT(334)% %NAME%%CONTINUE% //griffon's eye
-ItemDisplay[UNI ID (obc) CLSK1=1]: %BLUE%1 / %STAT(330)%lite% / %STAT(329)%fire%NL%%GOLD%%NAME% //eschuta
-ItemDisplay[UNI ID (obc) CLSK1=2]: %BLUE%2 / %STAT(330)%lite% / %STAT(329)%fire%NL%%GOLD%%NAME% //eschuta
-ItemDisplay[UNI ID (obc) CLSK1=3]: %BLUE%3 / %STAT(330)%lite% / %STAT(329)%fire%NL%%GOLD%%NAME% //eschuta
+ItemDisplay[UNI ID (obc) CLSK1>0]: %BLUE%CSKILLS(1) / %STAT(330)%lite% / %STAT(329)%fire%NL%%GOLD%%NAME% //eschuta
+//ItemDisplay[UNI ID (obc) CLSK1=2]: %BLUE%2 / %STAT(330)%lite% / %STAT(329)%fire%NL%%GOLD%%NAME% //eschuta
+//ItemDisplay[UNI ID (obc) CLSK1=3]: %BLUE%3 / %STAT(330)%lite% / %STAT(329)%fire%NL%%GOLD%%NAME% //eschuta
 ItemDisplay[UNI ID (amu) RES>19 ALLSK>1]: %BLUE%%RES%res %NAME%%CONTINUE% //maras
 ItemDisplay[UNI ID (amu) RES>19 STAT360>0 ALLSK>2]: %RED% +3sk | %GOLD%%NAME% //maras
 ItemDisplay[UNI ID (rin) ALLSK=1 STAT360>0 STAT36>4]: %RED%%STAT(36)%pdr %NL%%GOLD%%NAME% //pdr SOJ/BK
@@ -603,8 +603,8 @@ ItemDisplay[(amd OR ame) ETH (NMAG !RW) (SOCK=0 OR SOCK=6) ED=15 TABSK2=3]:  %NO
 //Bows
 ItemDisplay[(6lw OR 6l7 OR (amc TABSK0=3)) (NMAG !RW) SOCK=4 ED>9]: %BLUE%%EDAMAGE%ed %NAME%{%GOLD%Faith:%ORANGE%OhmJahLemEld}
 //Claws
-ItemDisplay[CL5 NMAG !RW (SK269=3 (SK274=3 OR SK275>0 OR SK278>0 OR SK268>0)) (SOCK=0 OR SOCK=3)]: %MAPICON(19,0)%%NAME%{%GOLD%Plague:%ORANGE%ChamFalUm} //claw of thunder+BOI
-ItemDisplay[CL5 NMAG !RW (SK277=3 (SK276>0 OR SK262>1 OR SK274=3 OR SK275>0)) (SOCK=0 OR SOCK=3)]: %MAPICON(19,0)%%NAME%{%GOLD%Plague:%ORANGE%ChamFalUm %GOLD%|| Pattern:%ORANGE%TalOrtTir} //3BS+DS/WoF/BoI/DF
+ItemDisplay[CL5 NMAG !RW (SK269=3 (SK274>1 OR SK275>0 OR SK278>0 OR SK268>0)) (SOCK=0 OR SOCK=3)]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NOTIFYSOUND(TINK)%%NAME%{%GOLD%Mosaic:MalGulAmn%NL%Plague:%ORANGE%ChamFalUm} //claw of thunder+BOI
+ItemDisplay[CL5 NMAG !RW (SK277=3 (SK276>0 OR SK262>1 OR SK274=3 OR SK275>0)) (SOCK=0 OR SOCK=3)]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NAME%{%GOLD%Plague:%ORANGE%ChamFalUm %GOLD%|| Pattern:%ORANGE%TalOrtTir} //3BS+DS/WoF/BoI/DF
 //Infi/Insi/Pride and Obedience/Doom
 ItemDisplay[(7wc OR 7pa OR 7s8 OR 7br) (ETH NMAG !RW) (SOCK=4 OR SOCK=5) ED>9]: %MAPICON(19,0)%%NOTIFY(ITEM)%%WHITE%%NAME%
 ItemDisplay[(7wc OR 7pa OR 7s8 OR 7br OR 7p7 OR 7vo OR 7st OR 7tr) (ETH NMAG !RW) ED=15 (SOCK=0 OR SOCK=4 OR SOCK=5 OR SOCK=6)]: %NOTIFY(ITEM)%%WHITE%%NAME%
