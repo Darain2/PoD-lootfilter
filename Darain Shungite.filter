@@ -1,6 +1,10 @@
 // Darain's LootFilter for Patch 21
 //
 /////////////////////////////
+Attribute[Author]: *Darain
+Attribute[Name]: Darain's Vanilla+ Filter
+Attribute[Version]: 1.21.9
+Attribute[Date]: 22/03/2024 19:01 SGT
 
 //Rename filterlevel
 FilterLevel[1]: Reset
