@@ -370,7 +370,7 @@ ItemDisplay[UNI ID (rin OR xvb) STAT2>14]: %BLUE%%STAT(19)%ar | %STAT(2)%dex %NL
 ItemDisplay[UNI ID (obc) CLSK1=1]: %BLUE%1 / %STAT(330)%lite% / %STAT(329)%fire%NL%%GOLD%%NAME% //eschuta
 ItemDisplay[UNI ID (obc) CLSK1=2]: %BLUE%2 / %STAT(330)%lite% / %STAT(329)%fire%NL%%GOLD%%NAME% //eschuta
 ItemDisplay[UNI ID (obc) CLSK1=3]: %BLUE%3 / %STAT(330)%lite% / %STAT(329)%fire%NL%%GOLD%%NAME% //eschuta
-ItemDisplay[UNI ID (amu) RES>19 ALLSK>1]: %BLUE%%RES%res %NL%%NAME%%CONTINUE% //maras
+ItemDisplay[UNI ID (amu) RES>19 ALLSK>1]: %BLUE%%RES%res %NAME%%CONTINUE% //maras
 ItemDisplay[UNI ID (amu) RES>19 STAT360>0 ALLSK>2]: %RED% +3sk | %GOLD%%NAME% //maras
 ItemDisplay[UNI ID (rin) ALLSK=1 STAT360>0 STAT36>4]: %RED%%STAT(36)%pdr %NL%%GOLD%%NAME% //pdr SOJ/BK
 ItemDisplay[UNI ID (rin) ALLSK=1 STAT360>0 STAT105=10]: %RED%%STAT(105)%fcr %NL%%GOLD%%NAME% //fcr SOJ/BK
@@ -378,11 +378,11 @@ ItemDisplay[UNI ID (rin) ALLSK=1 STAT360>0 STAT96=10]: %RED%%STAT(96)%frw %NL%%G
 ItemDisplay[UNI ID (rin) ALLSK=1 STAT360>0 STAT80=10]: %RED%%STAT(80)%mf %NL%%GOLD%%NAME% //mf SOJ/BK
 ItemDisplay[UNI ID (rin) ALLSK=1 STAT360>0 STAT7=15]: %RED%%STAT(7)%life %NL%%GOLD%%NAME% //life SOJ/BK
 //Facets
-ItemDisplay[UNI ID jew STAT329>2]: %RED%Fire | +%STAT(329)% | -%STAT(333)%%NL%%NAME%%CONTINUE% //Fire Facet
-ItemDisplay[UNI ID jew STAT330>2]: %Yellow%Light | -%STAT(330)% | +%STAT(334)%%NL%%NAME%%CONTINUE% //Light Facet
-ItemDisplay[UNI ID jew STAT331>2]: %BLUE%Cold | +%STAT(331)% | -%STAT(335)%%NL%%NAME%%CONTINUE% //Cold Facet
-ItemDisplay[UNI ID jew STAT332>2]: %GREEN%Poison | -%STAT(332)% | +%STAT(336)%%NL%%NAME%%CONTINUE% //Poison Facet
-ItemDisplay[UNI ID jew STAT357>2]: %BOLD%Magic | -%STAT(358)% | +%STAT(357)%%NL%%NAME%%CONTINUE% //Magic Facet
+ItemDisplay[UNI ID jew STAT329>2]: %RED%Fire | +%STAT(329)% | -%STAT(333)% %NAME%%CONTINUE% //Fire Facet
+ItemDisplay[UNI ID jew STAT330>2]: %Yellow%Light | -%STAT(330)% | +%STAT(334)% %NAME%%CONTINUE% //Light Facet
+ItemDisplay[UNI ID jew STAT331>2]: %BLUE%Cold | +%STAT(331)% | -%STAT(335)% %NAME%%CONTINUE% //Cold Facet
+ItemDisplay[UNI ID jew STAT332>2]: %GREEN%Poison | -%STAT(332)% | +%STAT(336)% %NAME%%CONTINUE% //Poison Facet
+ItemDisplay[UNI ID jew STAT357>2]: %BOLD%Magic | -%STAT(358)% | +%STAT(357)% %NAME%%CONTINUE% //Magic Facet
 //ItemDisplay[UNI ID jew STAT376>2]: %WHITE%Phys %NL%%NAME%%CONTINUE% //Phys Facet| //-%STAT(360)% | +%STAT(359)%
 
 
