@@ -3,8 +3,8 @@
 /////////////////////////////
 Attribute[Author]: *Darain
 Attribute[Name]: Darain's Vanilla+ Filter
-Attribute[Version]: 1.21.9
-Attribute[Date]: 22/03/2024 19:01 SGT
+Attribute[Version]: 1.21.10
+Attribute[Date]: 22/03/2024 19:13 SGT
 
 //Rename filterlevel
 FilterLevel[1]: Reset
@@ -74,7 +74,7 @@ ItemDisplay[cq2 RARE CLVL>12]:
 ItemDisplay[(cm1 OR cm2 OR cm3) !ID UNI]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME%%WHITE%[%ILVL%]
 
 //Display Items with ILVL and Sockets (if N/A don't show - belts,gloves,boots)
-ItemDisplay[(MAG OR (RARE !(ma1 OR ma2 OR ma3 OR ma4 OR ma5 OR ma6 OR ma7 OR ma8 OR ma9 OR ma10 OR maz)) OR SET OR UNI OR CRAFT) ID]: %NAME% %WHITE%[%ILVL%]%CONTINUE%
+//ItemDisplay[(MAG OR (RARE !(ma1 OR ma2 OR ma3 OR ma4 OR ma5 OR ma6 OR ma7 OR ma8 OR ma9 OR ma10 OR maz)) OR SET OR UNI OR CRAFT) ID]: %NAME% %WHITE%[%ILVL%]%CONTINUE%
 ItemDisplay[(ARMOR OR WEAPON) !(EQ4 OR EQ5 OR EQ6 OR WP6 OR WP5 OR ama OR am5 OR amf) (MAG OR RARE OR SET OR CRAFT OR UNI OR (NMAG !RW)) ID]: %NAME% %RED%(%SOCKETS%)%CONTINUE%
 
 //Display Items in Correct Color Schemes
@@ -371,6 +371,7 @@ ItemDisplay[UNI ID (xh9 OR uh9 OR uld OR zlb OR umc) STAT36>0]: %BLUE%%STAT(36)%
 ItemDisplay[UNI ID (xtb OR 7pa OR mgl OR rin) STAT80>0]: %BLUE%%STAT(80)%MF %NL%%GOLD%%NAME% //Trav, TombReaver, Chancies,
 ItemDisplay[UNI ID (hgl OR xhg OR uhg) STAT77>29]: %BLUE%%STAT(77)%%mana %NL%%GOLD%%NAME% //Frostburn
 ItemDisplay[UNI ID (rin OR xvb) STAT2>14]: %BLUE%%STAT(19)%ar | %STAT(2)%dex %NL%%GOLD%%NAME% //ravenfrost.waterwalk
+ItemDisplay[UNI ID ci3]: %BLUE%+%STAT(330)% / -%STAT(334)% %NAME%%CONTINUE% //griffon's eye
 ItemDisplay[UNI ID (obc) CLSK1=1]: %BLUE%1 / %STAT(330)%lite% / %STAT(329)%fire%NL%%GOLD%%NAME% //eschuta
 ItemDisplay[UNI ID (obc) CLSK1=2]: %BLUE%2 / %STAT(330)%lite% / %STAT(329)%fire%NL%%GOLD%%NAME% //eschuta
 ItemDisplay[UNI ID (obc) CLSK1=3]: %BLUE%3 / %STAT(330)%lite% / %STAT(329)%fire%NL%%GOLD%%NAME% //eschuta
