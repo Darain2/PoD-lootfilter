@@ -370,19 +370,28 @@ ItemDisplay[UNI ID (rin OR xvb) STAT2>14]: %BLUE%%STAT(19)%ar | %STAT(2)%dex %NL
 ItemDisplay[UNI ID (obc) CLSK1=1]: %BLUE%1 / %STAT(330)%lite% / %STAT(329)%fire%NL%%GOLD%%NAME% //eschuta
 ItemDisplay[UNI ID (obc) CLSK1=2]: %BLUE%2 / %STAT(330)%lite% / %STAT(329)%fire%NL%%GOLD%%NAME% //eschuta
 ItemDisplay[UNI ID (obc) CLSK1=3]: %BLUE%3 / %STAT(330)%lite% / %STAT(329)%fire%NL%%GOLD%%NAME% //eschuta
-ItemDisplay[UNI ID (amu) RES>19 ALLSK>1]: %BLUE%%RES%res %NL%%GOLD%%NAME% //maras
-ItemDisplay[UNI ID (rin) ALLSK=1 STAT360>0]: %RED%%STAT(360,1)%???? %NL%%GOLD%%NAME% //work in progress SOJ/BK
+ItemDisplay[UNI ID (amu) RES>19 ALLSK>1]: %BLUE%%RES%res %NL%%NAME%%CONTINUE% //maras
+ItemDisplay[UNI ID (amu) RES>19 STAT360>0 ALLSK>2]: %RED% +3sk | %GOLD%%NAME% //maras
 ItemDisplay[UNI ID (rin) ALLSK=1 STAT360>0 STAT36>4]: %RED%%STAT(36)%pdr %NL%%GOLD%%NAME% //pdr SOJ/BK
 ItemDisplay[UNI ID (rin) ALLSK=1 STAT360>0 STAT105=10]: %RED%%STAT(105)%fcr %NL%%GOLD%%NAME% //fcr SOJ/BK
 ItemDisplay[UNI ID (rin) ALLSK=1 STAT360>0 STAT96=10]: %RED%%STAT(96)%frw %NL%%GOLD%%NAME% //frw SOJ/BK
+ItemDisplay[UNI ID (rin) ALLSK=1 STAT360>0 STAT80=10]: %RED%%STAT(80)%mf %NL%%GOLD%%NAME% //mf SOJ/BK
+ItemDisplay[UNI ID (rin) ALLSK=1 STAT360>0 STAT7=15]: %RED%%STAT(7)%life %NL%%GOLD%%NAME% //life SOJ/BK
+//Facets
+ItemDisplay[UNI ID jew STAT329>2]: %RED%Fire | +%STAT(329)% | -%STAT(333)%%NL%%NAME%%CONTINUE% //Fire Facet
+ItemDisplay[UNI ID jew STAT330>2]: %Yellow%Light | -%STAT(330)% | +%STAT(334)%%NL%%NAME%%CONTINUE% //Light Facet
+ItemDisplay[UNI ID jew STAT331>2]: %BLUE%Cold | +%STAT(331)% | -%STAT(335)%%NL%%NAME%%CONTINUE% //Cold Facet
+ItemDisplay[UNI ID jew STAT332>2]: %GREEN%Poison | -%STAT(332)% | +%STAT(336)%%NL%%NAME%%CONTINUE% //Poison Facet
+ItemDisplay[UNI ID jew STAT357>2]: %BOLD%Magic | -%STAT(358)% | +%STAT(357)%%NL%%NAME%%CONTINUE% //Magic Facet
+//ItemDisplay[UNI ID jew STAT376>2]: %WHITE%Phys %NL%%NAME%%CONTINUE% //Phys Facet| //-%STAT(360)% | +%STAT(359)%
 
 
 //crafted stats - caster belt
 ItemDisplay[CRAFT (uvc OR zvb) STAT105>0]: %NL%%NAME%%CONTINUE% 
-ItemDisplay[CRAFT (uvc OR zvb) STAT39>20]: %RED%%STAT(39)%Fres %NAME% %CONTINUE% //fire res
-ItemDisplay[CRAFT (uvc OR zvb) STAT41>20]: %YELLOW%%STAT(41)%Lres %NAME% %CONTINUE% //lightning res
-ItemDisplay[CRAFT (uvc OR zvb) STAT43>20]: %WHITE%%STAT(43)%Cres %NAME% %CONTINUE% //cold res
-ItemDisplay[CRAFT (uvc OR zvb) STAT45>20]: %GREEN%%STAT(45)%Pres %NAME% %CONTINUE% //poison res
+ItemDisplay[CRAFT (uvc OR zvb) STAT39>20]: %RED%%STAT(39)%fire %NAME% %CONTINUE% //fire res
+ItemDisplay[CRAFT (uvc OR zvb) STAT41>20]: %YELLOW%%STAT(41)%lite %NAME% %CONTINUE% //lightning res
+ItemDisplay[CRAFT (uvc OR zvb) STAT43>20]: %BLUE%%STAT(43)%cold %NAME% %CONTINUE% //cold res
+ItemDisplay[CRAFT (uvc OR zvb) STAT45>20]: %GREEN%%STAT(45)%psn %NAME% %CONTINUE% //poison res
 ItemDisplay[CRAFT (uvc OR zvb) STR>9]: %RED%%STAT(0)%str %NAME%%CONTINUE% //str
 ItemDisplay[CRAFT (uvc OR zvb) STAT105>0]: %BLUE%%STAT(105)%fcr %NAME%%CONTINUE% //Caster belt
 
@@ -395,17 +404,18 @@ ItemDisplay[WP2 RW RES>29 SOCK=4]: %NAME% %BLUE%%RES%STAT(39)%CONTINUE% //hoto
 
 //Rare jewelry,boots (EQ5), and gloves (EQ4) displayed stats
 ItemDisplay[!(UNI OR SET) (EQ4 OR EQ5 OR amu OR rin) (STAT80>0 OR TABSK8>0 OR TABSK9>0 OR TABSK10>0 OR TABSK16>0 OR TABSK17>0 OR TABSK18>0 OR TABSK24>0 OR TABSK25>0 OR TABSK26>0 OR TABSK34>0 OR TABSK40>0 OR TABSK41>0 OR TABSK42>0 OR TABSK48>0 OR TABSK49>0 OR TABSK50>0 OR STAT7>0 OR RES>0 OR STAT105>0 OR STAT39>0 OR STAT41>0 OR STAT43>0 OR STAT45>0)]: %NL%%NAME% %CONTINUE% //display stats in next line
-ItemDisplay[!(UNI OR SET) (EQ4 OR EQ5 OR amu OR rin) STAT360>0 STAT36>4]: %RED%%STAT(360,1)%pdr %NAME%%CONTINUE%//pdr corrupt
+ItemDisplay[!(UNI OR SET) rin STAT360>0 STAT36>4]: %BOLD%%STAT(36)%pdr %NAME%%CONTINUE%//pdr corrupt
+ItemDisplay[!(UNI OR SET) rin STAT360>0 STAT96=10]: %BOLD%%STAT(96)%frw %NAME%%CONTINUE%//frw corrupt
 ItemDisplay[!(UNI OR SET) (EQ4 OR EQ5 OR amu OR rin) STAT80>0]: %GOLD%%STAT(80)%mf %NAME%%CONTINUE%//mf
 ItemDisplay[!(UNI OR SET) (EQ4 OR EQ5 OR amu OR rin) DEX>9]: %GRAY%%STAT(2)%dex %NAME% %CONTINUE% //dex
-ItemDisplay[!(UNI OR SET) (EQ4 OR EQ5 OR amu OR rin) RES=0 STAT39>0]: %RED%%STAT(39)%Fres %NAME% %CONTINUE% //fire res
-ItemDisplay[!(UNI OR SET) (EQ4 OR EQ5 OR amu OR rin) RES=0 STAT41>0]: %YELLOW%%STAT(41)%Lres %NAME% %CONTINUE% //lightning res
-ItemDisplay[!(UNI OR SET) (EQ4 OR EQ5 OR amu OR rin) RES=0 STAT43>0]: %BLUE%%STAT(43)%Cres %NAME% %CONTINUE% //cold res
-ItemDisplay[!(UNI OR SET) (EQ4 OR EQ5 OR amu OR rin) RES=0 STAT45>0]: %GREEN%%STAT(45)%Pres %NAME% %CONTINUE% //poison res
-ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) (RES>0 RES<21) STAT39>20]: %RED%%STAT(39)%Fres %NAME% %CONTINUE% //fire res
-ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) (RES>0 RES<21) STAT41>20]: %YELLOW%%STAT(41)%Lres %NAME% %CONTINUE% //lightning res
-ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) (RES>0 RES<21) STAT43>20]: %BLUE%%STAT(43)%Cres %NAME% %CONTINUE% //cold res
-ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) (RES>0 RES<21) STAT45>20]: %GREEN%%STAT(45)%Pres %NAME% %CONTINUE% //poison res
+ItemDisplay[!(UNI OR SET) (EQ4 OR EQ5 OR amu OR rin) RES=0 STAT39>0]: %RED%%STAT(39)%fire %NAME% %CONTINUE% //fire res
+ItemDisplay[!(UNI OR SET) (EQ4 OR EQ5 OR amu OR rin) RES=0 STAT41>0]: %YELLOW%%STAT(41)%lite %NAME% %CONTINUE% //lightning res
+ItemDisplay[!(UNI OR SET) (EQ4 OR EQ5 OR amu OR rin) RES=0 STAT43>0]: %BLUE%%STAT(43)%cold %NAME% %CONTINUE% //cold res
+ItemDisplay[!(UNI OR SET) (EQ4 OR EQ5 OR amu OR rin) RES=0 STAT45>0]: %GREEN%%STAT(45)%psn %NAME% %CONTINUE% //poison res
+ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) (RES>0 RES<21) STAT39>20]: %RED%%STAT(39)%fire %NAME% %CONTINUE% //fire res
+ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) (RES>0 RES<21) STAT41>20]: %YELLOW%%STAT(41)%lite %NAME% %CONTINUE% //lightning res
+ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) (RES>0 RES<21) STAT43>20]: %BLUE%%STAT(43)%cold %NAME% %CONTINUE% //cold res
+ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) (RES>0 RES<21) STAT45>20]: %GREEN%%STAT(45)%psn %NAME% %CONTINUE% //poison res
 ItemDisplay[!(UNI OR SET) (EQ4 OR EQ5 OR amu OR rin) MANA>50]: %BLUE%%STAT(9)% mana %NAME% %CONTINUE% //mana
 ItemDisplay[!(UNI OR SET) (EQ4 OR EQ5 OR amu OR rin) STR>9]: %RED%%STAT(0)% str %NAME% %CONTINUE% //strength
 ItemDisplay[!(UNI OR SET) (amu OR rin) STAT7>0]: %RED%%STAT(7)% life %NAME% %CONTINUE% //life
@@ -927,8 +937,8 @@ ItemDisplay[MAG ARMOR CLVL<25 (STAT39>9 OR STAT41>9)]: %NOTIFY(ITEM)%%NAME% //li
 
 //class leveling gears
 ItemDisplay[(CL6 OR WP11) ((SK38>0 CLVL<6) OR (SK44>0 CLVL<25))]:  %NOTIFY(ITEM)%%NAME% //charged bolt or frostnova staff
-ItemDisplay[CL1 ((SK222>0 CLVL<13) OR (SK226>0) OR (SK234>0 CLVL<30) OR (SK238>0 CLVL<40))]:  %NOTIFY(ITEM)%%NAME% //dru helm - poison creeper, fissure, oak, rabies
-ItemDisplay[CL5 ((SK251>0 CLVL<7) OR (SK258>0) OR (SK262>0 CLVL<30) OR (SK269>0 CLVL<30))]:  %NOTIFY(ITEM)%%NAME% //fire blast, burst of speed, fist of fire, wake of fire, claw of thunder
+ItemDisplay[CL1 ((SK222>0 CLVL<13 REQLEVEL<13) OR (SK226>0) OR (SK234>0 CLVL<30 REQLEVEL<30) OR (SK238>0 CLVL<40 REQLEVEL<40))]:  %NOTIFY(ITEM)%%NAME% //dru helm - poison creeper, fissure, oak, rabies
+ItemDisplay[CL5 ((SK251>0 CLVL<7 REQLEVEL<7) OR (SK258>0) OR (SK262>0 CLVL<30 REQLEVEL<30) OR (SK269>0 CLVL<30 REQLEVEL<30))]:  %NOTIFY(ITEM)%%NAME% //fire blast, burst of speed, fist of fire, wake of fire, claw of thunder
 
 
 //HIDE EVERYTHING ELSE
