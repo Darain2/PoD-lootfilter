@@ -367,10 +367,14 @@ ItemDisplay[UNI ID (xh9 OR uh9 OR uld OR zlb OR umc) STAT36>0]: %BLUE%%STAT(36)%
 ItemDisplay[UNI ID (xtb OR 7pa OR mgl OR rin) STAT80>0]: %BLUE%%STAT(80)%MF %NL%%GOLD%%NAME% //Trav, TombReaver, Chancies,
 ItemDisplay[UNI ID (hgl OR xhg OR uhg) STAT77>29]: %BLUE%%STAT(77)%%mana %NL%%GOLD%%NAME% //Frostburn
 ItemDisplay[UNI ID (rin OR xvb) STAT2>14]: %BLUE%%STAT(19)%ar | %STAT(2)%dex %NL%%GOLD%%NAME% //ravenfrost.waterwalk
-ItemDisplay[UNI ID (obc) CLSK1=1]: %BLUE%1 / %STAT(329)%fire / %STAT(330)%lite%NL%%GOLD%%NAME% //eschuta
-ItemDisplay[UNI ID (obc) CLSK1=2]: %BLUE%2 / %STAT(329)%fire / %STAT(330)%lite%NL%%GOLD%%NAME% //eschuta
-ItemDisplay[UNI ID (obc) CLSK1=3]: %BLUE%3 / %STAT(329)%fire / %STAT(330)%lite%NL%%GOLD%%NAME% //eschuta
-ItemDisplay[UNI ID (amu) RES>19 STAT41>19]: %BLUE%%RES%res %NL%%GOLD%%NAME% //maras
+ItemDisplay[UNI ID (obc) CLSK1=1]: %BLUE%1 / %STAT(330)%lite% / %STAT(329)%fire%NL%%GOLD%%NAME% //eschuta
+ItemDisplay[UNI ID (obc) CLSK1=2]: %BLUE%2 / %STAT(330)%lite% / %STAT(329)%fire%NL%%GOLD%%NAME% //eschuta
+ItemDisplay[UNI ID (obc) CLSK1=3]: %BLUE%3 / %STAT(330)%lite% / %STAT(329)%fire%NL%%GOLD%%NAME% //eschuta
+ItemDisplay[UNI ID (amu) RES>19 ALLSK>1]: %BLUE%%RES%res %NL%%GOLD%%NAME% //maras
+ItemDisplay[UNI ID (rin) ALLSK=1 STAT360>0 STAT36>4]: %RED%%STAT(36)%pdr %NL%%GOLD%%NAME% //pdr SOJ/BK
+ItemDisplay[UNI ID (rin) ALLSK=1 STAT360>0 STAT105=10]: %RED%%STAT(105)%fcr %NL%%GOLD%%NAME% //fcr SOJ/BK
+ItemDisplay[UNI ID (rin) ALLSK=1 STAT360>0 STAT96=10]: %RED%%STAT(96)%frw %NL%%GOLD%%NAME% //frw SOJ/BK
+
 
 //crafted stats - caster belt
 ItemDisplay[CRAFT (uvc OR zvb) STAT105>0]: %NL%%NAME%%CONTINUE% 
