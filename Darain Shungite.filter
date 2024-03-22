@@ -367,9 +367,9 @@ ItemDisplay[UNI ID (xh9 OR uh9 OR uld OR zlb OR umc) STAT36>0]: %BLUE%%STAT(36)%
 ItemDisplay[UNI ID (xtb OR 7pa OR mgl OR rin) STAT80>0]: %BLUE%%STAT(80)%MF %NL%%GOLD%%NAME% //Trav, TombReaver, Chancies,
 ItemDisplay[UNI ID (hgl OR xhg OR uhg) STAT77>29]: %BLUE%%STAT(77)%%mana %NL%%GOLD%%NAME% //Frostburn
 ItemDisplay[UNI ID (rin OR xvb) STAT2>14]: %BLUE%%STAT(19)%ar | %STAT(2)%dex %NL%%GOLD%%NAME% //ravenfrost.waterwalk
-ItemDisplay[UNI ID (obc) CLSK1=1]: 1 / %BLUE%%STAT(329)%fire /%STAT(330)%lite%NL%%GOLD%%NAME% //eschuta
-ItemDisplay[UNI ID (obc) CLSK1=2]: 2 / %BLUE%%STAT(329)%fire /%STAT(330)%lite%NL%%GOLD%%NAME% //eschuta
-ItemDisplay[UNI ID (obc) CLSK1=3]: 3 / %BLUE%%STAT(329)%fire /%STAT(330)%lite%NL%%GOLD%%NAME% //eschuta
+ItemDisplay[UNI ID (obc) CLSK1=1]: %BLUE%1 / %STAT(329)%fire / %STAT(330)%lite%NL%%GOLD%%NAME% //eschuta
+ItemDisplay[UNI ID (obc) CLSK1=2]: %BLUE%2 / %STAT(329)%fire / %STAT(330)%lite%NL%%GOLD%%NAME% //eschuta
+ItemDisplay[UNI ID (obc) CLSK1=3]: %BLUE%3 / %STAT(329)%fire / %STAT(330)%lite%NL%%GOLD%%NAME% //eschuta
 ItemDisplay[UNI ID (amu) RES>19 STAT41>19]: %BLUE%%RES%res %NL%%GOLD%%NAME% //maras
 
 //crafted stats - caster belt
@@ -546,7 +546,7 @@ ItemDisplay[UNI !ID (amu OR jew OR rin)]: %MAPICON(5,0)%%NOTIFY(ITEM)%%RED%O   O
 //ItemDisplay[UNI !ID cm3]: %NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%RED%O   O   O %GOLD%%Gheed's Fortune%%RED%  O   O   O
 ItemDisplay[ETH (ulc OR xea OR uap OR ulm OR ci3 OR xtb OR 7gw OR obf) UNI !ID]: %MAPICON(5,0)%%NOTIFY(ITEM)%%RED%O %GOLD%%NAME% %RED%O
 
-ItemDisplay[UNI ID xea]: %RED%O %GOLD%Skin of the Vipermagi %RED%O%NL%%NAME% {! ! !UPGRADE BEFORE CORRUPTING ! ! ! %NL% Lem Ko PDiamond}
+ItemDisplay[UNI ID (xh9 OR xhn OR xtp OR xea)]: %NAME% {! ! !UPGRADE BEFORE CORRUPTING ! ! ! %NL% Lem Ko PDiamond}
 
 // GG Sets
 ItemDisplay[SET !ID uth]: %MAPICON(33,1)%%NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%GREEN%Tal Rasha's Armor%NL%%DARK_GREEN%>> >> %NAME%%DARK_GREEN% << <<
@@ -604,8 +604,8 @@ ItemDisplay[CL1 (!ETH) NMAG !RW (SK244=3 (SK249=3 OR SK229=3 OR SK235=3)) !SOCK=
 ItemDisplay[CL1 (NMAG !RW) SK226>2 !SOCK=1]: %NAME%
 ItemDisplay[CL1 (!ETH) NMAG !RW (SK238>2  (SK226>0 OR SK224>0 OR SK248>0 OR SK222>0 OR SK237>0 OR SK247>0)) !SOCK=1]: %NOTIFY(ITEM)%%NAME% //3rabies+PsnCrp/Dwolf/Grizz
 //Shields
-ItemDisplay[pab (NMAG !RW) (SOCK=0 OR SOCK=4) RES>44]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NAME% %NOTIFYSOUND(TINK)%
-ItemDisplay[pab (NMAG !RW) (SOCK=0 OR SOCK>2) RES>39]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NAME%
+ItemDisplay[pab (NMAG !RW) (SOCK=0 OR SOCK=4) RES=45]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NAME% %NOTIFYSOUND(TINK)%
+ItemDisplay[pab (NMAG !RW) (SOCK=0 OR SOCK>2) RES>39 (STAT91>-11 AND STAT91<-9)]: %NOTIFYSOUND(TINK)%%MAPICON(19,0)%%NOTIFY(ITEM)%%NAME%
 ItemDisplay[CL3 ELT ETH (NMAG !RW) RES>39 (SOCK=0 OR SOCK>2)]: %NAME%
 ItemDisplay[uit (NMAG !RW) (STAT91>-11 AND STAT91<-5) (SOCK=0 OR SOCK=4)]: %NAME%
 //Map Elites - for horking and general awareness
@@ -635,7 +635,7 @@ ItemDisplay[FILTERLVL>4 (r09 OR r12)]: %ORANGE%%RUNENAME% %WHITE%[%RUNETIER%]
 ItemDisplay[FILTERLVL=6 (r01 OR r02 OR r03 OR r04 OR r05 OR r06 OR r07 OR r10 OR r11 OR r13 OR r14 OR r15 OR r16 OR r17 OR r18 OR r19)]:
 //Always show ALL Identified items and runewords
 ItemDisplay[((MAG OR RARE OR SET OR UNI OR CRAFT) ID) OR RW]: %NAME%
-ItemDisplay[FILTERLVL>5 ((NMAG !RW) OR !ID)]:
+ItemDisplay[FILTERLVL>5 !FILTERLVL=7 ((NMAG !RW) OR !ID)]:
 
 ItemDisplay[tsc TPSCROLLS<11]: %BLUE%°%GRAY%tp
 
@@ -704,7 +704,7 @@ ItemDisplay[FILTERLVL>4 ((NMAG !RW) OR !ID)]:
 /////////////////////////////
 
 ItemDisplay[mp5]: %BLUE%!%WHITE%MP
-ItemDisplay[FILTERLVL>3 ((NMAG !RW) OR !ID)]:
+ItemDisplay[FILTERLVL>3 !FILTERLVL=7 ((NMAG !RW) OR !ID)]:
 
 //Rare Items (CS/DB/PB, boots EQ5 && gloves belt EQ4 and EQ6)
 ItemDisplay[(CL2 OR CL4 OR CL6 OR CL7) (MAG OR RARE) !ID]: %NAME%
