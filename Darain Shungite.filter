@@ -372,7 +372,7 @@ ItemDisplay[UNI ID (xtb OR 7pa OR mgl OR rin) STAT80>0]: %BLUE%%STAT(80)%MF %NL%
 ItemDisplay[UNI ID (hgl OR xhg OR uhg) STAT77>29]: %BLUE%%STAT(77)%%mana %NL%%GOLD%%NAME% //Frostburn
 ItemDisplay[UNI ID (rin OR xvb) STAT2>14]: %BLUE%%STAT(19)%ar | %STAT(2)%dex %NL%%GOLD%%NAME% //ravenfrost.waterwalk
 ItemDisplay[UNI ID ci3]: %BLUE%+%STAT(330)% / -%STAT(334)% %NAME%%CONTINUE% //griffon's eye
-ItemDisplay[UNI ID (obc) CLSK1>0]: %BLUE%CSKILLS(1) / %STAT(330)%lite% / %STAT(329)%fire%NL%%GOLD%%NAME% //eschuta
+ItemDisplay[UNI ID (obc) CLSK1>0]: %BLUE%%CSKILLS(SORCERESS)% / %STAT(330)%lite% / %STAT(329)%fire%NL%%GOLD%%NAME% //eschuta
 //ItemDisplay[UNI ID (obc) CLSK1=2]: %BLUE%2 / %STAT(330)%lite% / %STAT(329)%fire%NL%%GOLD%%NAME% //eschuta
 //ItemDisplay[UNI ID (obc) CLSK1=3]: %BLUE%3 / %STAT(330)%lite% / %STAT(329)%fire%NL%%GOLD%%NAME% //eschuta
 ItemDisplay[UNI ID (amu) RES>19 ALLSK>1]: %BLUE%%RES%res %NAME%%CONTINUE% //maras
@@ -384,7 +384,7 @@ ItemDisplay[UNI ID (rin) ALLSK=1 STAT360>0 STAT80=10]: %RED%%STAT(80)%mf %NL%%GO
 ItemDisplay[UNI ID (rin) ALLSK=1 STAT360>0 STAT7=15]: %RED%%STAT(7)%life %NL%%GOLD%%NAME% //life SOJ/BK
 //Facets
 ItemDisplay[UNI ID jew STAT329>2]: %RED%Fire | +%STAT(329)% | -%STAT(333)% %NAME%%CONTINUE% //Fire Facet
-ItemDisplay[UNI ID jew STAT330>2]: %Yellow%Light | +%STAT(330)% | -%STAT(334)% %NAME%%CONTINUE% //Light Facet
+ItemDisplay[UNI ID jew STAT330>2]: %YELLOW%Light | +%STAT(330)% | -%STAT(334)% %NAME%%CONTINUE% //Light Facet
 ItemDisplay[UNI ID jew STAT331>2]: %BLUE%Cold | +%STAT(331)% | -%STAT(335)% %NAME%%CONTINUE% //Cold Facet
 ItemDisplay[UNI ID jew STAT332>2]: %GREEN%Poison | +%STAT(332)% | -%STAT(336)% %NAME%%CONTINUE% //Poison Facet
 ItemDisplay[UNI ID jew STAT357>2]: %BOLD%Magic | +%STAT(358)% | -%STAT(357)% %NAME%%CONTINUE% //Magic Facet
@@ -708,7 +708,7 @@ ItemDisplay[(amc OR amb) (NMAG !RW) TABSK0=3 SOCK=4]: %GRAY%3bow %NAME% {%GOLD%I
 //Polearm/Spears
 ItemDisplay[(7wc OR 7pa OR 7s8 OR 7br OR 7p7 OR 7vo OR 7st OR 7tr) (ETH NMAG !RW) (SOCK=4 OR SOCK=5)]: %WHITE%%NAME%
 //Claws
-ItemDisplay[CL5 NMAG !RW (!ETH !INF) SK277>2 (SOCK=0 OR SOCK=3)]: %NAME% //3BS
+ItemDisplay[CL5 NMAG !RW (!ETH !INF) (SK273=3 OR SK269=3 OR SK277=3) (SOCK=0 OR SOCK=3)]: %NAME% //3mindblast/COT/bladeshield
 //Armors
 ItemDisplay[(utp OR urs) !ETH !SUP (NMAG !RW) SOCK=3 DEF>500]: %DARK_GREEN%%DEF%def %WHITE%%NAME%
 //Pally Shields
