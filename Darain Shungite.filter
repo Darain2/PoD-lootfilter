@@ -4,7 +4,7 @@
 Attribute[Author]: *Darain
 Attribute[Name]: Darain's Vanilla+ Filter
 Attribute[Version]: 1.21.10
-Attribute[Date]: 22/03/2024 19:13 SGT
+Attribute[Date]: 24/03/2024 21:00 SGT
 
 //Rename filterlevel
 FilterLevel[1]: Reset
@@ -406,6 +406,7 @@ ItemDisplay[(7wa OR 7cr) RW STAT93>29 SOCK=5]: %NAME% %BLUE%%STAT(93)%ias%CONTIN
 ItemDisplay[EQ2 RW STAT332>24 SOCK=4]: %NAME% %BLUE%+%STAT(332)%psn%CONTINUE% //bramble armor
 ItemDisplay[EQ2 RW STAT17>249 SOCK=4]: %NAME% %BLUE%%STAT(17)%ed%CONTINUE% //fort armor
 ItemDisplay[WP2 RW RES>29 SOCK=4]: %NAME% %BLUE%%RES%STAT(39)%CONTINUE% //hoto
+ItemDisplay[WEAPON RW SOCK=5 OSKILL("Battle Orders")>0]: %NAME% %BLUE%%STAT(97,155)%bc / %STAT(97,149)%bo%CONTINUE% //call to arms  "/ %STAT(97,146)%bcry" 
 
 //Rare jewelry,boots (EQ5), and gloves (EQ4) displayed stats
 //ItemDisplay[!(UNI OR SET) (EQ4 OR EQ5 OR amu OR rin) (STAT80>0 OR TABSK8>0 OR TABSK9>0 OR TABSK10>0 OR TABSK16>0 OR TABSK17>0 OR TABSK18>0 OR TABSK24>0 OR TABSK25>0 OR TABSK26>0 OR TABSK34>0 OR TABSK40>0 OR TABSK41>0 OR TABSK42>0 OR TABSK48>0 OR TABSK49>0 OR TABSK50>0 OR STAT7>0 OR RES>0 OR STAT105>0 OR STAT39>0 OR STAT41>0 OR STAT43>0 OR STAT45>0)]: %NL%%NAME% %CONTINUE% //display stats in next line
