@@ -11,6 +11,7 @@ Option 1: Copy/Paste this URL into Launcher: https://github.com/Darain2/PoD-loot
 ![image](https://github.com/Darain2/PoD-lootfilter/assets/42797564/53f18b7a-1bd8-45c8-9075-47e893b5f5d7)
 
 It will appear as item.filter in-game using this option. Select it from dropdown menu (in-game hotkey "H"). Select appropriate Filter Level. If first-timer, select "Reset" + Notification Priority "Low"
+![image](https://github.com/Darain2/PoD-lootfilter/assets/42797564/d4902225-bca6-4b54-ba1b-9ee6408e68b4)
 
 
 Option 2: 
