@@ -89,7 +89,7 @@ ItemDisplay[CRAFT]:%ORANGE%%NAME%%ORANGE%%CONTINUE%
 ItemDisplay[ETH]:%GRAY%eth %NAME%%CONTINUE%
 
 //Break Stats into NextLine for all MAG/RARE/NMAG(incl. RW) with need-to-know stats
-ItemDisplay[(NMAG !RW) ((CL3 (RES>0 OR ED>0 OR (STAT91>-11 AND STAT91<-5))) OR ((EQ2 OR EQ3 OR (WEAPON !(CL5 OR CL6 OR WP11 OR WP12 OR WP13))) (ED>0 OR (STAT91>-11 AND STAT91<-5))))]:%NL%%NAME%%CONTINUE%
+//ItemDisplay[(NMAG !RW) ((CL3 (RES>0 OR ED>0 OR (STAT91>-11 AND STAT91<-5))) OR ((EQ2 OR EQ3 OR (WEAPON !(CL5 OR CL6 OR WP11 OR WP12 OR WP13))) (ED>0 OR (STAT91>-11 AND STAT91<-5))))]:%NL%%NAME%%CONTINUE%
 ItemDisplay[(RW OR (MAG ID) OR (RARE ID) OR (NMAG !RW)) CL1 CLSK5>0]:%NL%%NAME%%CONTINUE% //druid pelts
 ItemDisplay[(RW OR (MAG ID) OR (RARE ID) OR (NMAG !RW)) CL2 CLSK4>0]:%NL%%NAME%%CONTINUE% //barb helm
 ItemDisplay[(RW OR (MAG ID) OR (RARE ID) OR (NMAG !RW)) (CL4 OR WP12) CLSK2>0]:%NL%%NAME%%CONTINUE% //necro shield
@@ -602,7 +602,7 @@ ItemDisplay[(((cst OR bst OR 8cs OR 8bs OR 6cs OR 6bs OR wst OR 8ws OR 6ws) (SOC
 //EBOTD Mat Spear
 ItemDisplay[(amd OR ame) ETH (NMAG !RW) (SOCK=0 OR SOCK=6) ED=15 TABSK2=3]:  %NOTIFY(ITEM)%%NAME% {%GOLD%BotD:%ORANGE%VexHelElEldZodEth}
 //Bows
-ItemDisplay[(6lw OR 6l7 OR (amc TABSK0=3)) (NMAG !RW) SOCK=4 ED>9]: %BLUE%%EDAMAGE%ed %NAME%{%GOLD%Faith:%ORANGE%OhmJahLemEld}
+ItemDisplay[(6lw OR 6l7 OR (amc TABSK0=3)) (NMAG !RW) SOCK=4 ED>9]: %NAME%{%GOLD%Faith:%ORANGE%OhmJahLemEld}
 //Claws
 ItemDisplay[CL5 NMAG !RW (SK269=3 (SK274>1 OR SK275>0 OR SK278>0 OR SK268>0 OR SK264>0)) (SOCK=0 OR SOCK=3)]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NOTIFYSOUND(TINK)%%NAME%{%GOLD%Mosaic:MalGulAmn%NL%Plague:%ORANGE%ChamFalUm} //MUST HAVE***3claw of thunder*** and either +BOI, Dflight, SWarr, SMast, Cloak of Shadow
 ItemDisplay[CL5 NMAG !RW (SK277=3 (SK276>0 OR SK262>1 OR SK274=3 OR SK275>0)) (SOCK=0 OR SOCK=3)]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NAME%{%GOLD%Plague:%ORANGE%ChamFalUm %GOLD%|| Pattern:%ORANGE%TalOrtTir} //3BS+DS/WoF/BoI/DF
