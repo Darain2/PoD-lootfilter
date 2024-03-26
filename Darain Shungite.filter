@@ -656,8 +656,10 @@ ItemDisplay[CL5 ((TABSK49=3 (SK258=1 OR SK273=1 OR SK277=1)) OR ((CLSK6=2 OR TAB
 ItemDisplay[FILTERLVL>4 r08]: %NL%%ORANGE%%RUNENAME% %WHITE%[%RUNETIER%]%NL%%NL%
 ItemDisplay[FILTERLVL>4 (r09 OR r12)]: %ORANGE%%RUNENAME% %WHITE%[%RUNETIER%]
 ItemDisplay[FILTERLVL=6 (r01 OR r02 OR r03 OR r04 OR r05 OR r06 OR r07 OR r10 OR r11 OR r13 OR r14 OR r15 OR r16 OR r17 OR r18 OR r19)]:
-//Always show ALL Identified items and runewords
+//Always show ALL Identified items, runewords and Lem+ rune
 ItemDisplay[((MAG OR RARE OR SET OR UNI OR CRAFT) ID) OR RW]: : %NAME%
+ItemDisplay[RUNETIER>14]: %RUNENAME% %WHITE%[%RUNETIER%]
+//Hide everything else for FILTERLVL=6
 ItemDisplay[FILTERLVL>5 !FILTERLVL=7 ((NMAG !RW) OR !ID)]:
 
 ItemDisplay[tsc TPSCROLLS<11]: %BLUE%°%GRAY%tp
@@ -669,7 +671,7 @@ ItemDisplay[tsc TPSCROLLS<11]: %BLUE%°%GRAY%tp
 
 ItemDisplay[GOLD<5000]:
 ItemDisplay[(cm1 OR cm3) !ID MAG]: %NOTIFYSOUND(OOC)%%MAPICON(19,3)%%NOTIFY(ITEM)%%NAME%
-ItemDisplay[EQ7 !ID (MAG OR RARE)]: %RED%> > %NAME%%RED% < <
+ItemDisplay[(EQ7 OR ((ba4 OR ba5 OR ba9 OR baa OR bae OR baf) ILVL>49)) !ID (MAG OR RARE)]: %RED%> > %NAME%%RED% < < //arreatstyle helm ilvl50+ (5bo/wc), circlets
 
 // Good usable uniques
 ItemDisplay[UNI !ID xpl]: %RED%O %GOLD%Skullder's Ire %RED%O%NL%%NAME%
@@ -721,9 +723,6 @@ ItemDisplay[CL3 (EXC OR ELT) NMAG RES=45 (SOCK=0 OR SOCK=3 OR SOCK=4)]: %NAME%
 //Roll for sockets - only the good stuff
 ItemDisplay[(7wa OR 7wc OR 7s8 OR 7br OR 7h7) ETH (NMAG !RW) (SOCK=0) !SUP]: %NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%WHITE%%NAME% {Cube: %ORANGE%Ral Amn %PURPLE%PAmth}//roll polearm for socket
 ItemDisplay[(amc) TABSK0=3 (NMAG !RW) (SOCK=0)]: %GRAY%3bow %NAME% //roll +3GMB for socket
-
-//Interesting rares
-ItemDisplay[(ba4 OR ba5 OR ba9 OR baa OR bae OR baf) (MAG OR RARE) !ID ILVL>49]: %NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%NAME% //barb arreat style only - ID for 5 wc
 
 // Hide everything else
 ItemDisplay[FILTERLVL>4 ((NMAG !RW) OR !ID)]:
