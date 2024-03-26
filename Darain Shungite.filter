@@ -3,8 +3,8 @@
 /////////////////////////////
 Attribute[Author]: *Darain
 Attribute[Name]: Darain's Vanilla+ Filter
-Attribute[Version]: 1.21.10
-Attribute[Date]: 25/03/2024 19:00 SGT
+Attribute[Version]: 1.21.11
+Attribute[Date]: 26/03/2024 19:00 UTC8
 
 //Rename filterlevel
 FilterLevel[1]: Reset
@@ -438,30 +438,30 @@ ItemDisplay[!(UNI OR SET) (amu OR rin) FCR>0]: %PURPLE%%STAT(105)%fcr %NAME% %CO
 //Continue Display of +Skills on Amulets (especially needed on rares)
 /////////
 ItemDisplay[!(UNI OR SET) (amu OR rin) STAT34>15]: %BOLD%%STAT(34)%pdr*** %NAME% %CONTINUE% //PDR
-ItemDisplay[!(UNI OR SET) amu CLSK0=2]: %BOLD%2 Zon %NAME% %CONTINUE% //+2amazon
-ItemDisplay[!(UNI OR SET) amu CLSK1=2]: %BOLD%2 Sor %NAME% %CONTINUE% //+2sorceress
-ItemDisplay[!(UNI OR SET) amu CLSK2=2]: %BOLD%2 Nec %NAME% %CONTINUE% //+2necromancer
-ItemDisplay[!(UNI OR SET) amu CLSK3=2]: %BOLD%2 Pal %NAME% %CONTINUE% //+2paladin
-ItemDisplay[!(UNI OR SET) amu CLSK4=2]: %BOLD%2 Bar %NAME% %CONTINUE% //+2barbarian
-ItemDisplay[!(UNI OR SET) amu CLSK5=2]: %BOLD%2 Dru %NAME% %CONTINUE% //+2druid
-ItemDisplay[!(UNI OR SET) amu CLSK6=2]: %BOLD%2 Sin %NAME% %CONTINUE% //+2assassin
-ItemDisplay[!(UNI OR SET) amu TABSK8>0]: %BOLD%%STAT(188,8)% Fire %NAME% %CONTINUE% //+2 or +3fire
-ItemDisplay[!(UNI OR SET) amu TABSK1>0]: %BOLD%%STAT(188,1)% ZonPassive %NAME% %CONTINUE% //+2 or +3passive&magic
-ItemDisplay[!(UNI OR SET) amu TABSK9>0]: %BOLD%%STAT(188,9)% Light %NAME% %CONTINUE% //+2 or +3light
-ItemDisplay[!(UNI OR SET) amu TABSK10>0]: %BOLD%%STAT(188,10)% Cold %NAME% %CONTINUE% //+2 or +3cold
-ItemDisplay[!(UNI OR SET) amu TABSK16>0]: %BOLD%%STAT(188,16)% Curse %NAME% %CONTINUE% //+2 or +3curse
-ItemDisplay[!(UNI OR SET) amu TABSK17>0]: %BOLD%%STAT(188,17)% PnB %NAME% %CONTINUE% //+2 or +3pnb
-ItemDisplay[!(UNI OR SET) amu TABSK18>0]: %BOLD%%STAT(188,18)% NSumm %NAME% %CONTINUE% //+2 or +3necro summoning
-ItemDisplay[!(UNI OR SET) amu TABSK24>0]: %BOLD%%STAT(188,24)% PComb %NAME% %CONTINUE% //+2 or +3paladin combat
-ItemDisplay[!(UNI OR SET) amu TABSK25>0]: %BOLD%%STAT(188,25)% PalOff %NAME% %CONTINUE% //+2 or +3paladin offensive
-ItemDisplay[!(UNI OR SET) amu TABSK26>0]: %BOLD%%STAT(188,26)% PalDef %NAME% %CONTINUE% //+2 or +3paladin defensive
-ItemDisplay[!(UNI OR SET) amu TABSK34>0]: %BOLD%%STAT(188,34)% Warcries %NAME% %CONTINUE% //+2 or +3warcries
-ItemDisplay[!(UNI OR SET) amu TABSK40>0]: %BOLD%%STAT(188,40)% DSumm %NAME% %CONTINUE% //+2 or +3druid summoning
-ItemDisplay[!(UNI OR SET) amu TABSK41>0]: %BOLD%%STAT(188,41)% Shapeshift %NAME% %CONTINUE% //+2 or +3shapeshifting
-ItemDisplay[!(UNI OR SET) amu TABSK42>0]: %BOLD%%STAT(188,42)% Ele %NAME% %CONTINUE% //+2 or +3druid elemental
-ItemDisplay[!(UNI OR SET) amu TABSK48>0]: %BOLD%%STAT(188,48)% Trap %NAME% %CONTINUE% //+2 or +3trap
-ItemDisplay[!(UNI OR SET) amu TABSK49>0]: %BOLD%%STAT(188,49)% Shadow %NAME% %CONTINUE% //+2 or +3shadow
-ItemDisplay[!(UNI OR SET) amu TABSK50>0]: %BOLD%%STAT(188,50)% Martial Arts %NAME% %CONTINUE% //+2 or +3martial arts
+ItemDisplay[!(UNI OR SET) (amu OR EQ1) CLSK0=2]: %BOLD%2 Zon %NAME% %CONTINUE% //+2amazon
+ItemDisplay[!(UNI OR SET) (amu OR EQ1 OR CL6) CLSK1=2]: %BOLD%2 Sor %NAME% %CONTINUE% //+2sorceress
+ItemDisplay[!(UNI OR SET) (amu OR EQ1 OR CL4) CLSK2=2]: %BOLD%2 Nec %NAME% %CONTINUE% //+2necromancer
+ItemDisplay[!(UNI OR SET) (amu OR EQ1) CLSK3=2]: %BOLD%2 Pal %NAME% %CONTINUE% //+2paladin
+ItemDisplay[!(UNI OR SET) (amu OR EQ1 OR CL2) CLSK4=2]: %BOLD%2 Bar %NAME% %CONTINUE% //+2barbarian
+ItemDisplay[!(UNI OR SET) (amu OR EQ1 OR CL1) CLSK5=2]: %BOLD%2 Dru %NAME% %CONTINUE% //+2druid
+ItemDisplay[!(UNI OR SET) (amu OR EQ1 OR CL5) CLSK6=2]: %BOLD%2 Sin %NAME% %CONTINUE% //+2assassin
+ItemDisplay[!(UNI OR SET) (amu OR EQ1) TABSK8>0]: %BOLD%%STAT(188,8)% Fire %NAME% %CONTINUE% //>+1fire
+ItemDisplay[!(UNI OR SET) (amu OR EQ1) TABSK1>0]: %BOLD%%STAT(188,1)% ZonPassive %NAME% %CONTINUE% //>+1passive&magic
+ItemDisplay[!(UNI OR SET) (amu OR EQ1) TABSK9>0]: %BOLD%%STAT(188,9)% Light %NAME% %CONTINUE% //>+1light
+ItemDisplay[!(UNI OR SET) (amu OR EQ1) TABSK10>0]: %BOLD%%STAT(188,10)% Cold %NAME% %CONTINUE% //>+1cold
+ItemDisplay[!(UNI OR SET) (amu OR EQ1) TABSK16>0]: %BOLD%%STAT(188,16)% Curse %NAME% %CONTINUE% //>+1curse
+ItemDisplay[!(UNI OR SET) (amu OR EQ1) TABSK17>0]: %BOLD%%STAT(188,17)% PnB %NAME% %CONTINUE% //>+1pnb
+ItemDisplay[!(UNI OR SET) (amu OR EQ1) TABSK18>0]: %BOLD%%STAT(188,18)% NSumm %NAME% %CONTINUE% //>+1necro summoning
+ItemDisplay[!(UNI OR SET) (amu OR EQ1) TABSK24>0]: %BOLD%%STAT(188,24)% PComb %NAME% %CONTINUE% //>+1paladin combat
+ItemDisplay[!(UNI OR SET) (amu OR EQ1) TABSK25>0]: %BOLD%%STAT(188,25)% PalOff %NAME% %CONTINUE% //>+1paladin offensive
+ItemDisplay[!(UNI OR SET) (amu OR EQ1) TABSK26>0]: %BOLD%%STAT(188,26)% PalDef %NAME% %CONTINUE% //>+1paladin defensive
+ItemDisplay[!(UNI OR SET) (amu OR EQ1) TABSK34>0]: %BOLD%%STAT(188,34)% Warcries %NAME% %CONTINUE% //>+1warcries
+ItemDisplay[!(UNI OR SET) (amu OR EQ1) TABSK40>0]: %BOLD%%STAT(188,40)% DSumm %NAME% %CONTINUE% //>+1druid summoning
+ItemDisplay[!(UNI OR SET) (amu OR EQ1) TABSK41>0]: %BOLD%%STAT(188,41)% Shapeshift %NAME% %CONTINUE% //>+1shapeshifting
+ItemDisplay[!(UNI OR SET) (amu OR EQ1) TABSK42>0]: %BOLD%%STAT(188,42)% Ele %NAME% %CONTINUE% //>+1druid elemental
+ItemDisplay[!(UNI OR SET) (amu OR EQ1) TABSK48>0]: %BOLD%%STAT(188,48)% Trap %NAME% %CONTINUE% //>+1trap
+ItemDisplay[!(UNI OR SET) (amu OR EQ1) TABSK49>0]: %BOLD%%STAT(188,49)% Shadow %NAME% %CONTINUE% //>+1shadow
+ItemDisplay[!(UNI OR SET) (amu OR EQ1) TABSK50>0]: %BOLD%%STAT(188,50)% Martial Arts %NAME% %CONTINUE% //>+1martial arts
 
 /////////////////////////////
 //FILTERLVL = 7 (Temporarily Show Gems - Switch back to relevant filterlevel when done)
@@ -581,6 +581,7 @@ ItemDisplay[SET !ID xmg]: %MAPICON(33,1)%%NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%GREEN%
 // GG Socketables
 //Melee Weapons
 ItemDisplay[(((7fb OR 7gd) ETH NMAG !RW (SOCK=4 OR SOCK=5 OR SOCK=6)) OR (7wa NMAG !RW ((ETH (SOCK=0 OR SOCK=4 OR SOCK=5 OR SOCK=6)) OR (!ETH (SOCK=3 OR SOCK=4 OR SOCK=5)))) OR 7cr NMAG !RW (SOCK=3 OR SOCK=4 OR SOCK=5)) ED>9]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME%
+ItemDisplay[7wa ETH !RW NMAG SOCK=4]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%WHITE%%NAME% {%GOLD%Oath: %ORANGE%ShaelPulMalLum%NL%%GOLD%Phoenix: %ORANGE%VexVexLoJah}
 ItemDisplay[(7gs OR 7ax OR 7cm OR 7bs) ETH !RW NMAG (SOCK=0 OR SOCK=4) ED>9]: %MAPICON(19,0)%%NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%NAME%{%WHITE%Larzuk for 4os%NL%%GOLD%Oath:%ORANGE%ShaelPulMalLum}//eth Oath bases - larzuk
 ItemDisplay[(6ws OR 7gi OR 7gm OR 7gd OR 7p7) ETH !RW NMAG (SOCK=0 OR SOCK=3 OR SOCK=5 OR SOCK=6) ED>9]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%WHITE%%NAME%
 ItemDisplay[WP13 !RW NMAG SK117>0]: %MAPICON(26)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%WHITE%%NAME% %RED%%NL%%GRAY%[%PURPLE%°°°°Holy Shield°°°°%GRAY%]
@@ -650,14 +651,13 @@ ItemDisplay[CL5 SK262=3 (TABSK48=3 OR CLSK6=2 OR TABSK48=2)]: %NOTIFYSOUND(TINK)
 ItemDisplay[CL5 ((TABSK49=3 (SK258=2 OR SK273=2 OR SK277=2)) OR (TABSK49=2 (SK258=3 OR SK273=3 OR SK277=3)) OR (CLSK6=2 (SK258=3 OR SK273=3 OR SK277=3)))]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%RED%  O   O   O %NAME%%RED%  O   O   O //5MB/BOS/BS Claw
 ItemDisplay[CL5 ((TABSK49=3 (SK258=1 OR SK273=1 OR SK277=1)) OR ((CLSK6=2 OR TABSK49=2) (SK258=2 OR SK273=2 OR SK277=2)) OR ((CLSK6=1 OR TABSK49=1) (SK258=3 OR SK273=3 OR SK277=3)))]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%RED%  O   O   O %NAME%%RED%  O   O   O //4MB/BOS/BS Claw
 
-
 // Hide all magic,rare,non-runeword bases
 //Hide all Runes El to Fal (r01 - r19) but show Ral + Ort rune
 ItemDisplay[FILTERLVL>4 r08]: %NL%%ORANGE%%RUNENAME% %WHITE%[%RUNETIER%]%NL%%NL%
 ItemDisplay[FILTERLVL>4 (r09 OR r12)]: %ORANGE%%RUNENAME% %WHITE%[%RUNETIER%]
 ItemDisplay[FILTERLVL=6 (r01 OR r02 OR r03 OR r04 OR r05 OR r06 OR r07 OR r10 OR r11 OR r13 OR r14 OR r15 OR r16 OR r17 OR r18 OR r19)]:
 //Always show ALL Identified items and runewords
-ItemDisplay[((MAG OR RARE OR SET OR UNI OR CRAFT) ID) OR RW]: %NAME%
+ItemDisplay[((MAG OR RARE OR SET OR UNI OR CRAFT) ID) OR RW]: : %NAME%
 ItemDisplay[FILTERLVL>5 !FILTERLVL=7 ((NMAG !RW) OR !ID)]:
 
 ItemDisplay[tsc TPSCROLLS<11]: %BLUE%°%GRAY%tp
@@ -719,9 +719,11 @@ ItemDisplay[(utp OR urs) !ETH !SUP (NMAG !RW) SOCK=3 DEF>500]: %DARK_GREEN%%DEF%
 //Pally Shields
 ItemDisplay[CL3 (EXC OR ELT) NMAG RES=45 (SOCK=0 OR SOCK=3 OR SOCK=4)]: %NAME%
 //Roll for sockets - only the good stuff
-ItemDisplay[(7wa OR 7wc OR 7s8 OR 7br OR 7h7) ETH (NMAG !RW) (SOCK=0) !SUP]: %NOTIFY(ITEM)%%WHITE%%NAME% {Cube: %ORANGE%Ral Amn %PURPLE%PAmth}//roll polearm for socket
+ItemDisplay[(7wa OR 7wc OR 7s8 OR 7br OR 7h7) ETH (NMAG !RW) (SOCK=0) !SUP]: %NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%WHITE%%NAME% {Cube: %ORANGE%Ral Amn %PURPLE%PAmth}//roll polearm for socket
 ItemDisplay[(amc) TABSK0=3 (NMAG !RW) (SOCK=0)]: %GRAY%3bow %NAME% //roll +3GMB for socket
 
+//Interesting rares
+ItemDisplay[(ba4 OR ba5 OR ba9 OR baa OR bae OR baf) (MAG OR RARE) !ID ILVL>49]: %NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%NAME% //barb arreat style only - ID for 5 wc
 
 // Hide everything else
 ItemDisplay[FILTERLVL>4 ((NMAG !RW) OR !ID)]:
