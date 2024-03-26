@@ -4,7 +4,7 @@
 Attribute[Author]: *Darain
 Attribute[Name]: Darain's Vanilla+ Filter
 Attribute[Version]: 1.21.11
-Attribute[Date]: 26/03/2024 19:00 UTC8
+Attribute[Date]: 26/03/2024 20:00 UTC8
 
 //Rename filterlevel
 FilterLevel[1]: Reset
@@ -638,9 +638,6 @@ ItemDisplay[(ARMOR OR WEAPON OR rin OR amu) (SET OR UNI OR MAG OR RARE) (FILTERL
 ItemDisplay[(ARMOR OR WEAPON OR rin OR amu) (SET OR UNI OR MAG OR RARE) (FILTERLVL=5 OR FILTERLVL=6) !ID AREALVL=87 ILVL=90]: %MAPICON(5)%%NAME%
 ItemDisplay[(ARMOR OR WEAPON OR rin OR amu) (SET OR UNI OR MAG OR RARE) (FILTERLVL=5 OR FILTERLVL=6) !ID AREALVL=88 ILVL=91]: %MAPICON(5)%%NAME%
 
-//ItemDisplay[(ARMOR OR WEAPON OR rin OR amu) (SET OR UNI OR MAG OR RARE) !ID ILVL>88]: %MAPICON(1)%%NAME%
-
-
 //Shoppables
 ItemDisplay[WEAPON TABSK34>2]: %NOTIFY(ITEM)%%PURPLE%>> >> >> >> %BOLD%3BO %NAME%%PURPLE% << << << << //+3bo weapons 
 ItemDisplay[EQ4 (TABSK0=3 OR TABSK2=3 OR TABSK50=3) IAS=20]: %NOTIFY(ITEM)%%RED%  O   O   O %GREEN%3/20 %NAME%%RED%  O   O   O //+3/20 gloves and +6foh scpeters
@@ -671,7 +668,7 @@ ItemDisplay[tsc TPSCROLLS<11]: %BLUE%°%GRAY%tp
 
 ItemDisplay[GOLD<5000]:
 ItemDisplay[(cm1 OR cm3) !ID MAG]: %NOTIFYSOUND(OOC)%%MAPICON(19,3)%%NOTIFY(ITEM)%%NAME%
-ItemDisplay[(EQ7 OR ((ba4 OR ba5 OR ba9 OR baa OR bae OR baf) ILVL>49)) !ID (MAG OR RARE)]: %RED%> > %NAME%%RED% < < //arreatstyle helm ilvl50+ (5bo/wc), circlets
+ItemDisplay[!ID (((EQ7 OR ((ba4 OR ba5 OR ba9 OR baa OR bae OR baf) ILVL>49)) (MAG OR RARE)) OR ((CL1 OR CL5) RARE))]: %RED%> > %NAME%%RED% < < //arreatstyle helm ilvl50+ (5bo/wc), circlets
 
 // Good usable uniques
 ItemDisplay[UNI !ID xpl]: %RED%O %GOLD%Skullder's Ire %RED%O%NL%%NAME%
