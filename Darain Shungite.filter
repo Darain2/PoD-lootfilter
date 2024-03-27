@@ -3,8 +3,8 @@
 /////////////////////////////
 Attribute[Author]: *Darain
 Attribute[Name]: Darain's Vanilla+ Filter
-Attribute[Version]: 1.21.11
-Attribute[Date]: 26/03/2024 20:00 UTC8
+Attribute[Version]: 1.21.12
+Attribute[Date]: 27/03/2024 20:00 UTC8
 
 //Rename filterlevel
 FilterLevel[1]: Reset
@@ -366,13 +366,16 @@ ItemDisplay[UNI ID uvg]: %NAME% %BLUE%%STAT(0)% / %STAT(86)% //Dracul's Grasp
 ItemDisplay[UNI ID 7gw]: %BLUE%-%STAT(336)%psn %GOLD%%NAME% //Death's Web
 ItemDisplay[UNI ID urn]: %BLUE%%RES%res %STAT(36)%%DR %GOLD%%NAME% //Crown of Ages
 ItemDisplay[UNI ID (xea OR uea OR dre OR uar OR ci2 OR 7wb OR gts OR uts OR xow) RES>0]: %BLUE%%RES%res %GOLD%%NAME% //vmagi, anni, torch, ravenlore, tyrael, kiras, jade talon, ward, spirit ward,
+ItemDisplay[UNI ID amf]: %NAME% %BLUE%+%STAT(188,50)%ma / +%STAT(188,49)% //jade talon MA/SD
 ItemDisplay[UNI ID (6cs OR upl OR 7sr) STAT127>0]: %BLUE%+%STAT(127)%All %GOLD%%NAME% //Ondals, Arkaine, AriocNeedle
+ItemDisplay[UNI ID amf]: %NAME% %BLUE%+%STAT(188,2)%jav //tstroke
 ItemDisplay[UNI ID (uhm OR obf) STAT331>7]: %BLUE%+%STAT(331)%Cold %GOLD%%NAME% //Nightwing,Death Fathom
 ItemDisplay[UNI ID (xh9 OR uh9 OR uld OR zlb OR umc) STAT36>0]: %BLUE%%STAT(36)%%DR %GOLD%%NAME% //VGaze,Levi,String,Dungo
 ItemDisplay[UNI ID (xtb OR 7pa OR mgl OR rin) STAT80>0]: %BLUE%%STAT(80)%MF %GOLD%%NAME% //Trav, TombReaver, Chancies,
 ItemDisplay[UNI ID (hgl OR xhg OR uhg) STAT77>29]: %BLUE%%STAT(77)%%mana %GOLD%%NAME% //Frostburn
 ItemDisplay[UNI ID (rin OR xvb) STAT2>14]: %BLUE%%STAT(19)%ar | %STAT(2)%dex %GOLD%%NAME% //ravenfrost.waterwalk
 ItemDisplay[UNI ID ci3]: %BLUE%+%STAT(330)% / -%STAT(334)% %NAME%%CONTINUE% //griffon's eye
+ItemDisplay[UNI ID dre]: %BLUE%-%STAT(333)% %NAME%%CONTINUE% //ravenlore
 ItemDisplay[UNI ID (obc) CLSK1=1]: %BLUE%1 / %STAT(330)%lite / %STAT(329)%fire %GOLD%%NAME% //eschuta
 ItemDisplay[UNI ID (obc) CLSK1=2]: %BLUE%2 / %STAT(330)%lite / %STAT(329)%fire %GOLD%%NAME% //eschuta
 ItemDisplay[UNI ID (obc) CLSK1=3]: %BLUE%3 / %STAT(330)%lite / %STAT(329)%fire %GOLD%%NAME% //eschuta
@@ -773,12 +776,7 @@ ItemDisplay[gly]: %WHITE%Topz %ORANGE%[%YELLOW%O%ORANGE%]
 ItemDisplay[(ci3 OR uh9) NMAG ED=15 !ETH (SOCK=0 OR SOCK=3)]: %NAME% {%GOLD%Dream:%ORANGE%IoJahPul}
 ItemDisplay[ci3 NMAG !ETH (SOCK=0)]: %WHITE%%NAME% %YELLOW%[%GRAY%imbue%YELLOW%]
 
-//Claws for reroll +3 BOS
-//ItemDisplay[(7tw OR 7qr) NMAG !RW !SOCK=0]: %GRAY%[Reroll] %NAME%{%TAN%Reroll: %WHITE%3 Normal Gems->+6 Burst of Speed}
-//ItemDisplay[CL5 !(ktr OR wrb OR axf OR ces OR clw OR btl OR skr OR 9ar OR 9wb) NMAG !RW INF]: %NOTIFY(ITEM)%%GRAY%[Reroll] %NAME%
-//ItemDisplay[(7tw OR 7qr) MAG]: %GRAY%[Reroll] %BLUE%%NAME%%WHITE%{%TAN%Reroll: %WHITE%3chipped || 3flawless->+6 Burst of Speed}
-
-//Charms
+//Charms - hide large charms
 ItemDisplay[cm2 MAG !ID CLVL>90]:
 
 //Rings and amulets
