@@ -672,7 +672,7 @@ ItemDisplay[tsc TPSCROLLS<11]: %BLUE%°%GRAY%tp
 
 
 ItemDisplay[GOLD<5000]:
-ItemDisplay[(cm1 OR cm3) !ID MAG]: %NOTIFYSOUND(OOC)%%MAPICON(19,3)%%NOTIFY(ITEM)%%NAME%
+ItemDisplay[(cm1 OR (cm3 ILVL<91)) !ID MAG]: %NOTIFYSOUND(OOC)%%MAPICON(19,3)%%NOTIFY(ITEM)%%NAME%
 ItemDisplay[!ID (((EQ7 OR ((ba4 OR ba5 OR ba9 OR baa OR bae OR baf) ILVL>49)) (MAG OR RARE)) OR ((CL1 OR CL5) RARE))]: %RED%> > %NAME%%RED% < < //arreatstyle helm ilvl50+ (5bo/wc), circlets
 
 // Good usable uniques
