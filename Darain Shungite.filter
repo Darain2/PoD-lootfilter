@@ -489,7 +489,7 @@ ItemDisplay[rvs]: %PURPLE%r %WHITE%smol
 ItemDisplay[(jew OR rin OR (amu ILVL>89)) RARE !ID]: %NOTIFYSOUND(OOC)%%MAPICON(79,5)%%RED%> > %YELLOW%%NAME%%RED% < <//rare jewel,amulet,ring
 ItemDisplay[(aq2 OR EQ5 OR EQ4) RARE !ID]: %NAME%//rare arrows, boots, gloves
 ItemDisplay[skl]: %MAPICON(45)%%NOTIFY(ITEM)%%NL%%WHITE% > > %WHITE%Skull %ORANGE%[%GRAY%O%ORANGE%]%WHITE% < < %NL% %NL% 
-ItemDisplay[cm3 MAG ILVL>90]: %NOTIFYSOUND(OOC)%%MAPICON(19,3)%%NOTIFY(ITEM)%%NAME% %PURPLE%°°° //41+ lifer skillers
+ItemDisplay[cm3 MAG ILVL>90]: %NOTIFYSOUND(OOC)%%MAPICON(19,3)%%NOTIFY(ITEM)%%NAME% %WHITE%[%ILVL%]%PURPLE%°°°%GRAY%reroll //41+ lifer skillers
 
 //PoD-only Items
 ItemDisplay[SYNTH]: %MAPICON(26,1)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%GOLD%%NAME%
@@ -783,7 +783,7 @@ ItemDisplay[(amu OR rin) MAG !ID]: %NAME%
 
 //Socketables//
 //Armors
-ItemDisplay[(utp OR ula OR utu OR uea OR urs) !ETH !SUP (NMAG !RW) (SOCK=2 OR SOCK=3) DEF>450]: %DARK_GREEN%%DEF%def% WHITE%%NAME%
+ItemDisplay[(utp OR ula OR utu OR uea OR urs) !ETH !SUP (NMAG !RW) (SOCK=2 OR SOCK=3) DEF>450]: %DARK_GREEN%%DEF%def %NAME%
 ItemDisplay[xtp !ETH !SUP (NMAG !RW) (SOCK=2 OR SOCK=3) DEF>249]: %DARK_GREEN%%DEF%def %WHITE%%NAME%
 //PlagueOrbs
 ItemDisplay[(obf OR oba OR ob5) NMAG !RW (SOCK=3 OR SOCK=0) (SK62>0)]:  %MAPICON(19,0)%%NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%NAME% {Plague:ChamFalUm; for swap}//Hydra
