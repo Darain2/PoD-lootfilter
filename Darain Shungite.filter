@@ -365,15 +365,16 @@ ItemDisplay[UNI ID cm3]: %BOLD%%STAT(79)%gf / %STAT(87)% / %STAT(80)%mf %NAME%%C
 ItemDisplay[UNI ID uvg]: %NAME% %BLUE%%STAT(0)% / %STAT(86)% //Dracul's Grasp
 ItemDisplay[UNI ID 7gw]: %BLUE%-%STAT(336)%psn %GOLD%%NAME% //Death's Web
 ItemDisplay[UNI ID urn]: %BLUE%%RES%res %STAT(36)%%DR %GOLD%%NAME% //Crown of Ages
-ItemDisplay[UNI ID (xea OR uea OR dre OR uar OR ci2 OR 7wb OR gts OR uts OR xow) RES>0]: %BLUE%%RES%res %GOLD%%NAME% //vmagi, anni, torch, ravenlore, tyrael, kiras, jade talon, ward, spirit ward,
-ItemDisplay[UNI ID amf]: %NAME% %BLUE%+%STAT(188,50)%ma / +%STAT(188,49)% //jade talon MA/SD
+ItemDisplay[UNI ID (xea OR uea OR dre OR uar OR ci2 OR 7wb OR gts OR uts OR xow) RES>0]: %BLUE%%RES%res %GOLD%%NAME%%CONTINUE% //vmagi, anni, torch, ravenlore, tyrael, kiras, jade talon, ward, spirit ward,
+ItemDisplay[UNI ID 7wb]: %NAME% %BLUE%%STAT(188,50)%ma / %STAT(188,49)%sd //jade talon MA/SD
 ItemDisplay[UNI ID (6cs OR upl OR 7sr) STAT127>0]: %BLUE%+%STAT(127)%All %GOLD%%NAME% //Ondals, Arkaine, AriocNeedle
 ItemDisplay[UNI ID amf]: %NAME% %BLUE%+%STAT(188,2)%jav //tstroke
 ItemDisplay[UNI ID (uhm OR obf) STAT331>7]: %BLUE%+%STAT(331)%Cold %GOLD%%NAME% //Nightwing,Death Fathom
 ItemDisplay[UNI ID (xh9 OR uh9 OR uld OR zlb OR umc) STAT36>0]: %BLUE%%STAT(36)%%DR %GOLD%%NAME% //VGaze,Levi,String,Dungo
 ItemDisplay[UNI ID (xtb OR 7pa OR mgl OR rin) STAT80>0]: %BLUE%%STAT(80)%MF %GOLD%%NAME% //Trav, TombReaver, Chancies,
 ItemDisplay[UNI ID (hgl OR xhg OR uhg) STAT77>29]: %BLUE%%STAT(77)%%mana %GOLD%%NAME% //Frostburn
-ItemDisplay[UNI ID (rin OR xvb) STAT2>14]: %BLUE%%STAT(19)%ar | %STAT(2)%dex %GOLD%%NAME% //ravenfrost.waterwalk
+ItemDisplay[UNI ID (rin OR xvb) STAT2>14]: %BLUE%%STAT(19)%ar | %STAT(2)%dex %GOLD%%NAME% //ravenfrost
+ItemDisplay[UNI ID xvb STAT2>14]: %BLUE%%STAT(2)%dex %GOLD%%NAME% //waterwalk
 ItemDisplay[UNI ID ci3]: %BLUE%+%STAT(330)% / -%STAT(334)% %NAME%%CONTINUE% //griffon's eye
 ItemDisplay[UNI ID dre]: %BLUE%-%STAT(333)% %NAME%%CONTINUE% //ravenlore
 ItemDisplay[UNI ID (obc) CLSK1=1]: %BLUE%1 / %STAT(330)%lite / %STAT(329)%fire %GOLD%%NAME% //eschuta
@@ -406,7 +407,7 @@ ItemDisplay[CRAFT (uvc OR zvb) STAT105>0]: %BLUE%%STAT(105)%fcr %NAME%%CONTINUE%
 
 //RW Displayed Stats
 ItemDisplay[(uit OR CL3) RW STAT105>24 SOCK=4]: %NAME% %BLUE%%STAT(105)%fcr%CONTINUE% //fcr display spirit shield
-ItemDisplay[(uit OR CL3) RW STAT105>24 (STAT91>-11 STAT91<5) SOCK=4]: %BLUE%-%STAT(91%)req %NAME%%CONTINUE% //-req spirit shield
+ItemDisplay[(uit OR CL3) RW STAT105>24 (STAT91>-11 STAT91<5) SOCK=4]: %BLUE%%STAT(91)%req %NAME%%CONTINUE% //-req spirit shield
 ItemDisplay[(7wa OR 7cr) RW STAT93>29 SOCK=5]: %NAME% %BLUE%%STAT(93)%ias%CONTINUE% //grief
 ItemDisplay[EQ2 RW STAT332>24 SOCK=4]: %NAME% %BLUE%+%STAT(332)%psn%CONTINUE% //bramble armor
 ItemDisplay[EQ2 RW STAT17>249 SOCK=4]: %NAME% %BLUE%%STAT(17)%ed%CONTINUE% //fort armor
@@ -494,7 +495,7 @@ ItemDisplay[rvs]: %PURPLE%r %WHITE%smol
 ItemDisplay[(jew OR rin OR (amu ILVL>89)) RARE !ID]: %NOTIFYSOUND(OOC)%%MAPICON(79,5)%%RED%> > %YELLOW%%NAME%%RED% < <//rare jewel,amulet,ring
 ItemDisplay[(aq2 OR EQ5 OR EQ4) RARE !ID]: %NAME%//rare arrows, boots, gloves
 ItemDisplay[skl]: %MAPICON(45)%%NOTIFY(ITEM)%%NL%%WHITE% > > %WHITE%Skull %ORANGE%[%GRAY%O%ORANGE%]%WHITE% < < %NL% %NL% 
-ItemDisplay[cm3 MAG ILVL>90]: %NOTIFYSOUND(OOC)%%MAPICON(19,3)%%NOTIFY(ITEM)%%NAME% %WHITE%[%ILVL%]%PURPLE%°°°%GRAY%reroll //41+ lifer skillers
+ItemDisplay[cm3 MAG ILVL>90 ID]: %NOTIFYSOUND(OOC)%%MAPICON(19,3)%%NOTIFY(ITEM)%%NAME% %WHITE%[%ILVL%]%PURPLE%°°°%GRAY%reroll //41+ lifer skillers
 
 //PoD-only Items
 ItemDisplay[SYNTH]: %MAPICON(26,1)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%GOLD%%NAME%
@@ -591,7 +592,7 @@ ItemDisplay[(7gs OR 7ax OR 7cm OR 7bs) ETH !RW NMAG (SOCK=0 OR SOCK=4) ED>9]: %M
 ItemDisplay[(6ws OR 7gi OR 7gm OR 7gd OR 7p7) ETH !RW NMAG (SOCK=0 OR SOCK=3 OR SOCK=5 OR SOCK=6) ED>9]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%WHITE%%NAME%
 ItemDisplay[WP13 !RW NMAG SK117>0]: %MAPICON(26)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%WHITE%%NAME% %RED%%NL%%GRAY%[%PURPLE%°°°°Holy Shield°°°°%GRAY%]
 //Plague Orbs
-ItemDisplay[(obf OR oba OR ob5) NMAG !RW (SOCK=3 OR SOCK=0) ((SK62>0 (SK58=3 OR SK50>0 OR SK56=3 OR SK61>0)) OR (SK63>0 (SK57=3 OR SK49=3 OR SK48=3 OR SK53=3)) OR (SK65>0 (SK59=3 OR SK44=3 OR SK64=3)))]:  %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%GOLD%PlagueOrb%NL%%NAME% //Light/Fire/Cold Tree main damage abilities and their mastery
+ItemDisplay[(obf OR oba OR ob5) NMAG !RW (SOCK=3 OR SOCK=0) ((SK62>0 (SK58=3 OR SK50>0 OR SK56=3 OR SK61>0)) OR (SK63>0 (SK57=3 OR SK49=3 OR SK48=3 OR SK53=3)) OR (SK65>0 (SK59=3 OR SK44=3 OR SK64=3)))]:  %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME%{%GOLD%Plague:%ORANGE%ChamFalUm} //Light/Fire/Cold Tree main damage abilities and their mastery
 //Plague Scepter
 //ItemDisplay[WP13 (SK121=3 (SK101>0 OR SK123>0 OR SK125>0 OR SK112>0)) (SOCK=0 OR SOCK=3 OR SOCK=4) (NMAG !RW)]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME% //FOH+HB/Convic/Salv/
 ItemDisplay[WP13 SK121=3 (SOCK=0 OR SOCK=3 OR SOCK=4) NMAG !RW]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME% {%GOLD%Plague %RED%(3):%ORANGE%ChamFalUm || %GOLD%Phoenix %RED%(4):%ORANGE%VexVexLoJah} //3FOH
