@@ -3,8 +3,8 @@
 /////////////////////////////
 Attribute[Author]: *Darain
 Attribute[Name]: Darain's Vanilla+ Filter
-Attribute[Version]: 1.21.12
-Attribute[Date]: 27/03/2024 20:00 UTC8
+Attribute[Version]: 1.21.13
+Attribute[Date]: 29/03/2024 21:00 UTC8
 
 //Rename filterlevel
 FilterLevel[1]: Reset
@@ -350,15 +350,15 @@ ItemDisplay[MAG ID cm3 TABSK0>0]: %GOLD%Bow %NAME%%CONTINUE%
 
 //Anni, Torch, Gheed Stat Display
 ItemDisplay[UNI ID cm1]: %BOLD%%STAT(0)% | %RES% | %STAT(85)% %NAME%%CONTINUE%
-ItemDisplay[UNI ID cm2]: %NAME%%CONTINUE%
-ItemDisplay[UNI ID cm2 STAT0>9 RES>9]: %BOLD%%STAT(0)% | %RES%%NAME%%CONTINUE%
-ItemDisplay[UNI ID cm2 CLSK0=3]: %BOLD%Zon %NAME%%CONTINUE%
-ItemDisplay[UNI ID cm2 CLSK1=3]: %BOLD%Sor %NAME%%CONTINUE%
-ItemDisplay[UNI ID cm2 CLSK2=3]: %BOLD%Nec %NAME%%CONTINUE%
-ItemDisplay[UNI ID cm2 CLSK3=3]: %BOLD%Pal %NAME%%CONTINUE%
-ItemDisplay[UNI ID cm2 CLSK4=3]: %BOLD%Bar %NAME%%CONTINUE%
-ItemDisplay[UNI ID cm2 CLSK5=3]: %BOLD%Dru %NAME%%CONTINUE%
-ItemDisplay[UNI ID cm2 CLSK6=3]: %BOLD%Sin %NAME%%CONTINUE%
+//ItemDisplay[UNI ID cm2]: %NAME%%CONTINUE%
+ItemDisplay[UNI ID cm2 STAT0>9 RES>9]: %BOLD%%STAT(0)% | %RES% %NAME%%CONTINUE%
+ItemDisplay[UNI ID cm2 CLSK0=3]: %NAME% %BOLD%Zon%CONTINUE%
+ItemDisplay[UNI ID cm2 CLSK1=3]: %NAME% %BOLD%Sor%CONTINUE%
+ItemDisplay[UNI ID cm2 CLSK2=3]: %NAME% %BOLD%Nec%CONTINUE%
+ItemDisplay[UNI ID cm2 CLSK3=3]: %NAME% %BOLD%Pal%CONTINUE%
+ItemDisplay[UNI ID cm2 CLSK4=3]: %NAME% %BOLD%Bar%CONTINUE%
+ItemDisplay[UNI ID cm2 CLSK5=3]: %NAME% %BOLD%Dru%CONTINUE%
+ItemDisplay[UNI ID cm2 CLSK6=3]: %NAME% %BOLD%Sin%CONTINUE%
 ItemDisplay[UNI ID cm3]: %BOLD%%STAT(79)%gf | %STAT(87)% | %STAT(80)%mf %NAME%%CONTINUE%
 
 //ID'd Uniques Stats
@@ -612,8 +612,8 @@ ItemDisplay[(amd OR ame) ETH (NMAG !RW) (SOCK=0 OR SOCK=6) ED=15 TABSK2=3]:  %NO
 //Bows
 ItemDisplay[(6lw OR 6l7 OR ((amc OR amb) TABSK0=3)) (NMAG !RW) SOCK=4 ED>9]: %NAME%{%GOLD%Faith:%ORANGE%OhmJahLemEld}
 //Claws
-ItemDisplay[(9tw OR 7tw) NMAG !RW SK269=3]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NOTIFYSOUND(TINK)%%NAME%{%GOLD%Mosaic:MalGulAmn%NL%Plague:%ORANGE%ChamFalUm} //3claw of thunder Runic/Greater Talon
-ItemDisplay[CL5 NMAG !RW (SK269=3 (SK274>1 OR SK275>0 OR SK278>0 OR SK268>0 OR SK264>0)) (SOCK=0 OR SOCK=3)]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NOTIFYSOUND(OOC)%%NAME%{%GOLD%Mosaic:MalGulAmn%NL%Plague:%ORANGE%ChamFalUm} //MUST HAVE***3claw of thunder*** and either +BOI, Dflight, SWarr, SMast, Cloak of Shadow
+ItemDisplay[(9tw OR 7tw) NMAG !RW SK269=3]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NOTIFYSOUND(TINK)%%NAME%{%GOLD%Mosaic:%ORANGE%MalGulAmn%NL%%GOLD%Plague:%ORANGE%ChamFalUm} //3claw of thunder Runic/Greater Talon
+ItemDisplay[CL5 NMAG !RW (SK269=3 (SK274>1 OR SK275>0 OR SK278>0 OR SK268>0 OR SK264>0)) (SOCK=0 OR SOCK=3)]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NOTIFYSOUND(OOC)%%NAME%{%GOLD%Mosaic:%ORANGE%MalGulAmn%NL%%GOLD%Plague:%ORANGE%ChamFalUm} //MUST HAVE***3claw of thunder*** and either +BOI, Dflight, SWarr, SMast, Cloak of Shadow
 ItemDisplay[CL5 NMAG !RW (SK277=3 (SK276>0 OR SK262>1 OR SK274=3 OR SK275>0)) (SOCK=0 OR SOCK=3)]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NAME%{%GOLD%Plague:%ORANGE%ChamFalUm %GOLD%|| Pattern:%ORANGE%TalOrtTir} //3BS+DS/WoF/BoI/DF
 //Infi/Insi/Pride and Obedience/Doom
 ItemDisplay[(7wc OR 7pa OR 7s8 OR 7br) (ETH NMAG !RW) (SOCK=4 OR SOCK=5) ED>9]: %MAPICON(19,0)%%NOTIFY(ITEM)%%WHITE%%NAME%
@@ -648,7 +648,10 @@ ItemDisplay[(ARMOR OR WEAPON OR rin OR amu) (SET OR UNI OR MAG OR RARE) (FILTERL
 //GG Shoppables
 ItemDisplay[EQ4 (TABSK0=3 OR TABSK2=3 OR TABSK50=3) IAS=20]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%RED%  O   O   O %GREEN%3/20 %NAME%%RED%  O   O   O //+3/20 gloves
 ItemDisplay[WP13 ((SK121=3 (CLSK3=2 OR TABSK24=2)) OR (SK121=2 TABSK24=3))]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%RED%+5foh %NAME%  //+5foh scpeters
-ItemDisplay[WP13 SK121=3 TABSK24=3]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%RED%+6foh %NAME%  //+6foh scpeters
+ItemDisplay[WP13 SK121=3 TABSK24=3]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%RED%+6foh %NAME%  //+6foh scepters
+ItemDisplay[WP13 ((SK117=3 (CLSK3=2 OR TABSK24=2)) OR (SK117=2 TABSK24=3))]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%RED%+5hs %NAME%  //+5holyshield scepters
+ItemDisplay[WP13 SK117=3 TABSK24=3]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NL%%RED%+6hs %PURPLE%O  O  O  %NAME%  %PURPLE%O  O  O%NL%  //+6holyshield scepters
+ItemDisplay[WP13 SK117>0 MAG]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%RED%+hs %NAME%  //+any holyshield scepters
 ItemDisplay[WP12 (TABSK16=3 SK477=3)]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%RED%+6hemo %NAME% //+6hemo wand
 ItemDisplay[WP12 (((TABSK16=2 OR CLSK2=2) SK477=3) OR (TABSK16=3 SK477=2))]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%RED%+5hemo %NAME% //+5hemo wand
 ItemDisplay[WP12 (((TABSK18=2 OR CLSK2=2) SK94=3) OR (TABSK18=3 SK94=2))]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%RED%+5firegolem %NAME% //+5fire golem wand
