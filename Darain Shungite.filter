@@ -462,6 +462,7 @@ ItemDisplay[!(UNI OR SET) (amu OR EQ1) TABSK18>0]: %BOLD%%STAT(188,18)% NSumm %N
 ItemDisplay[!(UNI OR SET) (amu OR EQ1) TABSK24>0]: %BOLD%%STAT(188,24)% PComb %NAME% %CONTINUE% //>+1paladin combat
 ItemDisplay[!(UNI OR SET) (amu OR EQ1) TABSK25>0]: %BOLD%%STAT(188,25)% PalOff %NAME% %CONTINUE% //>+1paladin offensive
 ItemDisplay[!(UNI OR SET) (amu OR EQ1) TABSK26>0]: %BOLD%%STAT(188,26)% PalDef %NAME% %CONTINUE% //>+1paladin defensive
+ItemDisplay[!(UNI OR SET) (amu OR EQ1) TABSK33>0]: %BOLD%%STAT(188,33)% Masteries %NAME% %CONTINUE% //>+1masteries
 ItemDisplay[!(UNI OR SET) (amu OR EQ1) TABSK34>0]: %BOLD%%STAT(188,34)% Warcries %NAME% %CONTINUE% //>+1warcries
 ItemDisplay[!(UNI OR SET) (amu OR EQ1) TABSK40>0]: %BOLD%%STAT(188,40)% DSumm %NAME% %CONTINUE% //>+1druid summoning
 ItemDisplay[!(UNI OR SET) (amu OR EQ1) TABSK41>0]: %BOLD%%STAT(188,41)% Shapeshift %NAME% %CONTINUE% //>+1shapeshifting
