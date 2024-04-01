@@ -735,7 +735,9 @@ ItemDisplay[CL5 NMAG !RW (!ETH !INF) (SK273=3 OR SK269=3 OR SK277=3) (SOCK=0 OR 
 //Armors
 ItemDisplay[(utp OR urs) !ETH !SUP (NMAG !RW) SOCK=3 DEF>500]: %DARK_GREEN%%DEF%def %WHITE%%NAME%
 //Pally Shields
-ItemDisplay[CL3 (EXC OR ELT) NMAG RES=45 (SOCK=0 OR SOCK=3 OR SOCK=4)]: %NAME%
+ItemDisplay[CL3 (EXC OR ELT) NMAG !RW RES=45 (SOCK=0 OR SOCK=3 OR SOCK=4)]: %NAME%
+//Necro Heads
+ItemDisplay[CL4 NMAG !RW !SOCK=1 (SK477=3 OR SK84=3 OR SK74=3)]: %NAME% //3hemo/bonespear/CE
 //Roll for sockets - only the good stuff
 ItemDisplay[(7wa OR 7wc OR 7s8 OR 7br OR 7h7) ETH (NMAG !RW) (SOCK=0) !SUP]: %NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%WHITE%%NAME% {Cube: %ORANGE%Ral Amn %PURPLE%PAmth}//roll polearm for socket
 ItemDisplay[(amc) TABSK0=3 (NMAG !RW) (SOCK=0)]: %GRAY%3bow %NAME% //roll +3GMB for socket
