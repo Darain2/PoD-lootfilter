@@ -3,8 +3,8 @@
 /////////////////////////////
 Attribute[Author]: *Darain
 Attribute[Name]: Darain's Vanilla+ Filter
-Attribute[Version]: 1.21.13
-Attribute[Date]: 29/03/2024 21:00 UTC8
+Attribute[Version]: 1.21.14
+Attribute[Date]: 01/04/2024 18:30 UTC8
 
 //Rename filterlevel
 FilterLevel[1]: Reset
@@ -632,7 +632,8 @@ ItemDisplay[CL1 (!ETH NMAG !RW) (SK245>2 (SK250=3 OR SK235=3 OR SK240=3)) !SOCK=
 ItemDisplay[CL1 (!ETH) NMAG !RW SK247>2 SK236>2 !SOCK=1]: %NOTIFY(ITEM)%%NAME% //for summoners
 ItemDisplay[CL1 (!ETH) NMAG !RW (SK244=3 (SK249=3 OR SK229=3 OR SK235=3)) !SOCK=1]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NAME% //3Vol+CycA/Arma/Boulder
 ItemDisplay[CL1 (NMAG !RW) SK226>2 !SOCK=1]: %NAME%
-ItemDisplay[CL1 (!ETH) NMAG !RW (SK238>2  (SK226>0 OR SK224>0 OR SK248>0 OR SK222>0 OR SK237>0 OR SK247>0)) !SOCK=1]: %NOTIFY(ITEM)%%NAME% //3rabies+PsnCrp/Dwolf/Grizz
+ItemDisplay[CL1 (!ETH) NMAG !RW (SK243=3  (SK224>0 OR SK226>0 OR SK237>0 OR SK247>0 OR SK236>0)) !SOCK=1]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME% //3shockwave+Lycanthropy/Oak/Dire Wolf/Grizzly/HotW
+ItemDisplay[CL1 (!ETH) NMAG !RW (SK238>2  (SK226>0 OR SK224>0 OR SK248>0 OR SK222>0 OR SK237>0 OR SK247>0)) !SOCK=1]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME% //3rabies+Oak/Lycan/Fury/PsnCrp/Dwolf/Grizz
 //Shields
 ItemDisplay[pab (NMAG !RW) (SOCK=0 OR SOCK=4) RES=45]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NAME% %NOTIFYSOUND(TINK)%
 ItemDisplay[pab (NMAG !RW) (SOCK=0 OR SOCK>2) RES>39 (STAT91>-11 AND STAT91<-9)]: %NOTIFYSOUND(TINK)%%MAPICON(19,0)%%NOTIFY(ITEM)%%NAME%
@@ -748,6 +749,13 @@ ItemDisplay[FILTERLVL>4 ((NMAG !RW) OR !ID)]:
 /////////////////////////////
 
 ItemDisplay[mp5]: %BLUE%!%WHITE%MP
+
+//Socketables
+//Helmets - Druid (CL1), Barb (CL2)
+ItemDisplay[CL1 NMAG !RW SK243=3 !SOCK=1]: %NOTIFY(ITEM)%%NAME% //3shockwave
+ItemDisplay[CL2 NMAG !RW (SK154=3 OR SK149=3) !SOCK=1]: %NOTIFY(ITEM)%%NAME% //3WC or 3BO
+ItemDisplay[CL1 NMAG !RW (SK222=3 OR SK236=3 OR SK240=3 OR SK245=3 OR SK250=3 OR SK225=3 OR SK238=3 OR SK234=3 OR SK243=3 OR SK244=3) !SOCK=1]: %NOTIFY(ITEM)%%NAME%
+
 ItemDisplay[FILTERLVL>3 !FILTERLVL=7 ((NMAG !RW) OR !ID)]:
 
 //Rare Items (CS/DB/PB, boots EQ5 && gloves belt EQ4 and EQ6)
@@ -761,7 +769,7 @@ ItemDisplay[(EQ4 OR EQ5 OR EQ6) RARE !ID]: %NAME%
 /////////////////////////////
 //FILTERLVL = 3 [HP5 version of LVL5]
 /////////////////////////////
-ItemDisplay[hp5]: //%RED%!%WHITE%HP
+ItemDisplay[hp5]: %RED%!%WHITE%HP
 ItemDisplay[FILTERLVL>2 ((NMAG !RW) OR !ID)]:
 
 /////////////////////////////
@@ -910,9 +918,6 @@ ItemDisplay[btl NMAG !RW SOCK=3 CLVL<40]: %NAME% {%TAN%Pattern: %ORANGE%Tal Ort 
 ItemDisplay[CL5 NMAG !RW SOCK=3 CLVL<50]: %NAME% {%TAN%Pattern: %ORANGE%Tal Ort Tir}
 ItemDisplay[9tw NMAG !RW (!ETH !INF) (SK274>0 SK275>0) (SOCK=0 OR SOCK=3)]: %NAME%{%GOLD%Chaos:%ORANGE%FalOhmUm}
 ItemDisplay[CL5 NMAG !RW (!ETH !INF) (SK273>1 OR SK276=3 OR SK271=3 OR SK262=3 OR SK278=3) (SOCK=0 OR SOCK=3)]: %NAME%
-//Helmets
-ItemDisplay[CL2 NMAG !RW (SK154=3 OR SK149=3) !SOCK=1]: %NAME%
-ItemDisplay[CL1 NMAG !RW (SK222=3 OR SK236=3 OR SK240=3 OR SK245=3 OR SK250=3 OR SK225=3 OR SK238=3 OR SK234=3 OR SK243=3 OR SK244=3) !SOCK=1]: %NOTIFY(ITEM)%%NAME%
 //ItemDisplay[CL1 NMAG !RW SK222>1 !SOCK=1 CLVL<24]: %NAME%
 /ItemDisplay[(drf OR drd OR dre) NMAG !ETH SOCK=0]: %NAME% %TAN%[%GRAY%imbue%TAN%]
 //Armors
