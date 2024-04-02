@@ -19,10 +19,13 @@ FilterLevel[7]: Temp Show Gems
 //Default ItemFilter - Hide easy common items first before Filter Levels
 ItemDisplay[GOLD<10000]:
 ItemDisplay[GOLD>9999]:%NAME%
-
+//Sounds
 Sound[TINK]: "tink"
 Sound[OOC]: "ooc"
 Sound[MAP]: "map"
+//Styles and Macros (WIP)
+ItemStyle[GGset]: MapIcon = 2, NotificationSound = OOC // <<GGset>>
+TextMacro[GGset]: %NL%%DARK_GREEN%>> >> %NAME%%DARK_GREEN% << <<  // %!GGset!%
 
 //Cube
 ItemDisplay[box]: %NAME%{%GOLD%Exc Armor > %ORANGE%Lem Ko %WHITE%Diam %NL%%GOLD% Exc Weapon > %ORANGE%Lum Pul %GREEN%Emer%GOLD% %NL% Norm Armor > %ORANGE%Tal Shael %WHITE%Diam %NL% %GOLD% Unique Upgr: Norm Weapon > %ORANGE%Sol Ral %GREEN%Emer%NL%%NL% %GREEN%Exceptional Armor > %ORANGE%Hel Io %YELLOW%Topz%NL%%GREEN%Exc Weap > %ORANGE%Dol Mal %RED%Ruby%NL%%GREEN%Norm Armor > %ORANGE%Eld Ith %YELLOW%Topz%NL%%GREEN%Set Upgr: Norm Weap > %ORANGE%El Ith %RED%Ruby%NL%%GRAY%%NL% %WHITE%Shield > %ORANGE%Tal Amn %RED%Ruby%GRAY%%NL% %WHITE%Armor > %ORANGE%Tal Thul %YELLOW%Topz%GRAY%%NL% %WHITE%Socket: Weap > %ORANGE%Ral Amn %PURPLE%Amth}
@@ -90,19 +93,12 @@ ItemDisplay[ETH]:%GRAY%eth %NAME%%CONTINUE%
 
 //Break Stats into NextLine for all MAG/RARE/NMAG(incl. RW) with need-to-know stats
 //ItemDisplay[(NMAG !RW) ((CL3 (RES>0 OR ED>0 OR (STAT91>-11 STAT91<-5))) OR ((EQ2 OR EQ3 OR (WEAPON !(CL5 OR CL6 OR WP11 OR WP12 OR WP13))) (ED>0 OR (STAT91>-11 AND STAT91<-5))))]:%NL%%NAME%%CONTINUE%
-ItemDisplay[(RW OR (MAG ID) OR (RARE ID) OR (NMAG !RW)) CL1 CLSK5>0]:%NL%%NAME%%CONTINUE% //druid pelts
-ItemDisplay[(RW OR (MAG ID) OR (RARE ID) OR (NMAG !RW)) CL2 CLSK4>0]:%NL%%NAME%%CONTINUE% //barb helm
-ItemDisplay[(RW OR (MAG ID) OR (RARE ID) OR (NMAG !RW)) (CL4 OR WP12) CLSK2>0]:%NL%%NAME%%CONTINUE% //necro shield
-ItemDisplay[(RW OR (MAG ID) OR (RARE ID) OR (NMAG !RW)) CL5 CLSK6>0]:%NL%%NAME%%CONTINUE% //sin claws
-ItemDisplay[(RW OR (MAG ID) OR (RARE ID) OR (NMAG !RW)) (CL6 OR WP11) CLSK1>0]:%NL%%NAME%%CONTINUE% //sorc orbs
-ItemDisplay[(RW OR (MAG ID) OR (RARE ID) OR (NMAG !RW)) WP13 CLSK3>0]:%NL%%NAME%%CONTINUE% //paladin scepter
-
-//ItemDisplay[(RW OR (NMAG !RW)) CL1 CLSK5>0]:%NL%%NAME%%CONTINUE% //druid pelts
-//ItemDisplay[(RW OR (NMAG !RW)) CL2 CLSK4>0]:%NL%%NAME%%CONTINUE% //barb helm
-//ItemDisplay[(RW OR (NMAG !RW)) (CL4 OR WP12) CLSK2>0]:%NL%%NAME%%CONTINUE% //necro shield
-//ItemDisplay[(RW OR (NMAG !RW)) CL5 CLSK6>0]:%NL%%NAME%%CONTINUE% //sin claws
-//ItemDisplay[(RW OR (NMAG !RW)) (CL6 OR WP11) CLSK1>0]:%NL%%NAME%%CONTINUE% //sorc orbs
-//ItemDisplay[(RW OR (NMAG !RW)) WP13 CLSK3>0]:%NL%%NAME%%CONTINUE% //paladin scepter
+//ItemDisplay[(RW OR (MAG ID) OR (RARE ID) OR (NMAG !RW)) CL1 CLSK5>0]:%NL%%NAME%%CONTINUE% //druid pelts
+//ItemDisplay[(RW OR (MAG ID) OR (RARE ID) OR (NMAG !RW)) CL2 CLSK4>0]:%NL%%NAME%%CONTINUE% //barb helm
+//ItemDisplay[(RW OR (MAG ID) OR (RARE ID) OR (NMAG !RW)) (CL4 OR WP12) CLSK2>0]:%NL%%NAME%%CONTINUE% //necro shield
+//ItemDisplay[(RW OR (MAG ID) OR (RARE ID) OR (NMAG !RW)) CL5 CLSK6>0]:%NL%%NAME%%CONTINUE% //sin claws
+//ItemDisplay[(RW OR (MAG ID) OR (RARE ID) OR (NMAG !RW)) (CL6 OR WP11) CLSK1>0]:%NL%%NAME%%CONTINUE% //sorc orbs
+//ItemDisplay[(RW OR (MAG ID) OR (RARE ID) OR (NMAG !RW)) WP13 CLSK3>0]:%NL%%NAME%%CONTINUE% //paladin scepter
 
 //ItemDisplay[((MAG ID) OR (RARE ID) OR (NMAG)) (CL1 OR CL2 OR CL4 OR CL5 OR CL6 OR WP11 OR WP12 OR WP13) (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0)]:%NL%%NAME%%CONTINUE%
 //ItemDisplay[((MAG ID) OR (RARE ID) OR (NMAG)) (CL1 OR CL2 OR CL4 OR CL5 OR CL6 OR WP11 OR WP12 OR WP13) (SK105>0 OR SK106>0 OR SK107>0 OR SK108>0 OR SK109>0 OR SK110>0 OR SK111>0 OR SK112>0 OR SK113>0 OR SK114>0 OR SK115>0 OR SK116>0 OR SK117>0 OR SK118>0 OR SK119>0 OR SK120>0 OR SK121>0 OR SK122>0 OR SK123>0 OR SK124>0 OR SK125>0 OR SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0 OR SK50>0 OR SK51>0 OR SK52>0 OR SK53>0 OR SK54>0 OR SK55>0 OR SK56>0 OR SK57>0 OR SK58>0 OR SK59>0 OR SK60>0 OR SK61>0 OR SK62>0 OR SK63>0 OR SK64>0 OR SK65>0 OR SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0 OR SK76>0 OR SK77>0 OR SK78>0 OR SK79>0 OR SK80>0 OR SK81>0 OR SK82>0 OR SK83>0 OR SK84>0 OR SK85>0 OR SK86>0 OR SK87>0 OR SK88>0 OR SK89>0 OR SK90>0 OR SK91>0 OR SK92>0 OR SK93>0 OR SK94>0 OR SK95>0 OR SK126>0 OR SK127>0 OR SK128>0 OR SK129>0 OR SK130>0 OR SK131>0 OR SK132>0 OR SK133>0 OR SK134>0 OR SK135>0 OR SK136>0 OR SK137>0 OR SK138>0 OR SK139>0 OR SK140>0 OR SK141>0 OR SK142>0 OR SK143>0 OR SK144>0 OR SK145>0 OR SK146>0 OR SK147>0 OR SK148>0 OR SK149>0 OR SK150>0 OR SK151>0 OR SK152>0 OR SK153>0 OR SK154>0 OR SK155>0 OR SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0 OR SK229>0 OR SK230>0 OR SK231>0 OR SK232>0 OR SK233>0 OR SK234>0 OR SK235>0 OR SK236>0 OR SK237>0 OR SK238>0 OR SK239>0 OR SK240>0 OR SK241>0 OR SK242>0 OR SK243>0 OR SK244>0 OR SK245>0 OR SK246>0 OR SK247>0 OR SK248>0 OR SK249>0 OR SK250>0 OR SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 OR SK257>0 OR SK258>0 OR SK259>0 OR SK260>0 OR SK261>0 OR SK262>0 OR SK263>0 OR SK264>0 OR SK265>0 OR SK266>0 OR SK267>0 OR SK268>0 OR SK269>0 OR SK270>0 OR SK271>0 OR SK272>0 OR SK273>0 OR SK274>0 OR SK275>0 OR SK276>0 OR SK277>0 OR SK278>0 OR SK279>0 OR SK280>0)]:%NL%%NAME%%CONTINUE%
@@ -114,73 +110,135 @@ ItemDisplay[(RW OR (MAG ID) OR (RARE ID) OR (NMAG !RW)) WP13 CLSK3>0]:%NL%%NAME%
 ItemDisplay[CL3 RES>0]:%BLUE%%RES%@res %NAME%%CONTINUE%
 ItemDisplay[NMAG !RW CL3 STAT17>0]:%BLUE%%STAT(17)%edmg %NAME%%CONTINUE%
 ItemDisplay[NMAG !RW (STAT91>-11 AND STAT91<-5)]: %BLUE%%STAT(91)%%req %NAME%%CONTINUE%
-ItemDisplay[NMAG !RW (ARMOR !(CL1 OR CL2 OR EQ1 OR CL3 OR CL4)) ED>0]:%BLUE%%EDEFENSE%%ed %NAME%%CONTINUE%
-ItemDisplay[NMAG !RW (WEAPON !(CL5 OR CL6 OR WP11 OR WP12 OR WP13)) ED>0]:%BLUE%%EDAMAGE%%ed %NAME%%CONTINUE%
+ItemDisplay[NMAG !RW (ARMOR !(CL1 OR CL2 OR EQ1 OR CL3 OR CL4)) ED>0]:%BLUE%%EDEFENSE%ed %NAME%%CONTINUE%
+ItemDisplay[NMAG !RW (WEAPON !(CL5 OR CL6 OR WP11 OR WP12 OR WP13)) ED>0]:%BLUE%%EDAMAGE%ed %NAME%%CONTINUE%
 
-////Truncate Display of Staffmods
+////Truncate NameDisplay of Staffmods
 //Druid Pelts
-ItemDisplay[CL1 !UNI SK221>0]: %BLUE%%STAT(107,221)%Rvn %NAME%%CONTINUE%//Raven
-ItemDisplay[CL1 !UNI SK222>0]: %BLUE%%STAT(107,222)%PsnCrp %NAME%%CONTINUE%//Poison Creeper
-ItemDisplay[CL1 !UNI SK223>0]: %BLUE%%STAT(107,223)%WWolf %NAME%%CONTINUE%//Werewolf
-ItemDisplay[CL1 !UNI SK224>0]: %BLUE%%STAT(107,224)%Lycn %NAME%%CONTINUE%//Lycanthropy
-ItemDisplay[CL1 !UNI SK225>0]: %BLUE%%STAT(107,225)%FStorm %NAME%%CONTINUE%//Firestorm
-ItemDisplay[CL1 !UNI SK226>0]: %BLUE%%STAT(107,226)%Oak %NAME%%CONTINUE%//Oak Sage
-ItemDisplay[CL1 !UNI SK227>0]: %BLUE%%STAT(107,227)%SprWolf %NAME%%CONTINUE%//Spirit Wolf
-ItemDisplay[CL1 !UNI SK228>0]: %BLUE%%STAT(107,228)%WBear %NAME%%CONTINUE%//Werebear
-ItemDisplay[CL1 !UNI SK229>0]: %BLUE%%STAT(107,229)%MoltB %NAME%%CONTINUE%//Molten Boulder
-ItemDisplay[CL1 !UNI SK230>0]: %BLUE%%STAT(107,230)%ArcBl %NAME%%CONTINUE%//Arctic Blast
-ItemDisplay[CL1 !UNI SK231>0]: %BLUE%%STAT(107,231)%CVine %NAME%%CONTINUE%//Carrion Vine
-ItemDisplay[CL1 !UNI SK232>0]: %BLUE%%STAT(107,232)%FRage %NAME%%CONTINUE%//Feral Rage
-ItemDisplay[CL1 !UNI SK233>0]: %BLUE%%STAT(107,233)%Maul %NAME%%CONTINUE%//Maul
-ItemDisplay[CL1 !UNI SK234>0]: %BLUE%%STAT(107,234)%Fisr %NAME%%CONTINUE%//Fissure
-ItemDisplay[CL1 !UNI SK235>0]: %BLUE%%STAT(107,235)%CycA %NAME%%CONTINUE%//Cyclone Armor
-ItemDisplay[CL1 !UNI SK236>0]: %BLUE%%STAT(107,236)%HotW %NAME%%CONTINUE%//Heart of the Wolverine
-ItemDisplay[CL1 !UNI SK237>0]: %BLUE%%STAT(107,237)%DWolf %NAME%%CONTINUE%//Dire Wolf
-ItemDisplay[CL1 !UNI SK238>0]: %BLUE%%STAT(107,238)%Rabies %NAME%%CONTINUE%//Rabies
-ItemDisplay[CL1 !UNI SK239>0]: %BLUE%%STAT(107,239)%FClaw %NAME%%CONTINUE%//Fireclaw
-ItemDisplay[CL1 !UNI SK240>0]: %BLUE%%STAT(107,240)%Twstr %NAME%%CONTINUE%//Twister
-ItemDisplay[CL1 !UNI SK241>0]: %BLUE%%STAT(107,241)%SolCrp %NAME%%CONTINUE%//Solar Creeper
-ItemDisplay[CL1 !UNI SK242>0]: %BLUE%%STAT(107,242)%Hunger %NAME%%CONTINUE%//Hunger
-ItemDisplay[CL1 !UNI SK243>0]: %BLUE%%STAT(107,243)%SW %NAME%%CONTINUE%//Shockwave
-ItemDisplay[CL1 !UNI SK244>0]: %BLUE%%STAT(107,244)%Volc %NAME%%CONTINUE%//Volcano
-ItemDisplay[CL1 !UNI SK245>0]: %BLUE%%STAT(107,245)%Nado %NAME%%CONTINUE%//Tornado
-ItemDisplay[CL1 !UNI SK246>0]: %BLUE%%STAT(107,246)%SprBarb %NAME%%CONTINUE%//Spirit of Barbs
-ItemDisplay[CL1 !UNI SK247>0]: %BLUE%%STAT(107,247)%Grizz %NAME%%CONTINUE%//Grizzly
-ItemDisplay[CL1 !UNI SK248>0]: %BLUE%%STAT(107,248)%Fury %NAME%%CONTINUE%//Fury
-ItemDisplay[CL1 !UNI SK249>0]: %BLUE%%STAT(107,249)%Arma %NAME%%CONTINUE%//Armageddon
-ItemDisplay[CL1 !UNI SK250>0]: %BLUE%%STAT(107,250)%Hurri %NAME%%CONTINUE%//Hurricane
+ItemDisplay[CL1 !UNI !MAG SK221>0]: %BLUE%%STAT(107,221)%Rvn %NAME%%CONTINUE%//Raven
+ItemDisplay[CL1 !UNI !MAG SK222>0]: %BLUE%%STAT(107,222)%PsnCrp %NAME%%CONTINUE%//Poison Creeper
+ItemDisplay[CL1 !UNI !MAG SK223>0]: %BLUE%%STAT(107,223)%Werewolf %NAME%%CONTINUE%//Werewolf
+ItemDisplay[CL1 !UNI !MAG SK224>0]: %BLUE%%STAT(107,224)%Lycn %NAME%%CONTINUE%//Lycanthropy
+ItemDisplay[CL1 !UNI !MAG SK225>0]: %BLUE%%STAT(107,225)%FStorm %NAME%%CONTINUE%//Firestorm
+ItemDisplay[CL1 !UNI !MAG SK226>0]: %BLUE%%STAT(107,226)%Oak %NAME%%CONTINUE%//Oak Sage
+ItemDisplay[CL1 !UNI !MAG SK227>0]: %BLUE%%STAT(107,227)%SprWolf %NAME%%CONTINUE%//Spirit Wolf
+ItemDisplay[CL1 !UNI !MAG SK228>0]: %BLUE%%STAT(107,228)%WBear %NAME%%CONTINUE%//Werebear
+ItemDisplay[CL1 !UNI !MAG SK229>0]: %BLUE%%STAT(107,229)%MoltB %NAME%%CONTINUE%//Molten Boulder
+ItemDisplay[CL1 !UNI !MAG SK230>0]: %BLUE%%STAT(107,230)%ArcBl %NAME%%CONTINUE%//Arctic Blast
+ItemDisplay[CL1 !UNI !MAG SK231>0]: %BLUE%%STAT(107,231)%CVine %NAME%%CONTINUE%//Carrion Vine
+ItemDisplay[CL1 !UNI !MAG SK232>0]: %BLUE%%STAT(107,232)%FRage %NAME%%CONTINUE%//Feral Rage
+ItemDisplay[CL1 !UNI !MAG SK233>0]: %BLUE%%STAT(107,233)%Maul %NAME%%CONTINUE%//Maul
+ItemDisplay[CL1 !UNI !MAG SK234>0]: %BLUE%%STAT(107,234)%Fisr %NAME%%CONTINUE%//Fissure
+ItemDisplay[CL1 !UNI !MAG SK235>0]: %BLUE%%STAT(107,235)%CycA %NAME%%CONTINUE%//Cyclone Armor
+ItemDisplay[CL1 !UNI !MAG SK236>0]: %BLUE%%STAT(107,236)%HotW %NAME%%CONTINUE%//Heart of the Wolverine
+ItemDisplay[CL1 !UNI !MAG SK237>0]: %BLUE%%STAT(107,237)%DWolf %NAME%%CONTINUE%//Dire Wolf
+ItemDisplay[CL1 !UNI !MAG SK238>0]: %BLUE%%STAT(107,238)%Rabies %NAME%%CONTINUE%//Rabies
+ItemDisplay[CL1 !UNI !MAG SK239>0]: %BLUE%%STAT(107,239)%FClaw %NAME%%CONTINUE%//Fireclaw
+ItemDisplay[CL1 !UNI !MAG SK240>0]: %BLUE%%STAT(107,240)%Twstr %NAME%%CONTINUE%//Twister
+ItemDisplay[CL1 !UNI !MAG SK241>0]: %BLUE%%STAT(107,241)%SolCrp %NAME%%CONTINUE%//Solar Creeper
+ItemDisplay[CL1 !UNI !MAG SK242>0]: %BLUE%%STAT(107,242)%Hunger %NAME%%CONTINUE%//Hunger
+ItemDisplay[CL1 !UNI !MAG SK243>0]: %BLUE%%STAT(107,243)%SW %NAME%%CONTINUE%//Shockwave
+ItemDisplay[CL1 !UNI !MAG SK244>0]: %BLUE%%STAT(107,244)%Volc %NAME%%CONTINUE%//Volcano
+ItemDisplay[CL1 !UNI !MAG SK245>0]: %BLUE%%STAT(107,245)%Nado %NAME%%CONTINUE%//Tornado
+ItemDisplay[CL1 !UNI !MAG SK246>0]: %BLUE%%STAT(107,246)%SprBarb %NAME%%CONTINUE%//Spirit of Barbs
+ItemDisplay[CL1 !UNI !MAG SK247>0]: %BLUE%%STAT(107,247)%Grizz %NAME%%CONTINUE%//Grizzly
+ItemDisplay[CL1 !UNI !MAG SK248>0]: %BLUE%%STAT(107,248)%Fury %NAME%%CONTINUE%//Fury
+ItemDisplay[CL1 !UNI !MAG SK249>0]: %BLUE%%STAT(107,249)%Arma %NAME%%CONTINUE%//Armageddon
+ItemDisplay[CL1 !UNI !MAG SK250>0]: %BLUE%%STAT(107,250)%Hurri %NAME%%CONTINUE%//Hurricane
+
+ItemDisplay[CL1 MAG SK221>0]: %WHITE%%STAT(107,221)%Rvn %NAME%%CONTINUE%//Raven
+ItemDisplay[CL1 MAG SK222>0]: %WHITE%%STAT(107,222)%PsnCrp %NAME%%CONTINUE%//Poison Creeper
+ItemDisplay[CL1 MAG SK223>0]: %WHITE%%STAT(107,223)%Werewolf %NAME%%CONTINUE%//Werewolf
+ItemDisplay[CL1 MAG SK224>0]: %WHITE%%STAT(107,224)%Lycn %NAME%%CONTINUE%//Lycanthropy
+ItemDisplay[CL1 MAG SK225>0]: %WHITE%%STAT(107,225)%FStorm %NAME%%CONTINUE%//Firestorm
+ItemDisplay[CL1 MAG SK226>0]: %WHITE%%STAT(107,226)%Oak %NAME%%CONTINUE%//Oak Sage
+ItemDisplay[CL1 MAG SK227>0]: %WHITE%%STAT(107,227)%SprWolf %NAME%%CONTINUE%//Spirit Wolf
+ItemDisplay[CL1 MAG SK228>0]: %WHITE%%STAT(107,228)%WBear %NAME%%CONTINUE%//Werebear
+ItemDisplay[CL1 MAG SK229>0]: %WHITE%%STAT(107,229)%MoltB %NAME%%CONTINUE%//Molten Boulder
+ItemDisplay[CL1 MAG SK230>0]: %WHITE%%STAT(107,230)%ArcBl %NAME%%CONTINUE%//Arctic Blast
+ItemDisplay[CL1 MAG SK231>0]: %WHITE%%STAT(107,231)%CVine %NAME%%CONTINUE%//Carrion Vine
+ItemDisplay[CL1 MAG SK232>0]: %WHITE%%STAT(107,232)%FRage %NAME%%CONTINUE%//Feral Rage
+ItemDisplay[CL1 MAG SK233>0]: %WHITE%%STAT(107,233)%Maul %NAME%%CONTINUE%//Maul
+ItemDisplay[CL1 MAG SK234>0]: %WHITE%%STAT(107,234)%Fisr %NAME%%CONTINUE%//Fissure
+ItemDisplay[CL1 MAG SK235>0]: %WHITE%%STAT(107,235)%CycA %NAME%%CONTINUE%//Cyclone Armor
+ItemDisplay[CL1 MAG SK236>0]: %WHITE%%STAT(107,236)%HotW %NAME%%CONTINUE%//Heart of the Wolverine
+ItemDisplay[CL1 MAG SK237>0]: %WHITE%%STAT(107,237)%DWolf %NAME%%CONTINUE%//Dire Wolf
+ItemDisplay[CL1 MAG SK238>0]: %WHITE%%STAT(107,238)%Rabies %NAME%%CONTINUE%//Rabies
+ItemDisplay[CL1 MAG SK239>0]: %WHITE%%STAT(107,239)%FClaw %NAME%%CONTINUE%//Fireclaw
+ItemDisplay[CL1 MAG SK240>0]: %WHITE%%STAT(107,240)%Twstr %NAME%%CONTINUE%//Twister
+ItemDisplay[CL1 MAG SK241>0]: %WHITE%%STAT(107,241)%SolCrp %NAME%%CONTINUE%//Solar Creeper
+ItemDisplay[CL1 MAG SK242>0]: %WHITE%%STAT(107,242)%Hunger %NAME%%CONTINUE%//Hunger
+ItemDisplay[CL1 MAG SK243>0]: %WHITE%%STAT(107,243)%SW %NAME%%CONTINUE%//Shockwave
+ItemDisplay[CL1 MAG SK244>0]: %WHITE%%STAT(107,244)%Volc %NAME%%CONTINUE%//Volcano
+ItemDisplay[CL1 MAG SK245>0]: %WHITE%%STAT(107,245)%Nado %NAME%%CONTINUE%//Tornado
+ItemDisplay[CL1 MAG SK246>0]: %WHITE%%STAT(107,246)%SprBarb %NAME%%CONTINUE%//Spirit of Barbs
+ItemDisplay[CL1 MAG SK247>0]: %WHITE%%STAT(107,247)%Grizz %NAME%%CONTINUE%//Grizzly
+ItemDisplay[CL1 MAG SK248>0]: %WHITE%%STAT(107,248)%Fury %NAME%%CONTINUE%//Fury
+ItemDisplay[CL1 MAG SK249>0]: %WHITE%%STAT(107,249)%Arma %NAME%%CONTINUE%//Armageddon
+ItemDisplay[CL1 MAG SK250>0]: %WHITE%%STAT(107,250)%Hurri %NAME%%CONTINUE%//Hurricane
 
 //Barb Helms
-ItemDisplay[CL2 !UNI SK126>0]: %BLUE%%STAT(107,126)%Bash %NAME%%CONTINUE%//Bash
-ItemDisplay[CL2 !UNI SK127>0]: %BLUE%%STAT(107,127)%EdgdWep %NAME%%CONTINUE%//Edged Weapon Mastery
-ItemDisplay[CL2 !UNI SK128>0]: %BLUE%%STAT(107,128)%AxMst %NAME%%CONTINUE%//?? - formerly Axe Mastery
-ItemDisplay[CL2 !UNI SK129>0]: %BLUE%%STAT(107,129)%BlntWep %NAME%%CONTINUE%//Blunt Weapon Mastery
-ItemDisplay[CL2 !UNI SK130>0]: %BLUE%%STAT(107,130)%Howl %NAME%%CONTINUE%//Howl
-ItemDisplay[CL2 !UNI SK131>0]: %BLUE%%STAT(107,131)%FPot %NAME%%CONTINUE%//Find Potion
-ItemDisplay[CL2 !UNI SK132>0]: %BLUE%%STAT(107,132)%Leap %NAME%%CONTINUE%//Leap
-ItemDisplay[CL2 !UNI SK133>0]: %BLUE%%STAT(107,133)%DbSw %NAME%%CONTINUE%//?? - formerly Double Swing
-ItemDisplay[CL2 !UNI SK134>0]: %BLUE%%STAT(107,134)%Pulv %NAME%%CONTINUE%//Pulverize -formerly polearmMast
-ItemDisplay[CL2 !UNI SK135>0]: %BLUE%%STAT(107,135)%ThrWep %NAME%%CONTINUE%//Throwing Weapon Mastery
-ItemDisplay[CL2 !UNI SK136>0]: %BLUE%%STAT(107,136)%DblSwg %NAME%%CONTINUE%//Double Swing - formerly Spear Mastery
-ItemDisplay[CL2 !UNI SK137>0]: %BLUE%%STAT(107,137)%Taunt %NAME%%CONTINUE%//Taunt
-ItemDisplay[CL2 !UNI SK138>0]: %BLUE%%STAT(107,138)%Shout %NAME%%CONTINUE%//Shout
-ItemDisplay[CL2 !UNI SK139>0]: %BLUE%%STAT(107,139)%Stun %NAME%%CONTINUE%//Stun
-ItemDisplay[CL2 !UNI SK140>0]: %BLUE%%STAT(107,140)%DblThr %NAME%%CONTINUE%//Double Throw
-ItemDisplay[CL2 !UNI SK141>0]: %BLUE%%STAT(107,141)%IncStam %NAME%%CONTINUE%//Increased Stamina
-ItemDisplay[CL2 !UNI SK142>0]: %BLUE%%STAT(107,142)%FItem %NAME%%CONTINUE%//Find Item
-ItemDisplay[CL2 !UNI SK143>0]: %BLUE%%STAT(107,143)%LAttk %NAME%%CONTINUE%//Leap Attack
-ItemDisplay[CL2 !UNI SK144>0]: %BLUE%%STAT(107,144)%Conc %NAME%%CONTINUE%//Concentrate
-ItemDisplay[CL2 !UNI SK145>0]: %BLUE%%STAT(107,145)%IrSkin %NAME%%CONTINUE%//Iron Skin
-ItemDisplay[CL2 !UNI SK146>0]: %BLUE%%STAT(107,146)%BCry %NAME%%CONTINUE%//Battle Cry
-ItemDisplay[CL2 !UNI SK147>0]: %BLUE%%STAT(107,147)%Frnzy %NAME%%CONTINUE%//Frenzy
-ItemDisplay[CL2 !UNI SK148>0]: %BLUE%%STAT(107,148)%IncSpd %NAME%%CONTINUE%//Increased Speed
-ItemDisplay[CL2 !UNI SK149>0]: %BLUE%%STAT(107,149)%BO %NAME%%CONTINUE%//Battle Orders
-ItemDisplay[CL2 !UNI SK150>0]: %BLUE%%STAT(107,150)%GrimW %NAME%%CONTINUE%//Grim Ward
-ItemDisplay[CL2 !UNI SK151>0]: %BLUE%%STAT(107,151)%WW %NAME%%CONTINUE%//Whirlwind
-ItemDisplay[CL2 !UNI SK152>0]: %BLUE%%STAT(107,152)%Brsrk %NAME%%CONTINUE%//Berserk
-ItemDisplay[CL2 !UNI SK153>0]: %BLUE%%STAT(107,153)%NatR %NAME%%CONTINUE%//Natural Resistances
-ItemDisplay[CL2 !UNI SK154>0]: %BLUE%%STAT(107,154)%WC %NAME%%CONTINUE%//War Cry
-ItemDisplay[CL2 !UNI SK155>0]: %BLUE%%STAT(107,155)%BC %NAME%%CONTINUE%//Battle Command
+ItemDisplay[CL2 !UNI !MAG SK126>0]: %BLUE%%STAT(107,126)%Bash %NAME%%CONTINUE%//Bash
+ItemDisplay[CL2 !UNI !MAG SK127>0]: %BLUE%%STAT(107,127)%EdgdWep %NAME%%CONTINUE%//Edged Weapon Mastery
+ItemDisplay[CL2 !UNI !MAG SK128>0]: %BLUE%%STAT(107,128)%AxMst %NAME%%CONTINUE%//?? - formerly Axe Mastery
+ItemDisplay[CL2 !UNI !MAG SK129>0]: %BLUE%%STAT(107,129)%BlntWep %NAME%%CONTINUE%//Blunt Weapon Mastery
+ItemDisplay[CL2 !UNI !MAG SK130>0]: %BLUE%%STAT(107,130)%Howl %NAME%%CONTINUE%//Howl
+ItemDisplay[CL2 !UNI !MAG SK131>0]: %BLUE%%STAT(107,131)%FPot %NAME%%CONTINUE%//Find Potion
+ItemDisplay[CL2 !UNI !MAG SK132>0]: %BLUE%%STAT(107,132)%Leap %NAME%%CONTINUE%//Leap
+ItemDisplay[CL2 !UNI !MAG SK133>0]: %BLUE%%STAT(107,133)%DbSw %NAME%%CONTINUE%//?? - formerly Double Swing
+ItemDisplay[CL2 !UNI !MAG SK134>0]: %BLUE%%STAT(107,134)%Pulv %NAME%%CONTINUE%//Pulverize -formerly polearmMast
+ItemDisplay[CL2 !UNI !MAG SK135>0]: %BLUE%%STAT(107,135)%ThrWep %NAME%%CONTINUE%//Throwing Weapon Mastery
+ItemDisplay[CL2 !UNI !MAG SK136>0]: %BLUE%%STAT(107,136)%DblSwg %NAME%%CONTINUE%//Double Swing - formerly Spear Mastery
+ItemDisplay[CL2 !UNI !MAG SK137>0]: %BLUE%%STAT(107,137)%Taunt %NAME%%CONTINUE%//Taunt
+ItemDisplay[CL2 !UNI !MAG SK138>0]: %BLUE%%STAT(107,138)%Shout %NAME%%CONTINUE%//Shout
+ItemDisplay[CL2 !UNI !MAG SK139>0]: %BLUE%%STAT(107,139)%Stun %NAME%%CONTINUE%//Stun
+ItemDisplay[CL2 !UNI !MAG SK140>0]: %BLUE%%STAT(107,140)%DblThr %NAME%%CONTINUE%//Double Throw
+ItemDisplay[CL2 !UNI !MAG SK141>0]: %BLUE%%STAT(107,141)%IncStam %NAME%%CONTINUE%//Increased Stamina
+ItemDisplay[CL2 !UNI !MAG SK142>0]: %BLUE%%STAT(107,142)%FItem %NAME%%CONTINUE%//Find Item
+ItemDisplay[CL2 !UNI !MAG SK143>0]: %BLUE%%STAT(107,143)%LAttk %NAME%%CONTINUE%//Leap Attack
+ItemDisplay[CL2 !UNI !MAG SK144>0]: %BLUE%%STAT(107,144)%Conc %NAME%%CONTINUE%//Concentrate
+ItemDisplay[CL2 !UNI !MAG SK145>0]: %BLUE%%STAT(107,145)%IrSkin %NAME%%CONTINUE%//Iron Skin
+ItemDisplay[CL2 !UNI !MAG SK146>0]: %BLUE%%STAT(107,146)%BCry %NAME%%CONTINUE%//Battle Cry
+ItemDisplay[CL2 !UNI !MAG SK147>0]: %BLUE%%STAT(107,147)%Frnzy %NAME%%CONTINUE%//Frenzy
+ItemDisplay[CL2 !UNI !MAG SK148>0]: %BLUE%%STAT(107,148)%IncSpd %NAME%%CONTINUE%//Increased Speed
+ItemDisplay[CL2 !UNI !MAG SK149>0]: %BLUE%%STAT(107,149)%BO %NAME%%CONTINUE%//Battle Orders
+ItemDisplay[CL2 !UNI !MAG SK150>0]: %BLUE%%STAT(107,150)%GrimW %NAME%%CONTINUE%//Grim Ward
+ItemDisplay[CL2 !UNI !MAG SK151>0]: %BLUE%%STAT(107,151)%WW %NAME%%CONTINUE%//Whirlwind
+ItemDisplay[CL2 !UNI !MAG SK152>0]: %BLUE%%STAT(107,152)%Brsrk %NAME%%CONTINUE%//Berserk
+ItemDisplay[CL2 !UNI !MAG SK153>0]: %BLUE%%STAT(107,153)%NatR %NAME%%CONTINUE%//Natural Resistances
+ItemDisplay[CL2 !UNI !MAG SK154>0]: %BLUE%%STAT(107,154)%WC %NAME%%CONTINUE%//War Cry
+ItemDisplay[CL2 !UNI !MAG SK155>0]: %BLUE%%STAT(107,155)%BC %NAME%%CONTINUE%//Battle Command
+
+ItemDisplay[CL2 MAG SK126>0]: %WHITE%%STAT(107,126)%Bash %NAME%%CONTINUE%//Bash
+ItemDisplay[CL2 MAG SK127>0]: %WHITE%%STAT(107,127)%EdgdWep %NAME%%CONTINUE%//Edged Weapon Mastery
+ItemDisplay[CL2 MAG SK128>0]: %WHITE%%STAT(107,128)%AxMst %NAME%%CONTINUE%//?? - formerly Axe Mastery
+ItemDisplay[CL2 MAG SK129>0]: %WHITE%%STAT(107,129)%BlntWep %NAME%%CONTINUE%//Blunt Weapon Mastery
+ItemDisplay[CL2 MAG SK130>0]: %WHITE%%STAT(107,130)%Howl %NAME%%CONTINUE%//Howl
+ItemDisplay[CL2 MAG SK131>0]: %WHITE%%STAT(107,131)%FPot %NAME%%CONTINUE%//Find Potion
+ItemDisplay[CL2 MAG SK132>0]: %WHITE%%STAT(107,132)%Leap %NAME%%CONTINUE%//Leap
+ItemDisplay[CL2 MAG SK133>0]: %WHITE%%STAT(107,133)%DbSw %NAME%%CONTINUE%//?? - formerly Double Swing
+ItemDisplay[CL2 MAG SK134>0]: %WHITE%%STAT(107,134)%Pulv %NAME%%CONTINUE%//Pulverize -formerly polearmMast
+ItemDisplay[CL2 MAG SK135>0]: %WHITE%%STAT(107,135)%ThrWep %NAME%%CONTINUE%//Throwing Weapon Mastery
+ItemDisplay[CL2 MAG SK136>0]: %WHITE%%STAT(107,136)%DblSwg %NAME%%CONTINUE%//Double Swing - formerly Spear Mastery
+ItemDisplay[CL2 MAG SK137>0]: %WHITE%%STAT(107,137)%Taunt %NAME%%CONTINUE%//Taunt
+ItemDisplay[CL2 MAG SK138>0]: %WHITE%%STAT(107,138)%Shout %NAME%%CONTINUE%//Shout
+ItemDisplay[CL2 MAG SK139>0]: %WHITE%%STAT(107,139)%Stun %NAME%%CONTINUE%//Stun
+ItemDisplay[CL2 MAG SK140>0]: %WHITE%%STAT(107,140)%DblThr %NAME%%CONTINUE%//Double Throw
+ItemDisplay[CL2 MAG SK141>0]: %WHITE%%STAT(107,141)%IncStam %NAME%%CONTINUE%//Increased Stamina
+ItemDisplay[CL2 MAG SK142>0]: %WHITE%%STAT(107,142)%FItem %NAME%%CONTINUE%//Find Item
+ItemDisplay[CL2 MAG SK143>0]: %WHITE%%STAT(107,143)%LAttk %NAME%%CONTINUE%//Leap Attack
+ItemDisplay[CL2 MAG SK144>0]: %WHITE%%STAT(107,144)%Conc %NAME%%CONTINUE%//Concentrate
+ItemDisplay[CL2 MAG SK145>0]: %WHITE%%STAT(107,145)%IrSkin %NAME%%CONTINUE%//Iron Skin
+ItemDisplay[CL2 MAG SK146>0]: %WHITE%%STAT(107,146)%BCry %NAME%%CONTINUE%//Battle Cry
+ItemDisplay[CL2 MAG SK147>0]: %WHITE%%STAT(107,147)%Frnzy %NAME%%CONTINUE%//Frenzy
+ItemDisplay[CL2 MAG SK148>0]: %WHITE%%STAT(107,148)%IncSpd %NAME%%CONTINUE%//Increased Speed
+ItemDisplay[CL2 MAG SK149>0]: %WHITE%%STAT(107,149)%BO %NAME%%CONTINUE%//Battle Orders
+ItemDisplay[CL2 MAG SK150>0]: %WHITE%%STAT(107,150)%GrimW %NAME%%CONTINUE%//Grim Ward
+ItemDisplay[CL2 MAG SK151>0]: %WHITE%%STAT(107,151)%WW %NAME%%CONTINUE%//Whirlwind
+ItemDisplay[CL2 MAG SK152>0]: %WHITE%%STAT(107,152)%Brsrk %NAME%%CONTINUE%//Berserk
+ItemDisplay[CL2 MAG SK153>0]: %WHITE%%STAT(107,153)%NatR %NAME%%CONTINUE%//Natural Resistances
+ItemDisplay[CL2 MAG SK154>0]: %WHITE%%STAT(107,154)%WC %NAME%%CONTINUE%//War Cry
+ItemDisplay[CL2 MAG SK155>0]: %WHITE%%STAT(107,155)%BC %NAME%%CONTINUE%//Battle Command
 
 //Necro Heads and Wands
 ItemDisplay[(CL4 OR WP12) !UNI SK66>0]: %BLUE%%STAT(107,66)%Amp %NAME%%CONTINUE%//Amplify Damage
@@ -216,100 +274,200 @@ ItemDisplay[(CL4 OR WP12) !UNI SK95>0]: %BLUE%%STAT(107,95)%Revive %NAME%%CONTIN
 ItemDisplay[(CL4 OR WP12) !UNI SK477>0]: %BLUE%%STAT(107,477)%Hemo %NAME%%CONTINUE%//Hemorrage
 
 //Assassin Claws
-ItemDisplay[CL5 !UNI SK251>0]: %BLUE%%STAT(107,251)%FB %NAME%%CONTINUE%//Fire Blast
-ItemDisplay[CL5 !UNI SK252>0]: %BLUE%%STAT(107,252)%ClawM %NAME%%CONTINUE%//Claw Mastery
-ItemDisplay[CL5 !UNI SK253>0]: %BLUE%%STAT(107,253)%PsyHm %NAME%%CONTINUE%//Psychic Hammer
-ItemDisplay[CL5 !UNI SK254>0]: %BLUE%%STAT(107,254)%TStrike %NAME%%CONTINUE%//Tiger Strike
-ItemDisplay[CL5 !UNI SK255>0]: %BLUE%%STAT(107,255)%DTalon %NAME%%CONTINUE%//Dragon Talon
-ItemDisplay[CL5 !UNI SK256>0]: %BLUE%%STAT(107,256)%SWeb %NAME%%CONTINUE%//Shock Web
-ItemDisplay[CL5 !UNI SK257>0]: %BLUE%%STAT(107,257)%BThr %NAME%%CONTINUE%//Blade Throw
-ItemDisplay[CL5 !UNI SK258>0]: %BLUE%%STAT(107,258)%BoS %NAME%%CONTINUE%//Burst of Speed
-ItemDisplay[CL5 !UNI SK259>0]: %BLUE%%STAT(107,259)%FoF %NAME%%CONTINUE%//Fists of Fire
-ItemDisplay[CL5 !UNI SK260>0]: %BLUE%%STAT(107,260)%DClaw %NAME%%CONTINUE%//Dragon Claw
-ItemDisplay[CL5 !UNI SK261>0]: %BLUE%%STAT(107,261)%CBSent %NAME%%CONTINUE%//Charged Bolt Sentry
-ItemDisplay[CL5 !UNI SK262>0]: %BLUE%%STAT(107,262)%WoF %NAME%%CONTINUE%//Wake of Fire
-ItemDisplay[CL5 !UNI SK263>0]: %BLUE%%STAT(107,263)%Block %NAME%%CONTINUE%//Claw Block
-ItemDisplay[CL5 !UNI SK264>0]: %BLUE%%STAT(107,264)%CoS %NAME%%CONTINUE%//Cloak of Shadows
-ItemDisplay[CL5 !UNI SK265>0]: %BLUE%%STAT(107,265)%CStrike %NAME%%CONTINUE%//Cobra Strike
-ItemDisplay[CL5 !UNI SK266>0]: %BLUE%%STAT(107,266)%BFury %NAME%%CONTINUE%//Blade Fury
-ItemDisplay[CL5 !UNI SK267>0]: %BLUE%%STAT(107,267)%Fade %NAME%%CONTINUE%//Fade
-ItemDisplay[CL5 !UNI SK268>0]: %BLUE%%STAT(107,268)%SWarr %NAME%%CONTINUE%//Shadow Warrior
-ItemDisplay[CL5 !UNI SK269>0]: %BLUE%%STAT(107,269)%CoT %NAME%%CONTINUE%//Claws of Thunder
-ItemDisplay[CL5 !UNI SK270>0]: %BLUE%%STAT(107,270)%DTail %NAME%%CONTINUE%//Dragon Tail
-ItemDisplay[CL5 !UNI SK271>0]: %BLUE%%STAT(107,271)%LS %NAME%%CONTINUE%//Lightning Sentry
-ItemDisplay[CL5 !UNI SK272>0]: %BLUE%%STAT(107,272)%WoI %NAME%%CONTINUE%//Wake of Inferno
-ItemDisplay[CL5 !UNI SK273>0]: %BLUE%%STAT(107,273)%MB %NAME%%CONTINUE%//Mind Blast
-ItemDisplay[CL5 !UNI SK274>0]: %BLUE%%STAT(107,274)%BoI %NAME%%CONTINUE%//Blades of Ice
-ItemDisplay[CL5 !UNI SK275>0]: %BLUE%%STAT(107,275)%DF %NAME%%CONTINUE%//Dragon Flight
-ItemDisplay[CL5 !UNI SK276>0]: %BLUE%%STAT(107,276)%DS %NAME%%CONTINUE%//Death Sentry
-ItemDisplay[CL5 !UNI SK277>0]: %BLUE%%STAT(107,277)%BS %NAME%%CONTINUE%//Blade Shield
-ItemDisplay[CL5 !UNI SK278>0]: %BLUE%%STAT(107,278)%Venom %NAME%%CONTINUE%//Venom
-ItemDisplay[CL5 !UNI SK279>0]: %BLUE%%STAT(107,279)%SMast %NAME%%CONTINUE%//Shadow Master
-ItemDisplay[CL5 !UNI SK280>0]: %BLUE%%STAT(107,280)%Static Strike %NAME%%CONTINUE%//Static Strike - formerly Phoenix Strike
+ItemDisplay[CL5 !UNI !MAG SK251>0]: %BLUE%%STAT(107,251)%FB %NAME%%CONTINUE%//Fire Blast
+ItemDisplay[CL5 !UNI !MAG SK252>0]: %BLUE%%STAT(107,252)%ClawM %NAME%%CONTINUE%//Claw Mastery
+ItemDisplay[CL5 !UNI !MAG SK253>0]: %BLUE%%STAT(107,253)%PsyHm %NAME%%CONTINUE%//Psychic Hammer
+ItemDisplay[CL5 !UNI !MAG SK254>0]: %BLUE%%STAT(107,254)%TStrike %NAME%%CONTINUE%//Tiger Strike
+ItemDisplay[CL5 !UNI !MAG SK255>0]: %BLUE%%STAT(107,255)%DTalon %NAME%%CONTINUE%//Dragon Talon
+ItemDisplay[CL5 !UNI !MAG SK256>0]: %BLUE%%STAT(107,256)%SWeb %NAME%%CONTINUE%//Shock Web
+ItemDisplay[CL5 !UNI !MAG SK257>0]: %BLUE%%STAT(107,257)%BThr %NAME%%CONTINUE%//Blade Throw
+ItemDisplay[CL5 !UNI !MAG SK258>0]: %BLUE%%STAT(107,258)%BoS %NAME%%CONTINUE%//Burst of Speed
+ItemDisplay[CL5 !UNI !MAG SK259>0]: %BLUE%%STAT(107,259)%FoF %NAME%%CONTINUE%//Fists of Fire
+ItemDisplay[CL5 !UNI !MAG SK260>0]: %BLUE%%STAT(107,260)%DClaw %NAME%%CONTINUE%//Dragon Claw
+ItemDisplay[CL5 !UNI !MAG SK261>0]: %BLUE%%STAT(107,261)%CBSent %NAME%%CONTINUE%//Charged Bolt Sentry
+ItemDisplay[CL5 !UNI !MAG SK262>0]: %BLUE%%STAT(107,262)%WoF %NAME%%CONTINUE%//Wake of Fire
+ItemDisplay[CL5 !UNI !MAG SK263>0]: %BLUE%%STAT(107,263)%Block %NAME%%CONTINUE%//Claw Block
+ItemDisplay[CL5 !UNI !MAG SK264>0]: %BLUE%%STAT(107,264)%CoS %NAME%%CONTINUE%//Cloak of Shadows
+ItemDisplay[CL5 !UNI !MAG SK265>0]: %BLUE%%STAT(107,265)%CStrike %NAME%%CONTINUE%//Cobra Strike
+ItemDisplay[CL5 !UNI !MAG SK266>0]: %BLUE%%STAT(107,266)%BFury %NAME%%CONTINUE%//Blade Fury
+ItemDisplay[CL5 !UNI !MAG SK267>0]: %BLUE%%STAT(107,267)%Fade %NAME%%CONTINUE%//Fade
+ItemDisplay[CL5 !UNI !MAG SK268>0]: %BLUE%%STAT(107,268)%SWarr %NAME%%CONTINUE%//Shadow Warrior
+ItemDisplay[CL5 !UNI !MAG SK269>0]: %BLUE%%STAT(107,269)%CoT %NAME%%CONTINUE%//Claws of Thunder
+ItemDisplay[CL5 !UNI !MAG SK270>0]: %BLUE%%STAT(107,270)%DTail %NAME%%CONTINUE%//Dragon Tail
+ItemDisplay[CL5 !UNI !MAG SK271>0]: %BLUE%%STAT(107,271)%LS %NAME%%CONTINUE%//Lightning Sentry
+ItemDisplay[CL5 !UNI !MAG SK272>0]: %BLUE%%STAT(107,272)%WoI %NAME%%CONTINUE%//Wake of Inferno
+ItemDisplay[CL5 !UNI !MAG SK273>0]: %BLUE%%STAT(107,273)%MB %NAME%%CONTINUE%//Mind Blast
+ItemDisplay[CL5 !UNI !MAG SK274>0]: %BLUE%%STAT(107,274)%BoI %NAME%%CONTINUE%//Blades of Ice
+ItemDisplay[CL5 !UNI !MAG SK275>0]: %BLUE%%STAT(107,275)%DF %NAME%%CONTINUE%//Dragon Flight
+ItemDisplay[CL5 !UNI !MAG SK276>0]: %BLUE%%STAT(107,276)%DS %NAME%%CONTINUE%//Death Sentry
+ItemDisplay[CL5 !UNI !MAG SK277>0]: %BLUE%%STAT(107,277)%BS %NAME%%CONTINUE%//Blade Shield
+ItemDisplay[CL5 !UNI !MAG SK278>0]: %BLUE%%STAT(107,278)%Venom %NAME%%CONTINUE%//Venom
+ItemDisplay[CL5 !UNI !MAG SK279>0]: %BLUE%%STAT(107,279)%SMast %NAME%%CONTINUE%//Shadow Master
+ItemDisplay[CL5 !UNI !MAG SK280>0]: %BLUE%%STAT(107,280)%Static Strike %NAME%%CONTINUE%//Static Strike - formerly Phoenix Strike
 
-//Sorceress Orbs
-ItemDisplay[(CL6 OR WP11) !UNI SK36>0]: %BLUE%%STAT(107,36)%FBolt %NAME%%CONTINUE%//Fire Bolt
-ItemDisplay[(CL6 OR WP11) !UNI SK37>0]: %BLUE%%STAT(107,37)%Warmth %NAME%%CONTINUE%//Warmth
-ItemDisplay[(CL6 OR WP11) !UNI SK38>0]: %BLUE%%STAT(107,38)%CB %NAME%%CONTINUE%//Charged Bolt
-ItemDisplay[(CL6 OR WP11) !UNI SK39>0]: %BLUE%%STAT(107,39)%IceB %NAME%%CONTINUE%//Ice Bolt
-ItemDisplay[(CL6 OR WP11) !UNI SK40>0]: %BLUE%%STAT(107,40)%Fridg %NAME%%CONTINUE%//Fridgerate
-ItemDisplay[(CL6 OR WP11) !UNI SK41>0]: %BLUE%%STAT(107,41)%Blaze %NAME%%CONTINUE%//Blaze formerly Immolate
-ItemDisplay[(CL6 OR WP11) !UNI SK42>0]: %BLUE%%STAT(107,42)%Static %NAME%%CONTINUE%//Static Field
-ItemDisplay[(CL6 OR WP11) !UNI SK43>0]: %BLUE%%STAT(107,43)%TK %NAME%%CONTINUE%//Telekinesis
-ItemDisplay[(CL6 OR WP11) !UNI SK44>0]: %BLUE%%STAT(107,44)%FNova %NAME%%CONTINUE%//Frost Nova
-ItemDisplay[(CL6 OR WP11) !UNI SK45>0]: %BLUE%%STAT(107,45)%IceBl %NAME%%CONTINUE%//Ice Blast
-ItemDisplay[(CL6 OR WP11) !UNI SK46>0]: %BLUE%%STAT(107,46)%Immo %NAME%%CONTINUE%//Immolate -formerly Blaze
-ItemDisplay[(CL6 OR WP11) !UNI SK47>0]: %BLUE%%STAT(107,47)%FB %NAME%%CONTINUE%//Fireball
-ItemDisplay[(CL6 OR WP11) !UNI SK48>0]: %BLUE%%STAT(107,48)%Nova %NAME%%CONTINUE%//Nova
-ItemDisplay[(CL6 OR WP11) !UNI SK49>0]: %BLUE%%STAT(107,49)%LS %NAME%%CONTINUE%//Lightning Surge
-ItemDisplay[(CL6 OR WP11) !UNI SK50>0]: %BLUE%%STAT(107,50)%ShvArm %NAME%%CONTINUE%//Shiver Armor
-ItemDisplay[(CL6 OR WP11) !UNI SK51>0]: %BLUE%%STAT(107,51)%FWall %NAME%%CONTINUE%//Fire Wall
-ItemDisplay[(CL6 OR WP11) !UNI SK52>0]: %BLUE%%STAT(107,52)%Enfl %NAME%%CONTINUE%//Enchant
-ItemDisplay[(CL6 OR WP11) !UNI SK53>0]: %BLUE%%STAT(107,53)%Tele %NAME%%CONTINUE%//Teleport
-ItemDisplay[(CL6 OR WP11) !UNI SK54>0]: %BLUE%%STAT(107,54)%ChainL %NAME%%CONTINUE%//Chain Lightning
-ItemDisplay[(CL6 OR WP11) !UNI SK55>0]: %BLUE%%STAT(107,55)%Glacial %NAME%%CONTINUE%//Glacial Spike
-ItemDisplay[(CL6 OR WP11) !UNI SK56>0]: %BLUE%%STAT(107,56)%Meteor %NAME%%CONTINUE%//Meteor
-ItemDisplay[(CL6 OR WP11) !UNI SK57>0]: %BLUE%%STAT(107,57)%Discharge %NAME%%CONTINUE%//Discharge -formerly Thunder Storm
-ItemDisplay[(CL6 OR WP11) !UNI SK58>0]: %BLUE%%STAT(107,58)%ES %NAME%%CONTINUE%//Energy Shield
-ItemDisplay[(CL6 OR WP11) !UNI SK59>0]: %BLUE%%STAT(107,59)%Blizz %NAME%%CONTINUE%//Blizzard
-ItemDisplay[(CL6 OR WP11) !UNI SK60>0]: %BLUE%%STAT(107,60)%ChlArm %NAME%%CONTINUE%//Chilling Armor
-ItemDisplay[(CL6 OR WP11) !UNI SK61>0]: %BLUE%%STAT(107,61)%FMast %NAME%%CONTINUE%//Fire Mastery
-ItemDisplay[(CL6 OR WP11) !UNI SK62>0]: %BLUE%%STAT(107,62)%Hydra %NAME%%CONTINUE%//Hydra
-ItemDisplay[(CL6 OR WP11) !UNI SK63>0]: %BLUE%%STAT(107,63)%LMast %NAME%%CONTINUE%//Lightning Mastery
-ItemDisplay[(CL6 OR WP11) !UNI SK64>0]: %BLUE%%STAT(107,64)%FrzOrb %NAME%%CONTINUE%//Frozen Orb
-ItemDisplay[(CL6 OR WP11) !UNI SK65>0]: %BLUE%%STAT(107,65)%CMast %NAME%%CONTINUE%//Cold Mastery
+ItemDisplay[CL5 MAG SK251>0]: %WHITE%%STAT(107,251)%FB %NAME%%CONTINUE%//Fire Blast
+ItemDisplay[CL5 MAG SK252>0]: %WHITE%%STAT(107,252)%ClawM %NAME%%CONTINUE%//Claw Mastery
+ItemDisplay[CL5 MAG SK253>0]: %WHITE%%STAT(107,253)%PsyHm %NAME%%CONTINUE%//Psychic Hammer
+ItemDisplay[CL5 MAG SK254>0]: %WHITE%%STAT(107,254)%TStrike %NAME%%CONTINUE%//Tiger Strike
+ItemDisplay[CL5 MAG SK255>0]: %WHITE%%STAT(107,255)%DTalon %NAME%%CONTINUE%//Dragon Talon
+ItemDisplay[CL5 MAG SK256>0]: %WHITE%%STAT(107,256)%SWeb %NAME%%CONTINUE%//Shock Web
+ItemDisplay[CL5 MAG SK257>0]: %WHITE%%STAT(107,257)%BThr %NAME%%CONTINUE%//Blade Throw
+ItemDisplay[CL5 MAG SK258>0]: %WHITE%%STAT(107,258)%BoS %NAME%%CONTINUE%//Burst of Speed
+ItemDisplay[CL5 MAG SK259>0]: %WHITE%%STAT(107,259)%FoF %NAME%%CONTINUE%//Fists of Fire
+ItemDisplay[CL5 MAG SK260>0]: %WHITE%%STAT(107,260)%DClaw %NAME%%CONTINUE%//Dragon Claw
+ItemDisplay[CL5 MAG SK261>0]: %WHITE%%STAT(107,261)%CBSent %NAME%%CONTINUE%//Charged Bolt Sentry
+ItemDisplay[CL5 MAG SK262>0]: %WHITE%%STAT(107,262)%WoF %NAME%%CONTINUE%//Wake of Fire
+ItemDisplay[CL5 MAG SK263>0]: %WHITE%%STAT(107,263)%Block %NAME%%CONTINUE%//Claw Block
+ItemDisplay[CL5 MAG SK264>0]: %WHITE%%STAT(107,264)%CoS %NAME%%CONTINUE%//Cloak of Shadows
+ItemDisplay[CL5 MAG SK265>0]: %WHITE%%STAT(107,265)%CStrike %NAME%%CONTINUE%//Cobra Strike
+ItemDisplay[CL5 MAG SK266>0]: %WHITE%%STAT(107,266)%BFury %NAME%%CONTINUE%//Blade Fury
+ItemDisplay[CL5 MAG SK267>0]: %WHITE%%STAT(107,267)%Fade %NAME%%CONTINUE%//Fade
+ItemDisplay[CL5 MAG SK268>0]: %WHITE%%STAT(107,268)%SWarr %NAME%%CONTINUE%//Shadow Warrior
+ItemDisplay[CL5 MAG SK269>0]: %WHITE%%STAT(107,269)%CoT %NAME%%CONTINUE%//Claws of Thunder
+ItemDisplay[CL5 MAG SK270>0]: %WHITE%%STAT(107,270)%DTail %NAME%%CONTINUE%//Dragon Tail
+ItemDisplay[CL5 MAG SK271>0]: %WHITE%%STAT(107,271)%LS %NAME%%CONTINUE%//Lightning Sentry
+ItemDisplay[CL5 MAG SK272>0]: %WHITE%%STAT(107,272)%WoI %NAME%%CONTINUE%//Wake of Inferno
+ItemDisplay[CL5 MAG SK273>0]: %WHITE%%STAT(107,273)%MB %NAME%%CONTINUE%//Mind Blast
+ItemDisplay[CL5 MAG SK274>0]: %WHITE%%STAT(107,274)%BoI %NAME%%CONTINUE%//Blades of Ice
+ItemDisplay[CL5 MAG SK275>0]: %WHITE%%STAT(107,275)%DF %NAME%%CONTINUE%//Dragon Flight
+ItemDisplay[CL5 MAG SK276>0]: %WHITE%%STAT(107,276)%DS %NAME%%CONTINUE%//Death Sentry
+ItemDisplay[CL5 MAG SK277>0]: %WHITE%%STAT(107,277)%BS %NAME%%CONTINUE%//Blade Shield
+ItemDisplay[CL5 MAG SK278>0]: %WHITE%%STAT(107,278)%Venom %NAME%%CONTINUE%//Venom
+ItemDisplay[CL5 MAG SK279>0]: %WHITE%%STAT(107,279)%SMast %NAME%%CONTINUE%//Shadow Master
+ItemDisplay[CL5 MAG SK280>0]: %WHITE%%STAT(107,280)%Static Strike %NAME%%CONTINUE%//Static Strike - formerly Phoenix Strike
+
+//Sorceress Orbs/Staves
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK36>0]: %BLUE%%STAT(107,36)%FBolt %NAME%%CONTINUE%//Fire Bolt
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK37>0]: %BLUE%%STAT(107,37)%Warmth %NAME%%CONTINUE%//Warmth
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK38>0]: %BLUE%%STAT(107,38)%CB %NAME%%CONTINUE%//Charged Bolt
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK39>0]: %BLUE%%STAT(107,39)%IceB %NAME%%CONTINUE%//Ice Bolt
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK40>0]: %BLUE%%STAT(107,40)%Fridg %NAME%%CONTINUE%//Fridgerate
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK41>0]: %BLUE%%STAT(107,41)%Blaze %NAME%%CONTINUE%//Blaze formerly Immolate
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK42>0]: %BLUE%%STAT(107,42)%Static %NAME%%CONTINUE%//Static Field
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK43>0]: %BLUE%%STAT(107,43)%TK %NAME%%CONTINUE%//Telekinesis
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK44>0]: %BLUE%%STAT(107,44)%FNova %NAME%%CONTINUE%//Frost Nova
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK45>0]: %BLUE%%STAT(107,45)%IceBl %NAME%%CONTINUE%//Ice Blast
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK46>0]: %BLUE%%STAT(107,46)%Immo %NAME%%CONTINUE%//Immolate -formerly Blaze
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK47>0]: %BLUE%%STAT(107,47)%FB %NAME%%CONTINUE%//Fireball
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK48>0]: %BLUE%%STAT(107,48)%Nova %NAME%%CONTINUE%//Nova
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK49>0]: %BLUE%%STAT(107,49)%LS %NAME%%CONTINUE%//Lightning Surge
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK50>0]: %BLUE%%STAT(107,50)%ShvArm %NAME%%CONTINUE%//Shiver Armor
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK51>0]: %BLUE%%STAT(107,51)%FWall %NAME%%CONTINUE%//Fire Wall
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK52>0]: %BLUE%%STAT(107,52)%Enfl %NAME%%CONTINUE%//Enchant
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK53>0]: %BLUE%%STAT(107,53)%Tele %NAME%%CONTINUE%//Teleport
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK54>0]: %BLUE%%STAT(107,54)%ChainL %NAME%%CONTINUE%//Chain Lightning
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK55>0]: %BLUE%%STAT(107,55)%Glacial %NAME%%CONTINUE%//Glacial Spike
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK56>0]: %BLUE%%STAT(107,56)%Meteor %NAME%%CONTINUE%//Meteor
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK57>0]: %BLUE%%STAT(107,57)%Discharge %NAME%%CONTINUE%//Discharge -formerly Thunder Storm
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK58>0]: %BLUE%%STAT(107,58)%ES %NAME%%CONTINUE%//Energy Shield
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK59>0]: %BLUE%%STAT(107,59)%Blizz %NAME%%CONTINUE%//Blizzard
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK60>0]: %BLUE%%STAT(107,60)%ChlArm %NAME%%CONTINUE%//Chilling Armor
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK61>0]: %BLUE%%STAT(107,61)%FMast %NAME%%CONTINUE%//Fire Mastery
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK62>0]: %BLUE%%STAT(107,62)%Hydra %NAME%%CONTINUE%//Hydra
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK63>0]: %BLUE%%STAT(107,63)%LMast %NAME%%CONTINUE%//Lightning Mastery
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK64>0]: %BLUE%%STAT(107,64)%FrzOrb %NAME%%CONTINUE%//Frozen Orb
+ItemDisplay[(CL6 OR WP11) !UNI !MAG SK65>0]: %BLUE%%STAT(107,65)%CMast %NAME%%CONTINUE%//Cold Mastery
+
+ItemDisplay[(CL6 OR WP11) MAG SK36>0]: %WHITE%%STAT(107,36)%FBolt %NAME%%CONTINUE%//Fire Bolt
+ItemDisplay[(CL6 OR WP11) MAG SK37>0]: %WHITE%%STAT(107,37)%Warmth %NAME%%CONTINUE%//Warmth
+ItemDisplay[(CL6 OR WP11) MAG SK38>0]: %WHITE%%STAT(107,38)%CB %NAME%%CONTINUE%//Charged Bolt
+ItemDisplay[(CL6 OR WP11) MAG SK39>0]: %WHITE%%STAT(107,39)%IceB %NAME%%CONTINUE%//Ice Bolt
+ItemDisplay[(CL6 OR WP11) MAG SK40>0]: %WHITE%%STAT(107,40)%Fridg %NAME%%CONTINUE%//Fridgerate
+ItemDisplay[(CL6 OR WP11) MAG SK41>0]: %WHITE%%STAT(107,41)%Blaze %NAME%%CONTINUE%//Blaze formerly Immolate
+ItemDisplay[(CL6 OR WP11) MAG SK42>0]: %WHITE%%STAT(107,42)%Static %NAME%%CONTINUE%//Static Field
+ItemDisplay[(CL6 OR WP11) MAG SK43>0]: %WHITE%%STAT(107,43)%TK %NAME%%CONTINUE%//Telekinesis
+ItemDisplay[(CL6 OR WP11) MAG SK44>0]: %WHITE%%STAT(107,44)%FNova %NAME%%CONTINUE%//Frost Nova
+ItemDisplay[(CL6 OR WP11) MAG SK45>0]: %WHITE%%STAT(107,45)%IceBl %NAME%%CONTINUE%//Ice Blast
+ItemDisplay[(CL6 OR WP11) MAG SK46>0]: %WHITE%%STAT(107,46)%Immo %NAME%%CONTINUE%//Immolate -formerly Blaze
+ItemDisplay[(CL6 OR WP11) MAG SK47>0]: %WHITE%%STAT(107,47)%FB %NAME%%CONTINUE%//Fireball
+ItemDisplay[(CL6 OR WP11) MAG SK48>0]: %WHITE%%STAT(107,48)%Nova %NAME%%CONTINUE%//Nova
+ItemDisplay[(CL6 OR WP11) MAG SK49>0]: %WHITE%%STAT(107,49)%LS %NAME%%CONTINUE%//Lightning Surge
+ItemDisplay[(CL6 OR WP11) MAG SK50>0]: %WHITE%%STAT(107,50)%ShvArm %NAME%%CONTINUE%//Shiver Armor
+ItemDisplay[(CL6 OR WP11) MAG SK51>0]: %WHITE%%STAT(107,51)%FWall %NAME%%CONTINUE%//Fire Wall
+ItemDisplay[(CL6 OR WP11) MAG SK52>0]: %WHITE%%STAT(107,52)%Enfl %NAME%%CONTINUE%//Enchant
+ItemDisplay[(CL6 OR WP11) MAG SK53>0]: %WHITE%%STAT(107,53)%Tele %NAME%%CONTINUE%//Teleport
+ItemDisplay[(CL6 OR WP11) MAG SK54>0]: %WHITE%%STAT(107,54)%ChainL %NAME%%CONTINUE%//Chain Lightning
+ItemDisplay[(CL6 OR WP11) MAG SK55>0]: %WHITE%%STAT(107,55)%Glacial %NAME%%CONTINUE%//Glacial Spike
+ItemDisplay[(CL6 OR WP11) MAG SK56>0]: %WHITE%%STAT(107,56)%Meteor %NAME%%CONTINUE%//Meteor
+ItemDisplay[(CL6 OR WP11) MAG SK57>0]: %WHITE%%STAT(107,57)%Discharge %NAME%%CONTINUE%//Discharge -formerly Thunder Storm
+ItemDisplay[(CL6 OR WP11) MAG SK58>0]: %WHITE%%STAT(107,58)%ES %NAME%%CONTINUE%//Energy Shield
+ItemDisplay[(CL6 OR WP11) MAG SK59>0]: %WHITE%%STAT(107,59)%Blizz %NAME%%CONTINUE%//Blizzard
+ItemDisplay[(CL6 OR WP11) MAG SK60>0]: %WHITE%%STAT(107,60)%ChlArm %NAME%%CONTINUE%//Chilling Armor
+ItemDisplay[(CL6 OR WP11) MAG SK61>0]: %WHITE%%STAT(107,61)%FMast %NAME%%CONTINUE%//Fire Mastery
+ItemDisplay[(CL6 OR WP11) MAG SK62>0]: %WHITE%%STAT(107,62)%Hydra %NAME%%CONTINUE%//Hydra
+ItemDisplay[(CL6 OR WP11) MAG SK63>0]: %WHITE%%STAT(107,63)%LMast %NAME%%CONTINUE%//Lightning Mastery
+ItemDisplay[(CL6 OR WP11) MAG SK64>0]: %WHITE%%STAT(107,64)%FrzOrb %NAME%%CONTINUE%//Frozen Orb
+ItemDisplay[(CL6 OR WP11) MAG SK65>0]: %WHITE%%STAT(107,65)%CMast %NAME%%CONTINUE%//Cold Mastery
 
 //Paladin Scepters
-ItemDisplay[WP13 !UNI SK96>0]: %BLUE%%STAT(107,96)%Sacr %NAME%%CONTINUE%//Sacrifice
-ItemDisplay[WP13 !UNI SK97>0]: %BLUE%%STAT(107,97)%Smite %NAME%%CONTINUE%//Smite
-ItemDisplay[WP13 !UNI SK98>0]: %BLUE%%STAT(107,98)%Might %NAME%%CONTINUE%//Might
-ItemDisplay[WP13 !UNI SK99>0]: %BLUE%%STAT(107,99)%Prayer %NAME%%CONTINUE%//Prayer
-ItemDisplay[WP13 !UNI SK100>0]: %BLUE%%STAT(107,100)%ResF %NAME%%CONTINUE%//Resist Fire
-ItemDisplay[WP13 !UNI SK101>0]: %BLUE%%STAT(107,101)%HBolt %NAME%%CONTINUE%//Holy Bolt
-ItemDisplay[WP13 !UNI SK102>0]: %BLUE%%STAT(107,102)%HFire %NAME%%CONTINUE%//Holy Fire
-ItemDisplay[WP13 !UNI SK103>0]: %BLUE%%STAT(107,103)%Precision %NAME%%CONTINUE%//Thorns, precision in pod
-ItemDisplay[WP13 !UNI SK104>0]: %BLUE%%STAT(107,104)%Defi %NAME%%CONTINUE%//Defiance
-ItemDisplay[WP13 !UNI SK105>0]: %BLUE%%STAT(107,105)%ResC %NAME%%CONTINUE%//Resist Cold
-ItemDisplay[WP13 !UNI SK106>0]: %BLUE%%STAT(107,106)%Zeal %NAME%%CONTINUE%//Zeal
-ItemDisplay[WP13 !UNI SK107>0]: %BLUE%%STAT(107,107)%Charge %NAME%%CONTINUE%//Charge
-ItemDisplay[WP13 !UNI SK108>0]: %BLUE%%STAT(107,108)%BAim %NAME%%CONTINUE%//Blessed Aim
-ItemDisplay[WP13 !UNI SK109>0]: %BLUE%%STAT(107,109)%Cleans %NAME%%CONTINUE%//Cleansing
-ItemDisplay[WP13 !UNI SK110>0]: %BLUE%%STAT(107,110)%ResL %NAME%%CONTINUE%//Resist Lightning
-ItemDisplay[WP13 !UNI SK111>0]: %BLUE%%STAT(107,111)%Veng %NAME%%CONTINUE%//Vengeance
-ItemDisplay[WP13 !UNI SK112>0]: %BLUE%%STAT(107,112)%BHam %NAME%%CONTINUE%//Blessed Hammer
-ItemDisplay[WP13 !UNI SK113>0]: %BLUE%%STAT(107,113)%Conc %NAME%%CONTINUE%//Concentration
-ItemDisplay[WP13 !UNI SK114>0]: %BLUE%%STAT(107,114)%HFrz %NAME%%CONTINUE%//Holy Freeze
-ItemDisplay[WP13 !UNI SK115>0]: %BLUE%%STAT(107,115)%Vigor %NAME%%CONTINUE%//Vigor
-ItemDisplay[WP13 !UNI SK116>0]: %BLUE%%STAT(107,116)%Conversion %NAME%%CONTINUE%//Conversion
-ItemDisplay[WP13 !UNI SK117>0]: %BLUE%%STAT(107,117)%HShld %NAME%%CONTINUE%//Holy Shield
-ItemDisplay[WP13 !UNI SK118>0]: %BLUE%%STAT(107,118)%HShock %NAME%%CONTINUE%//Holy Shock
-ItemDisplay[WP13 !UNI SK119>0]: %BLUE%%STAT(107,119)%Sanc %NAME%%CONTINUE%//Sanctuary
-ItemDisplay[WP13 !UNI SK120>0]: %BLUE%%STAT(107,120)%Medi %NAME%%CONTINUE%//Meditation
-ItemDisplay[WP13 !UNI SK121>0]: %BLUE%%STAT(107,121)%FoH %NAME%%CONTINUE%//Fist of the Heavens
-ItemDisplay[WP13 !UNI SK122>0]: %BLUE%%STAT(107,122)%Fanat %NAME%%CONTINUE%//Fanaticism
-ItemDisplay[WP13 !UNI SK123>0]: %BLUE%%STAT(107,123)%Conv %NAME%%CONTINUE%//Conviction
-ItemDisplay[WP13 !UNI SK124>0]: %BLUE%%STAT(107,124)%Rdmp %NAME%%CONTINUE%//Redemption
-ItemDisplay[WP13 !UNI SK125>0]: %BLUE%%STAT(107,125)%Salv %NAME%%CONTINUE%//Salvation
+ItemDisplay[WP13 !UNI !MAG SK96>0]: %BLUE%%STAT(107,96)%Sacr %NAME%%CONTINUE%//Sacrifice
+ItemDisplay[WP13 !UNI !MAG SK97>0]: %BLUE%%STAT(107,97)%Smite %NAME%%CONTINUE%//Smite
+ItemDisplay[WP13 !UNI !MAG SK98>0]: %BLUE%%STAT(107,98)%Might %NAME%%CONTINUE%//Might
+ItemDisplay[WP13 !UNI !MAG SK99>0]: %BLUE%%STAT(107,99)%Prayer %NAME%%CONTINUE%//Prayer
+ItemDisplay[WP13 !UNI !MAG SK100>0]: %BLUE%%STAT(107,100)%ResF %NAME%%CONTINUE%//Resist Fire
+ItemDisplay[WP13 !UNI !MAG SK101>0]: %BLUE%%STAT(107,101)%HBolt %NAME%%CONTINUE%//Holy Bolt
+ItemDisplay[WP13 !UNI !MAG SK102>0]: %BLUE%%STAT(107,102)%HFire %NAME%%CONTINUE%//Holy Fire
+ItemDisplay[WP13 !UNI !MAG SK103>0]: %BLUE%%STAT(107,103)%Precision %NAME%%CONTINUE%//Thorns, precision in pod
+ItemDisplay[WP13 !UNI !MAG SK104>0]: %BLUE%%STAT(107,104)%Defi %NAME%%CONTINUE%//Defiance
+ItemDisplay[WP13 !UNI !MAG SK105>0]: %BLUE%%STAT(107,105)%ResC %NAME%%CONTINUE%//Resist Cold
+ItemDisplay[WP13 !UNI !MAG SK106>0]: %BLUE%%STAT(107,106)%Zeal %NAME%%CONTINUE%//Zeal
+ItemDisplay[WP13 !UNI !MAG SK107>0]: %BLUE%%STAT(107,107)%Charge %NAME%%CONTINUE%//Charge
+ItemDisplay[WP13 !UNI !MAG SK108>0]: %BLUE%%STAT(107,108)%BAim %NAME%%CONTINUE%//Blessed Aim
+ItemDisplay[WP13 !UNI !MAG SK109>0]: %BLUE%%STAT(107,109)%Cleans %NAME%%CONTINUE%//Cleansing
+ItemDisplay[WP13 !UNI !MAG SK110>0]: %BLUE%%STAT(107,110)%ResL %NAME%%CONTINUE%//Resist Lightning
+ItemDisplay[WP13 !UNI !MAG SK111>0]: %BLUE%%STAT(107,111)%Veng %NAME%%CONTINUE%//Vengeance
+ItemDisplay[WP13 !UNI !MAG SK112>0]: %BLUE%%STAT(107,112)%BHam %NAME%%CONTINUE%//Blessed Hammer
+ItemDisplay[WP13 !UNI !MAG SK113>0]: %BLUE%%STAT(107,113)%Conc %NAME%%CONTINUE%//Concentration
+ItemDisplay[WP13 !UNI !MAG SK114>0]: %BLUE%%STAT(107,114)%HFrz %NAME%%CONTINUE%//Holy Freeze
+ItemDisplay[WP13 !UNI !MAG SK115>0]: %BLUE%%STAT(107,115)%Vigor %NAME%%CONTINUE%//Vigor
+ItemDisplay[WP13 !UNI !MAG SK116>0]: %BLUE%%STAT(107,116)%Conversion %NAME%%CONTINUE%//Conversion
+ItemDisplay[WP13 !UNI !MAG SK117>0]: %BLUE%%STAT(107,117)%HShld %NAME%%CONTINUE%//Holy Shield
+ItemDisplay[WP13 !UNI !MAG SK118>0]: %BLUE%%STAT(107,118)%HShock %NAME%%CONTINUE%//Holy Shock
+ItemDisplay[WP13 !UNI !MAG SK119>0]: %BLUE%%STAT(107,119)%Sanc %NAME%%CONTINUE%//Sanctuary
+ItemDisplay[WP13 !UNI !MAG SK120>0]: %BLUE%%STAT(107,120)%Medi %NAME%%CONTINUE%//Meditation
+ItemDisplay[WP13 !UNI !MAG SK121>0]: %BLUE%%STAT(107,121)%FoH %NAME%%CONTINUE%//Fist of the Heavens
+ItemDisplay[WP13 !UNI !MAG SK122>0]: %BLUE%%STAT(107,122)%Fanat %NAME%%CONTINUE%//Fanaticism
+ItemDisplay[WP13 !UNI !MAG SK123>0]: %BLUE%%STAT(107,123)%Conv %NAME%%CONTINUE%//Conviction
+ItemDisplay[WP13 !UNI !MAG SK124>0]: %BLUE%%STAT(107,124)%Rdmp %NAME%%CONTINUE%//Redemption
+ItemDisplay[WP13 !UNI !MAG SK125>0]: %BLUE%%STAT(107,125)%Salv %NAME%%CONTINUE%//Salvation
+ItemDisplay[WP13 !UNI !MAG SKILL("Dashing Strike")=1]: %BLUE%1Dash %NAME%%CONTINUE%//1Dashing strike
+ItemDisplay[WP13 !UNI !MAG SKILL("Dashing Strike")=2]: %BLUE%2Dash %NAME%%CONTINUE%//2Dashing Strike
+ItemDisplay[WP13 !UNI !MAG SKILL("Dashing Strike")=3]: %BLUE%3Dash %NAME%%CONTINUE%//3Dashing Strike
+
+ItemDisplay[WP13 MAG SK96>0]: %WHITE%%STAT(107,96)%Sacr %NAME%%CONTINUE%//Sacrifice
+ItemDisplay[WP13 MAG SK97>0]: %WHITE%%STAT(107,97)%Smite %NAME%%CONTINUE%//Smite
+ItemDisplay[WP13 MAG SK98>0]: %WHITE%%STAT(107,98)%Might %NAME%%CONTINUE%//Might
+ItemDisplay[WP13 MAG SK99>0]: %WHITE%%STAT(107,99)%Prayer %NAME%%CONTINUE%//Prayer
+ItemDisplay[WP13 MAG SK100>0]: %WHITE%%STAT(107,100)%ResF %NAME%%CONTINUE%//Resist Fire
+ItemDisplay[WP13 MAG SK101>0]: %WHITE%%STAT(107,101)%HBolt %NAME%%CONTINUE%//Holy Bolt
+ItemDisplay[WP13 MAG SK102>0]: %WHITE%%STAT(107,102)%HFire %NAME%%CONTINUE%//Holy Fire
+ItemDisplay[WP13 MAG SK103>0]: %WHITE%%STAT(107,103)%Precision %NAME%%CONTINUE%//Thorns, precision in pod
+ItemDisplay[WP13 MAG SK104>0]: %WHITE%%STAT(107,104)%Defi %NAME%%CONTINUE%//Defiance
+ItemDisplay[WP13 MAG SK105>0]: %WHITE%%STAT(107,105)%ResC %NAME%%CONTINUE%//Resist Cold
+ItemDisplay[WP13 MAG SK106>0]: %WHITE%%STAT(107,106)%Zeal %NAME%%CONTINUE%//Zeal
+ItemDisplay[WP13 MAG SK107>0]: %WHITE%%STAT(107,107)%Charge %NAME%%CONTINUE%//Charge
+ItemDisplay[WP13 MAG SK108>0]: %WHITE%%STAT(107,108)%BAim %NAME%%CONTINUE%//Blessed Aim
+ItemDisplay[WP13 MAG SK109>0]: %WHITE%%STAT(107,109)%Cleans %NAME%%CONTINUE%//Cleansing
+ItemDisplay[WP13 MAG SK110>0]: %WHITE%%STAT(107,110)%ResL %NAME%%CONTINUE%//Resist Lightning
+ItemDisplay[WP13 MAG SK111>0]: %WHITE%%STAT(107,111)%Veng %NAME%%CONTINUE%//Vengeance
+ItemDisplay[WP13 MAG SK112>0]: %WHITE%%STAT(107,112)%BHam %NAME%%CONTINUE%//Blessed Hammer
+ItemDisplay[WP13 MAG SK113>0]: %WHITE%%STAT(107,113)%Conc %NAME%%CONTINUE%//Concentration
+ItemDisplay[WP13 MAG SK114>0]: %WHITE%%STAT(107,114)%HFrz %NAME%%CONTINUE%//Holy Freeze
+ItemDisplay[WP13 MAG SK115>0]: %WHITE%%STAT(107,115)%Vigor %NAME%%CONTINUE%//Vigor
+ItemDisplay[WP13 MAG SK116>0]: %WHITE%%STAT(107,116)%Conversion %NAME%%CONTINUE%//Conversion
+ItemDisplay[WP13 MAG SK117>0]: %WHITE%%STAT(107,117)%HShld %NAME%%CONTINUE%//Holy Shield
+ItemDisplay[WP13 MAG SK118>0]: %WHITE%%STAT(107,118)%HShock %NAME%%CONTINUE%//Holy Shock
+ItemDisplay[WP13 MAG SK119>0]: %WHITE%%STAT(107,119)%Sanc %NAME%%CONTINUE%//Sanctuary
+ItemDisplay[WP13 MAG SK120>0]: %WHITE%%STAT(107,120)%Medi %NAME%%CONTINUE%//Meditation
+ItemDisplay[WP13 MAG SK121>0]: %WHITE%%STAT(107,121)%FoH %NAME%%CONTINUE%//Fist of the Heavens
+ItemDisplay[WP13 MAG SK122>0]: %WHITE%%STAT(107,122)%Fanat %NAME%%CONTINUE%//Fanaticism
+ItemDisplay[WP13 MAG SK123>0]: %WHITE%%STAT(107,123)%Conv %NAME%%CONTINUE%//Conviction
+ItemDisplay[WP13 MAG SK124>0]: %WHITE%%STAT(107,124)%Rdmp %NAME%%CONTINUE%//Redemption
+ItemDisplay[WP13 MAG SK125>0]: %WHITE%%STAT(107,125)%Salv %NAME%%CONTINUE%//Salvation
+ItemDisplay[WP13 MAG SKILL("Dashing Strike")=1]: %WHITE%1Dash %NAME%%CONTINUE%//1Dashing strike
+ItemDisplay[WP13 MAG SKILL("Dashing Strike")=2]: %WHITE%2Dash %NAME%%CONTINUE%//2Dashing Strike
+ItemDisplay[WP13 MAG SKILL("Dashing Strike")=3]: %WHITE%3Dash %NAME%%CONTINUE%//3Dashing Strike
+
 
 /////////
 //Preview Items from the ground - useful/important stats only
@@ -320,14 +478,14 @@ ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG RES=0 STAT39>0]: %ORANGE%%STAT(39)%Fres %
 ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG RES=0 STAT41>0]: %YELLOW%%STAT(41)%Lres %NAME% %CONTINUE% //lightning res
 ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG RES=0 STAT43>0]: %WHITE%%STAT(43)%Cres %NAME% %CONTINUE% //cold res
 ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG RES=0 STAT45>0]: %GREEN%%STAT(45)%Pres %NAME% %CONTINUE% //poison res
-ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG RES>0]: %PURPLE%%RES%@res %NAME% %CONTINUE% //all res
+ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG RES>0]: %BOLD%%RES%@res %NAME% %CONTINUE% //all res
 ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG STAT22=0 STAT19>0]: %TAN%%STAT(19)%ar %NAME%%CONTINUE%//AR
 ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG MANA>0]: %BOLD%%STAT(9)% Mana %NAME%%CONTINUE%//Mana
 ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG STAT7>0]: %RED%%STAT(7)% Life %NAME%%CONTINUE%//Life
 ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG STAT22>0 STAT19>0]: %TAN%%STAT(24)%max %STAT(19)%ar %NAME% %CONTINUE% //max+AR
 ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG STAT80>0]: %GOLD%%STAT(80)%mf %NAME%%CONTINUE%//mf
-ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG STAT99>0]: %SAGE%%STAT(99)%FHR %NAME%%CONTINUE%//FHR
-ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG STAT96>0]: %BOLD%%STAT(96)%FRW %NAME% %CONTINUE% //FRW
+ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG STAT99>0]: %SAGE%%STAT(99)%fhr %NAME%%CONTINUE%//FHR
+ItemDisplay[(cm1 OR cm2 OR cm3) ID MAG STAT96>0]: %BOLD%%STAT(96)%frw %NAME% %CONTINUE% //FRW
 ItemDisplay[MAG ID cm3 TABSK8>0]: %GOLD%Fire %NAME%%CONTINUE%
 ItemDisplay[MAG ID cm3 TABSK10>0]: %GOLD%Cold %NAME%%CONTINUE%
 ItemDisplay[MAG ID cm3 TABSK9>0]: %GOLD%Light %NAME%%CONTINUE%
@@ -338,11 +496,11 @@ ItemDisplay[MAG ID cm3 TABSK24>0]: %GOLD%Pcomb %NAME%%CONTINUE%
 ItemDisplay[MAG ID cm3 TABSK25>0]: %GOLD%PalOff %NAME%%CONTINUE%
 ItemDisplay[MAG ID cm3 TABSK26>0]: %GOLD%PalDef %NAME%%CONTINUE%
 ItemDisplay[MAG ID cm3 TABSK48>0]: %GOLD%Trap %NAME%%CONTINUE%
-ItemDisplay[MAG ID cm3 TABSK50>0]: %GOLD%MartialArts %NAME%%CONTINUE%
-ItemDisplay[MAG ID cm3 TABSK42>0]: %GOLD%DruEle %NAME%%CONTINUE%
+ItemDisplay[MAG ID cm3 TABSK50>0]: %GOLD%Martial Arts %NAME%%CONTINUE%
+ItemDisplay[MAG ID cm3 TABSK42>0]: %GOLD%Ele %NAME%%CONTINUE%
 ItemDisplay[MAG ID cm3 TABSK41>0]: %GOLD%Shapeshift %NAME%%CONTINUE%
-ItemDisplay[MAG ID cm3 TABSK40>0]: %GOLD%DSum %NAME%%CONTINUE%
-ItemDisplay[MAG ID cm3 TABSK32>0]: %GOLD%BComb %NAME%%CONTINUE%
+ItemDisplay[MAG ID cm3 TABSK40>0]: %GOLD%DSumm %NAME%%CONTINUE%
+ItemDisplay[MAG ID cm3 TABSK32>0]: %GOLD%BarbComb %NAME%%CONTINUE%
 ItemDisplay[MAG ID cm3 TABSK33>0]: %GOLD%BarbMast %NAME%%CONTINUE%
 ItemDisplay[MAG ID cm3 TABSK34>0]: %GOLD%Warcries %NAME%%CONTINUE%
 ItemDisplay[MAG ID cm3 TABSK2>0]: %GOLD%Jav %NAME%%CONTINUE%
@@ -432,7 +590,7 @@ ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) (RES>0 RES<21) STAT45>20]: %GREEN%
 ItemDisplay[!(UNI OR SET) (EQ4 OR EQ5 OR amu OR rin) MANA>50]: %BLUE%%STAT(9)% mana %NAME% %CONTINUE% //mana
 ItemDisplay[!(UNI OR SET) (EQ4 OR EQ5 OR amu OR rin) STR>9]: %RED%%STAT(0)% str %NAME% %CONTINUE% //strength
 ItemDisplay[!(UNI OR SET) (amu OR rin) STAT7>0]: %RED%%STAT(7)% life %NAME% %CONTINUE% //life
-ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) RES>0]: %BOLD%%RES%@res %NAME% %CONTINUE% //allres
+ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin OR EQ7) RES>0]: %BOLD%%RES%@res %NAME% %CONTINUE% //allres
 ItemDisplay[!(UNI OR SET) (EQ5 OR amu OR rin) STAT99>0]: %SAGE%%STAT(99)%fhr %NAME% %CONTINUE% //FHR
 ItemDisplay[!(UNI OR SET) EQ5 STAT96>0]: %BOLD%%STAT(96)%FRW %NAME% %CONTINUE% //FRW
 ItemDisplay[!(UNI OR SET OR MAG) EQ4 IAS>0]: %BLUE%%STAT(93)%ias %NAME% %CONTINUE% //ias
@@ -440,7 +598,7 @@ ItemDisplay[!(UNI OR SET OR MAG) EQ4 (TABSK0>0)]: %BLUE%%STAT(188,0)%bow %NAME% 
 ItemDisplay[!(UNI OR SET OR MAG) EQ4 (TABSK1>0)]: %BLUE%%STAT(188,1)%PnM %NAME% %CONTINUE% //PnM
 ItemDisplay[!(UNI OR SET OR MAG) EQ4 (TABSK2>0)]: %BLUE%%STAT(188,2)%jav %NAME% %CONTINUE% //jav
 ItemDisplay[!(UNI OR SET OR MAG) EQ4 (TABSK50>0)]: %BLUE%%STAT(188,50)%ma %NAME% %CONTINUE% //martial arts
-ItemDisplay[!(UNI OR SET) (amu OR rin) FCR>0]: %BOLD%%STAT(105)%fcr %NAME% %CONTINUE% //fcr
+ItemDisplay[!(UNI OR SET) (amu OR rin OR EQ7) FCR>0]: %BOLD%%STAT(105)%fcr %NAME% %CONTINUE% //fcr
 /////////
 //Continue Display of +Skills on Amulets (especially needed on rares)
 /////////
@@ -511,9 +669,9 @@ ItemDisplay[cm3 MAG ILVL>90 ID]: %NOTIFYSOUND(OOC)%%MAPICON(19,3)%%NOTIFY(ITEM)%
 ItemDisplay[SYNTH]: %MAPICON(26,1)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%GOLD%%NAME%
 //ItemDisplay[SPECIAL]: %MAPICON(26,1)%%NOTIFY(ITEM)%%GOLD%%NAME%
 ItemDisplay[cx5 OR cx7]: %NL%%NOTIFYSOUND(OOC)%%MAPICON(33,1)%%NOTIFY(ITEM)%%RED%> %PURPLE%%NAME%%RED% < %NL% %NL% 
-//ItemDisplay[cx7]: %NL%%NOTIFYSOUND(OOC)%%MAPICON(33,1)%%NOTIFY(ITEM,HIGH)%%RED%> %PURPLE%%NAME%%RED% < %NL% %NL% 
-ItemDisplay[MAP]: %NOTIFYSOUND(MAP)%%MAPICON(92)%%NOTIFY(ITEM,HIGH)%%NAME% %GRAY%[%DARK_GREEN%~ %PURPLE%MAP %DARK_GREEN%~%GRAY%]
-//ItemDisplay[(ma1 OR ma2 OR ma3 OR ma4 OR ma5 OR ma6 OR ma7 OR ma8 OR ma9 OR ma10 OR maz)]: %NOTIFYSOUND(MAP)%%MAPICON(92)%%NOTIFY(ITEM,HIGH)%%NAME% %GRAY%[%DARK_GREEN%~ %PURPLE%MAP %DARK_GREEN%~%GRAY%]
+//ItemDisplay[cx7]: %NL%%NOTIFYSOUND(OOC)%%MAPICON(33,1)%%NOTIFY(ITEM)%%RED%> %PURPLE%%NAME%%RED% < %NL% %NL% 
+ItemDisplay[MAP]: %NOTIFYSOUND(MAP)%%MAPICON(92)%%NOTIFY(ITEM)%%NAME% %GRAY%[%DARK_GREEN%~ %PURPLE%MAP %DARK_GREEN%~%GRAY%]
+//ItemDisplay[(ma1 OR ma2 OR ma3 OR ma4 OR ma5 OR ma6 OR ma7 OR ma8 OR ma9 OR ma10 OR maz)]: %NOTIFYSOUND(MAP)%%MAPICON(92)%%NOTIFY(ITEM)%%NAME% %GRAY%[%DARK_GREEN%~ %PURPLE%MAP %DARK_GREEN%~%GRAY%]
 
 //high runes
 ItemDisplay[(r20 OR r21 OR r22 OR r23)]: %MAPICON(5,0)%%NOTIFY(ITEM)%%PURPLE%»» »» %ORANGE%%RUNENAME% %ORANGE%[%RUNETIER%]%PURPLE% «« ««
@@ -584,15 +742,15 @@ ItemDisplay[UNI !ID (amu OR jew OR rin)]:%NOTIFYSOUND(TINK)%%MAPICON(26)%%NOTIFY
 //ItemDisplay[UNI !ID cm3]: %NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%RED%O   O   O %GOLD%%Gheed's Fortune%%RED%  O   O   O
 ItemDisplay[ETH (ulc OR xea OR uap OR ulm OR ci3 OR xtb OR 7gw OR obf) UNI !ID]: %MAPICON(26)%%NOTIFY(ITEM)%%RED%O %GOLD%%NAME% %RED%O
 
-ItemDisplay[UNI ID (xh9 OR xhn OR xtp OR xea) STAT360=0]: %NAME% {%RED%! ! !%WHITE%UPGRADE BEFORE CORRUPTING %RED%! ! ! %NL% %ORANGE%Lem Ko %WHITE%PDiamond}
+ItemDisplay[UNI ID (xh9 OR xhn OR xtp OR xea) STAT360=0]: %NAME% {%RED%! ! !%ORANGE%UPGRADE BEFORE CORRUPTING %RED%! ! ! %NL% %ORANGE%Lem Ko %WHITE%PDiamond}
 
 // GG Sets
-ItemDisplay[SET !ID uth]: %MAPICON(33,1)%%NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%GREEN%Tal Rasha's Armor%NL%%DARK_GREEN%>> >> %NAME%%DARK_GREEN% << <<
-ItemDisplay[SET !ID 7qr]: %MAPICON(33,1)%%NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%GREEN%Natalya's Claw%NL%%DARK_GREEN%>> >> %NAME%%DARK_GREEN% << <<
-ItemDisplay[SET !ID xh9]: %MAPICON(33,1)%%NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%GREEN%Natalya's Helm%NL%%DARK_GREEN%>> >> %NAME%%DARK_GREEN% << <<
-ItemDisplay[SET !ID xtb]: %MAPICON(33,1)%%NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%GREEN%Aldur's Boots%NL%%DARK_GREEN%>> >> %NAME%%DARK_GREEN% << <<
-ItemDisplay[SET !ID xhm]: %MAPICON(33,1)%%NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%GREEN%Guillaume's Face%NL%%DARK_GREEN%>> >> %NAME%%DARK_GREEN% << <<
-ItemDisplay[SET !ID xmg]: %MAPICON(33,1)%%NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%GREEN%TrangOul's Gloves%NL%%DARK_GREEN%>> >> %NAME%%DARK_GREEN% << <<
+ItemDisplay[SET !ID uth]: %GREEN%Tal Rasha's Armor %!GGset!% <<GGset>>
+ItemDisplay[SET !ID 7qr]: %GREEN%Natalya's Claw %!GGset!% <<GGset>>
+ItemDisplay[SET !ID xh9]: %GREEN%Natalya's Helm %!GGset!% <<GGset>>
+ItemDisplay[SET !ID xtb]: %GREEN%Aldur's Boots %!GGset!% <<GGset>>
+ItemDisplay[SET !ID xhm]: %GREEN%Guillaume's Face %!GGset!% <<GGset>>
+ItemDisplay[SET !ID xmg]: %GREEN%TrangOul's Gloves %!GGset!% <<GGset>>
 
 // GG Socketables
 //Melee Weapons
@@ -632,8 +790,7 @@ ItemDisplay[72h ETH (NMAG !RW) (SOCK=0 OR SOCK=3) ED>9]: %NOTIFY(ITEM)%%NAME%
 //Armors
 ItemDisplay[((xtp DEF>255) OR (utp DEF>510) OR (uui DEF>460)) !ETH NMAG !RW (SOCK=0 OR SOCK=3 OR SOCK=4) (STAT91>-11 AND STAT91<-5)]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME%
 ItemDisplay[xtp !ETH (NMAG !RW) SOCK=3 ED=15]: %NOTIFY(ITEM)%%NAME%
-ItemDisplay[EQ2 ELT !ETH (NMAG !RW) !SOCK=1 ED=15]: %NOTIFY(ITEM)%%NAME%
-ItemDisplay[EQ2 ELT ETH (NMAG !RW) !SOCK=1 ED=15]: %NOTIFY(ITEM)%%NAME%
+ItemDisplay[EQ2 ELT NMAG !RW !SOCK=1 ED=15]: %NOTIFY(ITEM)%%NAME%
 //Helmets
 ItemDisplay[CL2 (NMAG !RW) SK149>2 SK154>2 !SOCK=1]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME% //3bo 3wc helm
 ItemDisplay[CL1 (!ETH NMAG !RW) (SK245>2 (SK250=3 OR SK235=3 OR SK240=3)) !SOCK=1]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NAME% //3Nado+Huri/CycA/Twister
@@ -652,8 +809,10 @@ ItemDisplay[(uit OR (CL3 ELT RES=45)) NMAG !RW (STAT91>-11 AND STAT91<-5) (SOCK=
 ItemDisplay[EQ4 (TABSK0=3 OR TABSK2=3 OR TABSK50=3) IAS=20]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%RED%  O   O   O %GREEN%3/20 %NAME%%RED%  O   O   O //+3/20 gloves
 ItemDisplay[WP13 ((SK121=3 (CLSK3=2 OR TABSK24=2)) OR (SK121=2 TABSK24=3))]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%RED%+5foh %NAME%  //+5foh scpeters
 ItemDisplay[WP13 SK121=3 TABSK24=3]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%RED%+6foh %NAME%  //+6foh scepters
-ItemDisplay[WP13 ((SK117=3 (CLSK3=2 OR TABSK24=2)) OR (SK117=2 TABSK24=3))]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%RED%+5hs %NAME%  //+5holyshield scepters
+ItemDisplay[WP13 ((SKILL("Dashing Strike")=3 (CLSK3>1 OR TABSK24>1)) OR (SKILL("Dashing Strike")>1 TABSK24=3))]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME%  //+5/6 Dashing Strike scepters
 ItemDisplay[WP13 SK117=3 TABSK24=3]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NL%%RED%+6hs %PURPLE%O  O  O  %NAME%  %PURPLE%O  O  O%NL%  //+6holyshield scepters
+ItemDisplay[WP13 ((SK117=3 (CLSK3=2 OR TABSK24=2)) OR (SK117=2 TABSK24=3))]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%RED%+5hs %NAME%  //+5holyshield scepters
+ItemDisplay[WP13 SK117>0]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME%  //+holyshield scepters
 ItemDisplay[WP13 SK117>0 MAG]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%RED%+hs %NAME%  //+any holyshield scepters
 ItemDisplay[WP12 (TABSK16=3 SK477=3)]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%RED%+6hemo %NAME% //+6hemo wand
 ItemDisplay[WP12 (((TABSK16=2 OR CLSK2=2) SK477=3) OR (TABSK16=3 SK477=2))]: %NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%RED%+5hemo %NAME% //+5hemo wand
