@@ -883,8 +883,6 @@ ItemDisplay[(crs OR fla) (NMAG !RW) (SOCK=4 OR SOCK=5) (STAT91>-11 AND STAT91<-7
 ItemDisplay[CL2 !ETH (NMAG !RW) SK154=3 !SOCK=1]: %NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%MAPICON(19,0)%%NAME% //3wc helm
 ItemDisplay[CL2 (NMAG !RW) SK149=3 !SOCK=1]: %NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%MAPICON(19,0)%%NAME% //3bo helm
 ItemDisplay[CL1 !ETH NMAG !RW SK238=3 !SOCK=1]: %NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%MAPICON(19,0)%%NAME% //3rabies
-//Bows - need clarification from no23
-ItemDisplay[NMAG !RW ((6sb SOCK=3) OR (6cb (SOCK=3 OR SOCK=4)))]: %NAME% //plague bow (6sb spider) / insight (6cb great bow)
 //Plague Orbs
 ItemDisplay[(obf OR oba OR ob5) NMAG !RW (SOCK=3 OR SOCK=0) (SK62>2 OR SK50>2 OR SK52>2 OR SK59>2)]: %NOTIFY(ITEM)%%NAME% //3hydra/shiver/Enflame/Blizz
 //Faith Grand Matron Bow GMB
@@ -974,6 +972,8 @@ ItemDisplay[amu RARE !ID ILVL<90 CLVL<86]: %NAME%
 ItemDisplay[(amu OR rin) MAG !ID]: %NAME%
 
 //Socketables//
+//Bows - need clarification from no23
+ItemDisplay[NMAG !RW ((6sb SOCK=3) OR (6cb (SOCK=3 OR SOCK=4)))]: %NAME% //plague bow (6sb spider) / insight (6cb great bow)
 //Armors
 ItemDisplay[(utp OR ula OR utu OR uea OR urs) !ETH !SUP (NMAG !RW) (SOCK=2 OR SOCK=3) DEF>450]: %DARK_GREEN%%DEF%def %NAME%
 ItemDisplay[xtp !ETH !SUP (NMAG !RW) (SOCK=2 OR SOCK=3) DEF>249]: %DARK_GREEN%%DEF%def %WHITE%%NAME%
@@ -1068,9 +1068,7 @@ ItemDisplay[72h ETH (NMAG !RW) SOCK=0]: %NAME% //lawbringer
 //Insight for shockwave
 ItemDisplay[(8ws OR 6cs OR 6bs OR 6ws OR 7p7 OR 9p9 OR 7pa OR 9pa OR 7fl) NMAG !RW (SOCK=4) !SK58=3]: %NAME%{%GOLD%Insight:%ORANGE%RalTirTalSol}
 //Bows
-ItemDisplay[(hbw OR lbw OR cbw OR (amc TABSK0>0)) (NMAG !RW) SOCK=4]: %NAME%{%GOLD%Harmony:%ORANGE%TirIthSolKo}
-//Bows - need clarification from no23
-ItemDisplay[NMAG !RW ((6sb SOCK=0) OR (6cb (SOCK=0)))]: %NAME% //plague bow (6sb spider) / insight (6cb great bow)
+ItemDisplay[((hbw OR lbw OR cbw OR (amc TABSK0>0)) (NMAG !RW) SOCK=4) OR ((6sb SOCK=0) OR (6cb (SOCK=0)) NMAG !RW)]: %NAME%{%GOLD%Harmony:%ORANGE%TirIthSolKo} //harmony bow, plague bow (6sb spider) / insight (6cb great bow)
 //Spirit Swords
 ItemDisplay[(crs OR bsd OR lsd) (NMAG !RW) (SOCK=4 OR SOCK=5)]: %NAME%
 ItemDisplay[(crs OR bsd) NMAG !RW (SOCK=0 OR SOCK=4) ILVL>25 ILVL<41]: %NAME% %TAN%[Larzuk]
