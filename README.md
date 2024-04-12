@@ -21,11 +21,13 @@ It will appear as item.filter in-game using this option. Select it from dropdown
 
 Option 2: 
 Download .filter file directly from URL above.
+
+# Filter Sound File Configuration
 Download and extract all sounds in from <url>https://github.com/Darain2/PoD-lootfilter/raw/main/Darain.zip
 
-Insert into DiabloII\PathofDiablo\filter folder
+Insert .wav files into DiabloII\PathofDiablo\filter folder. Folder should look as follows:
+![image](https://github.com/Darain2/PoD-lootfilter/assets/42797564/4d347858-f249-477e-81b2-97b97b0568e6)
 
-![image](https://github.com/Darain2/PoD-lootfilter/assets/42797564/0f7b1737-99ba-401e-8bfe-0ffb508a8072)
 
 
 # Filter Levels and How to use them
