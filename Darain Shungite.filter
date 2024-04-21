@@ -704,7 +704,7 @@ ItemDisplay[FILTERLVL=6 glr]: %WHITE%Ruby %ORANGE%[%RED%O%ORANGE%]
 /////////////////////////////
 //FILTERLVL = 5 [No Pots]
 /////////////////////////////
-ItemDisplay[(clw OR btl) NMAG !RW (SOCK=0 OR SOCK=3)]: %NOTIFYSOUND(OOC)%%NAME% {%TAN%Pattern: %ORANGE%Tal Ort Tir} //temporary for leveling MA sin 20.04.24
+//ItemDisplay[(clw OR btl) NMAG !RW (SOCK=0 OR SOCK=3)]: %NOTIFYSOUND(OOC)%%NAME% {%TAN%Pattern: %ORANGE%Tal Ort Tir} //temporary for leveling MA sin 20.04.24
 
 ItemDisplay[GOLD<10000]:
 ItemDisplay[rvl]: %PURPLE%R %WHITE%BIG
