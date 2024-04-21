@@ -547,6 +547,8 @@ ItemDisplay[MAG ID cm3 TABSK33>0]: %GOLD%BarbMast %NAME%%CONTINUE%
 ItemDisplay[MAG ID cm3 TABSK34>0]: %GOLD%Warcries %NAME%%CONTINUE%
 ItemDisplay[MAG ID cm3 TABSK2>0]: %GOLD%Jav %NAME%%CONTINUE%
 ItemDisplay[MAG ID cm3 TABSK0>0]: %GOLD%Bow %NAME%%CONTINUE%
+ItemDisplay[MAG ID cm3 ILVL>49 ILVL<91]: %NAME% %WHITE%[%ILVL%]%CONTINUE%
+
 
 //Anni, Torch, Gheed Stat Display
 ItemDisplay[UNI ID cm1]: %BOLD%%STAT(0)% | %RES% | %STAT(85)% %NAME%%CONTINUE%
@@ -612,7 +614,7 @@ ItemDisplay[(uit OR CL3) RW STAT105>24 (STAT91>-11 STAT91<-5) SOCK=4]: %BLUE%%ST
 ItemDisplay[(7wa OR 7cr) RW STAT93>29 SOCK=5]: %NAME% %BLUE%%STAT(93)%ias%CONTINUE% //grief
 ItemDisplay[EQ2 RW STAT332>24 SOCK=4]: %NAME% %BLUE%+%STAT(332)%psn%CONTINUE% //bramble armor
 ItemDisplay[EQ2 RW STAT17>249 SOCK=4]: %NAME% %BLUE%%STAT(17)%ed%CONTINUE% //fort armor
-ItemDisplay[WP2 RW RES>29 SOCK=4]: %NAME% %BLUE%%RES%STAT(39)%CONTINUE% //hoto
+ItemDisplay[WP2 RW RES>29 SOCK=4]: %NAME% %BLUE%%RES%res%CONTINUE% //hoto
 ItemDisplay[RW OSKILL("Battle Orders")>0]: %NAME% %BLUE%%STAT(97,155)%bc | %STAT(97,149)%bo%CONTINUE% //call to arms  "/ %STAT(97,146)%bcry" 
 
 //Rare jewelry,boots (EQ5), and gloves (EQ4) displayed stats
@@ -702,7 +704,7 @@ ItemDisplay[FILTERLVL=6 glr]: %WHITE%Ruby %ORANGE%[%RED%O%ORANGE%]
 /////////////////////////////
 //FILTERLVL = 5 [No Pots]
 /////////////////////////////
-//ItemDisplay[(clw OR btl) NMAG !RW (SOCK=0 OR SOCK=3)]: %NOTIFYSOUND(OOC)%%NAME% {%TAN%Pattern: %ORANGE%Tal Ort Tir} //temporary for leveling MA sin 20.04.24
+ItemDisplay[(clw OR btl) NMAG !RW (SOCK=0 OR SOCK=3)]: %NOTIFYSOUND(OOC)%%NAME% {%TAN%Pattern: %ORANGE%Tal Ort Tir} //temporary for leveling MA sin 20.04.24
 
 ItemDisplay[GOLD<10000]:
 ItemDisplay[rvl]: %PURPLE%R %WHITE%BIG
@@ -901,7 +903,8 @@ ItemDisplay[tsc TPSCROLLS<11]: %BLUE%°%GRAY%tp
 
 
 ItemDisplay[GOLD<5000]:
-ItemDisplay[(cm1 OR (cm3 ILVL<91)) !ID MAG]: %NOTIFYSOUND(OOC)%%MAPICON(19,3)%%NOTIFY(ITEM)%%NAME%
+ItemDisplay[(cm1 OR (cm3 ILVL>49 ILVL<91)) !ID MAG]: %NOTIFYSOUND(OOC)%%MAPICON(19,3)%%NOTIFY(ITEM)%%NAME%
+ItemDisplay[cm3 ILVL<50 !ID MAG]: %NAME%
 ItemDisplay[!ID (((EQ7 OR ((ba4 OR ba5 OR ba9 OR baa OR bae OR baf) ILVL>49)) (MAG OR RARE)) OR ((CL1 OR CL5) RARE))]: %RED%> > %NAME%%RED% < < //arreatstyle helm ilvl50+ (5bo/wc), circlets
 
 // Good usable uniques
