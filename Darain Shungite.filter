@@ -828,7 +828,7 @@ ItemDisplay[(amd OR ame) ETH (NMAG !RW) (SOCK=0 OR SOCK=6) ED=15 TABSK2=3]: %MAP
 //Bows
 ItemDisplay[(6lw OR 6l7 OR ((amc OR amb) TABSK0=3)) (NMAG !RW) SOCK=4 ED>9]: %NAME%{%GOLD%Faith:%ORANGE%OhmJahLemEld}
 //Claws
-ItemDisplay[(9tw OR 7tw) NMAG !RW SK269=3]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NOTIFYSOUND(TINK)%%NAME%{%GOLD%Mosaic:%ORANGE%MalGulAmn%NL%%GOLD%Plague:%ORANGE%ChamFalUm} //3claw of thunder Runic/Greater Talon
+ItemDisplay[(9tw OR 7tw) NMAG !RW (SK269=3 OR (SK269>1 (SK274>1 OR SK259>1 OR SK263>1 OR SK258>1 OR SK275>0)))]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NOTIFYSOUND(TINK)%%NAME%{%GOLD%Mosaic:%ORANGE%MalGulAmn%NL%%GOLD%Plague:%ORANGE%ChamFalUm} //3claw of thunder Runic/Greater Talon
 ItemDisplay[CL5 NMAG !RW (SK269=3 (SK274>1 OR SK275>0 OR SK278>0 OR SK268>0 OR SK264>0)) (SOCK=0 OR SOCK=3)]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NOTIFYSOUND(OOC)%%NAME%{%GOLD%Mosaic:%ORANGE%MalGulAmn%NL%%GOLD%Plague:%ORANGE%ChamFalUm} //MUST HAVE***3claw of thunder*** and either +BOI, Dflight, SWarr, SMast, Cloak of Shadow
 ItemDisplay[CL5 NMAG !RW (SK277=3 (SK276>0 OR SK262>1 OR SK274=3 OR SK275>0)) (SOCK=0 OR SOCK=3)]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NAME%{%GOLD%Plague:%ORANGE%ChamFalUm %GOLD%|| Pattern:%ORANGE%TalOrtTir} //3BS+DS/WoF/BoI/DF
 //Infi/Insi/Pride and Obedience/Doom
