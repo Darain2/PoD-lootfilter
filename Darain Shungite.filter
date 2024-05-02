@@ -3,8 +3,8 @@
 /////////////////////////////
 Attribute[Author]: *Darain
 Attribute[Name]: Darain's Vanilla+ Filter
-Attribute[Version]: 1.21.19
-Attribute[Date]: 27/04/2024 07:30 UTC8
+Attribute[Version]: 1.21.20
+Attribute[Date]: 02/05/2024 20:30 UTC8
 
 //Rename filterlevel
 FilterLevel[1]: Reset
@@ -145,6 +145,7 @@ ItemDisplay[CL1 !UNI !MAG SK247>0]: %BLUE%%STAT(107,247)%Grizz %NAME%%CONTINUE%/
 ItemDisplay[CL1 !UNI !MAG SK248>0]: %BLUE%%STAT(107,248)%Fury %NAME%%CONTINUE%//Fury
 ItemDisplay[CL1 !UNI !MAG SK249>0]: %BLUE%%STAT(107,249)%Arma %NAME%%CONTINUE%//Armageddon
 ItemDisplay[CL1 !UNI !MAG SK250>0]: %BLUE%%STAT(107,250)%Hurri %NAME%%CONTINUE%//Hurricane
+ItemDisplay[CL1 !UNI !MAG SK468>0]: %BLUE%%STAT(107,468)%FDash %NAME%%CONTINUE%//new - Flame Dash
 
 ItemDisplay[CL1 MAG SK221>0]: %WHITE%%STAT(107,221)%Rvn %NAME%%CONTINUE%//Raven
 ItemDisplay[CL1 MAG SK222>0]: %WHITE%%STAT(107,222)%PsnCrp %NAME%%CONTINUE%//Poison Creeper
@@ -176,6 +177,8 @@ ItemDisplay[CL1 MAG SK247>0]: %WHITE%%STAT(107,247)%Grizz %NAME%%CONTINUE%//Griz
 ItemDisplay[CL1 MAG SK248>0]: %WHITE%%STAT(107,248)%Fury %NAME%%CONTINUE%//Fury
 ItemDisplay[CL1 MAG SK249>0]: %WHITE%%STAT(107,249)%Arma %NAME%%CONTINUE%//Armageddon
 ItemDisplay[CL1 MAG SK250>0]: %WHITE%%STAT(107,250)%Hurri %NAME%%CONTINUE%//Hurricane
+ItemDisplay[CL1 MAG SK468>0]: %WHITE%%STAT(107,468)%FDash %NAME%%CONTINUE%//new - Flame Dash
+
 
 //Barb Helms
 ItemDisplay[CL2 !UNI !MAG SK126>0]: %BLUE%%STAT(107,126)%Bash %NAME%%CONTINUE%//Bash
@@ -219,7 +222,7 @@ ItemDisplay[CL2 MAG SK130>0]: %WHITE%%STAT(107,130)%Howl %NAME%%CONTINUE%//Howl
 ItemDisplay[CL2 MAG SK131>0]: %WHITE%%STAT(107,131)%FPot %NAME%%CONTINUE%//Find Potion
 ItemDisplay[CL2 MAG SK132>0]: %WHITE%%STAT(107,132)%Leap %NAME%%CONTINUE%//Leap
 ItemDisplay[CL2 MAG SK133>0]: %WHITE%%STAT(107,133)%?????? %NAME%%CONTINUE%//?? - formerly Double Swing
-ItemDisplay[CL2 MAG SK134>0]: %WHITE%%STAT(107,134)%WhrlAxe %NAME%%CONTINUE%//Counterattack - formerly Pulverize -formerly polearmMast
+ItemDisplay[CL2 MAG SK134>0]: %WHITE%%STAT(107,134)%WhrlAxe %NAME%%CONTINUE%//Whirling Axes - formerly Counterattack - formerly Pulverize -formerly polearmMast
 ItemDisplay[CL2 MAG SK135>0]: %WHITE%%STAT(107,135)%ThrWep %NAME%%CONTINUE%//Throwing Weapon Mastery
 ItemDisplay[CL2 MAG SK136>0]: %WHITE%%STAT(107,136)%DblSwg %NAME%%CONTINUE%//Double Swing - formerly Spear Mastery
 ItemDisplay[CL2 MAG SK137>0]: %WHITE%%STAT(107,137)%Taunt %NAME%%CONTINUE%//Taunt
@@ -686,7 +689,6 @@ ItemDisplay[!(UNI OR SET) (amu OR EQ1) TABSK50>0]: %BOLD%%STAT(188,50)%Martial A
 /////////////////////////////
 //FILTERLVL = 6 (Temporarily Show Gems - Switch back to relevant filterlevel when done)
 /////////////////////////////
-
 //Gems
 ItemDisplay[FILTERLVL=6 glg]: %WHITE%Emer %ORANGE%[%GREEN%O%ORANGE%]
 ItemDisplay[FILTERLVL=6 glw]: %WHITE%Diam %ORANGE%[%WHITE%O%ORANGE%]
@@ -847,7 +849,7 @@ ItemDisplay[CL1 !ETH NMAG !RW SK247>2 SK236>2 !SOCK=1]: %MAPICON(19,0)%%NOTIFY(I
 ItemDisplay[CL1 !ETH NMAG !RW (SK244=3 (SK249=3 OR SK229=3 OR SK235=3)) !SOCK=1]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NAME% //3Vol+CycA/Arma/Boulder
 ItemDisplay[CL1 !ETH NMAG !RW (SK243=3  (SK224>0 OR SK226>0 OR SK237>0 OR SK247>0 OR SK236>0)) !SOCK=1]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME% //3shockwave+Lycanthropy/Oak/Dire Wolf/Grizzly/HotW
 ItemDisplay[CL1 !ETH NMAG !RW (SK238=3  (SK226>0 OR SK224>0 OR SK248>0 OR SK222>0 OR SK237>0 OR SK247>0)) !SOCK=1]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME% //3rabies+Oak/Lycan/Fury/PsnCrp/Dwolf/Grizz
-ItemDisplay[CL1 !ETH NMAG !RW ((SK244=3 OR SK469=3)  (SK226>0 OR SK229>0 OR SK244>0 OR SK469>0 OR SK249>0 OR SK250>0 OR SK225>0)) !SOCK=1]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME% //3volcano OR Flamedash + (Firestorm/MoltenBoulder/Volcano/Armageddon/Hurricane)
+ItemDisplay[CL1 !ETH NMAG !RW ((SK244=3 OR SK468=3)  (SK226>0 OR SK229>0 OR SK244>0 OR SK468>0 OR SK249>0 OR SK250>0 OR SK225>0)) !SOCK=1]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME% //3volcano OR Flamedash + (Firestorm/MoltenBoulder/Volcano/Armageddon/Hurricane)
 
 //Shields
 ItemDisplay[pab (NMAG !RW) (SOCK=0 OR SOCK=4) RES=45]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NOTIFYSOUND(TINK)%%NAME%
@@ -939,7 +941,7 @@ ItemDisplay[CL2 !ETH (NMAG !RW) SK154=3 !SOCK=1]: %NOTIFYSOUND(OOC)%%NOTIFY(ITEM
 ItemDisplay[CL2 (NMAG !RW) SK149=3 !SOCK=1]: %NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%MAPICON(19,0)%%NAME% //3bo helm
 ItemDisplay[CL1 !ETH NMAG !RW (SK247=3 OR SK238=3) !SOCK=1]: %NOTIFYSOUND(OOC)%%NOTIFY(ITEM)%%MAPICON(19,0)%%NAME% //3grizzly/rabies
 //Plague Orbs
-ItemDisplay[(obf OR oba OR ob5) NMAG !RW (SOCK=3 OR SOCK=0) (SK62>2 OR SK50>2 OR SK52>2 OR SK59>2)]: %NOTIFY(ITEM)%%NAME% //3hydra/shiver/Enflame/Blizz
+ItemDisplay[(obf OR oba OR ob5) NMAG !RW (SOCK=3 OR SOCK=0) (SK62>2 OR SK50>2 OR SK52>2 OR SK59>2 OR SK469=3)]: %NOTIFY(ITEM)%%NAME% //3hydra/shiver/Enflame/Blizz/Freezing Pulse
 //Faith Grand Matron Bow GMB
 ItemDisplay[(amc OR amb) (NMAG !RW) TABSK0=3 SOCK=4]: %GRAY%3bow %NAME% {%GOLD%Ice: %ORANGE%AmnShaelJahLo%NL%%GOLD%Insight: %ORANGE%RalTirTalSol%NL%%GOLD%Faith: %ORANGE%OhmJahLemEld}
 //Polearm/Spears
@@ -972,7 +974,7 @@ ItemDisplay[glr]: %WHITE%Ruby %ORANGE%[%RED%O%ORANGE%] //ruby
 ItemDisplay[CL1 NMAG !RW SK243=3 !SOCK=1]: %NOTIFY(ITEM)%%NAME% //3shockwave
 ItemDisplay[CL2 NMAG !RW (SK154=3 OR SK149=3) !SOCK=1]: %NOTIFY(ITEM)%%NAME% //3WC or 3BO
 ItemDisplay[CL1 NMAG !RW SK226>2 !SOCK=1]: %NAME% //3oak
-ItemDisplay[CL1 NMAG !RW (SK469=3 OR SK229=3 OR SK222=3 OR SK236=3 OR SK240=3 OR SK245=3 OR SK250=3 OR SK225=3 OR SK238=3 OR SK234=3 OR SK243=3 OR SK244=3) !SOCK=1]: %NOTIFY(ITEM)%%NAME%
+ItemDisplay[CL1 NMAG !RW (SK468=3 OR SK229=3 OR SK222=3 OR SK236=3 OR SK240=3 OR SK245=3 OR SK250=3 OR SK225=3 OR SK238=3 OR SK234=3 OR SK243=3 OR SK244=3) !SOCK=1]: %NOTIFY(ITEM)%%NAME%
 //15ed Chests
 ItemDisplay[EQ2 ELT NMAG !RW !SOCK=1 ED=15]: %NOTIFY(ITEM)%%NAME%
 
