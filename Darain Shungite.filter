@@ -830,6 +830,7 @@ ItemDisplay[(amd OR ame) ETH (NMAG !RW) (SOCK=0 OR SOCK=6) ED=15 TABSK2=3]: %MAP
 //Bows
 ItemDisplay[(6lw OR 6l7 OR ((amc OR amb) TABSK0=3)) (NMAG !RW) SOCK=4 ED>9]: %NAME%{%GOLD%Faith:%ORANGE%OhmJahLemEld}
 //Claws
+//ItemDisplay[CL5 SK258=3 (SOCK=0 OR SOCK=3) NMAG !RW]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME%%PURPLE%°°° %GRAY%pm darain //3 bos
 ItemDisplay[(9tw OR 7tw) NMAG !RW (SK269=3 OR (SK269>1 (SK274>1 OR SK259>1 OR SK263>1 OR SK258>1 OR SK275>0)))]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NOTIFYSOUND(TINK)%%NAME%{%GOLD%Mosaic:%ORANGE%MalGulAmn%NL%%GOLD%Plague:%ORANGE%ChamFalUm} //3claw of thunder Runic/Greater Talon
 ItemDisplay[CL5 NMAG !RW (SK269=3 (SK274>1 OR SK275>0 OR SK278>0 OR SK268>0 OR SK264>0)) (SOCK=0 OR SOCK=3)]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NOTIFYSOUND(OOC)%%NAME%{%GOLD%Mosaic:%ORANGE%MalGulAmn%NL%%GOLD%Plague:%ORANGE%ChamFalUm} //MUST HAVE***3claw of thunder*** and either +BOI, Dflight, SWarr, SMast, Cloak of Shadow
 ItemDisplay[CL5 NMAG !RW (SK277=3 (SK276>0 OR SK262>1 OR SK274=3 OR SK275>0)) (SOCK=0 OR SOCK=3)]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NAME%{%GOLD%Plague:%ORANGE%ChamFalUm %GOLD%|| Pattern:%ORANGE%TalOrtTir} //3BS+DS/WoF/BoI/DF
@@ -839,17 +840,17 @@ ItemDisplay[(7wc OR 7pa OR 7s8 OR 7br OR 7p7 OR 7vo OR 7st OR 7tr) (ETH NMAG !RW
 //Lawbringer
 ItemDisplay[72h ETH (NMAG !RW) (SOCK=0 OR SOCK=3) ED>9]: %NOTIFY(ITEM)%%NAME%
 //Armors
-ItemDisplay[((xtp DEF>255) OR (utp DEF>510) OR (uui DEF>460)) !ETH NMAG !RW (SOCK=0 OR SOCK=3 OR SOCK=4) (STAT91>-11 AND STAT91<-8)]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME%
+ItemDisplay[((xtp DEF>255) OR (utp DEF>500) OR (uui DEF>460)) !ETH NMAG !RW (SOCK=0 OR SOCK=3 OR SOCK=4) (STAT91>-11 AND STAT91<-8)]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME%
 ItemDisplay[xtp !ETH (NMAG !RW) SOCK=3 ED=15]: %NOTIFY(ITEM)%%NAME%
 ItemDisplay[EQ2 ELT NMAG !RW SOCK=3 ED=15]: %NOTIFY(ITEM)%%NAME%
 //Helmets
 ItemDisplay[CL2 (NMAG !RW) SK149>2 SK154>2 !SOCK=1]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME% //3bo 3wc helm
 ItemDisplay[CL1 (!ETH NMAG !RW) (SK245>2 (SK250=3 OR SK235=3 OR SK240=3)) !SOCK=1]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NAME% //3Nado+Huri/CycA/Twister
-ItemDisplay[CL1 !ETH NMAG !RW SK247>2 SK236>2 !SOCK=1]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NAME% //for summoners
-ItemDisplay[CL1 !ETH NMAG !RW (SK244=3 (SK249=3 OR SK229=3 OR SK235=3)) !SOCK=1]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NAME% //3Vol+CycA/Arma/Boulder
+ItemDisplay[CL1 !ETH NMAG !RW SK247>2 SK236>2 !SOCK=1]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME% //for summoners
+ItemDisplay[CL1 !ETH NMAG !RW (SK244=3 (SK249=3 OR SK229=3 OR SK235=3)) !SOCK=1]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME% //3Vol+CycA/Arma/Boulder
 ItemDisplay[CL1 !ETH NMAG !RW (SK243=3  (SK224>0 OR SK226>0 OR SK237>0 OR SK247>0 OR SK236>0)) !SOCK=1]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME% //3shockwave+Lycanthropy/Oak/Dire Wolf/Grizzly/HotW
 ItemDisplay[CL1 !ETH NMAG !RW (SK238=3  (SK226>0 OR SK224>0 OR SK248>0 OR SK222>0 OR SK237>0 OR SK247>0)) !SOCK=1]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME% //3rabies+Oak/Lycan/Fury/PsnCrp/Dwolf/Grizz
-ItemDisplay[CL1 !ETH NMAG !RW ((SK244=3 OR SK468=3)  (SK226>0 OR SK229>0 OR SK244>0 OR SK468>0 OR SK249>0 OR SK250>0 OR SK225>0)) !SOCK=1]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME% //3volcano OR Flamedash + (Firestorm/MoltenBoulder/Volcano/Armageddon/Hurricane)
+ItemDisplay[CL1 !ETH NMAG !RW ((SK468=3 (SK226>0 OR SK229>0 OR SK244>0 OR SK249>0 OR SK250>0 OR SK225>0)) OR (SK244=3 (SK226>0 OR SK229>0 OR SK468>0 OR SK249>0 OR SK250>0 OR SK225>0))) !SOCK=1]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME% //3volcano OR Flamedash + (Firestorm/MoltenBoulder/Volcano/Armageddon/Hurricane)
 
 //Shields
 ItemDisplay[pab (NMAG !RW) (SOCK=0 OR SOCK=4) RES=45]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NOTIFYSOUND(TINK)%%NAME%
@@ -925,6 +926,7 @@ ItemDisplay[jew MAG !ID]: %NAME%
 
 //Gems & Runes
 ItemDisplay[gzv]: %NL%%WHITE%Amth %ORANGE%[%PURPLE%O%ORANGE%]%NL% %NL%
+ItemDisplay[r03]: %ORANGE%%RUNENAME% %GRAY%[%RUNETIER%]
 ItemDisplay[(r07 OR r10 OR r11 OR r12 OR r15 OR r17 OR r18 OR r19)]: %ORANGE%%RUNENAME% %WHITE%[%RUNETIER%]
 
 //Good set parts
@@ -933,7 +935,9 @@ ItemDisplay[SET !ID]: %NAME%
 //Good rare class items
 ItemDisplay[(CL1 OR CL2 OR CL4 OR CL5 OR CL6 OR ama OR am5 OR amf OR EQ4) RARE !ID]: %NAME%
 // Good Socketables
-//Bows
+//Merc Bows/Spear/Polearm
+//ItemDisplay[WP9 !CL7 NMAG !RW SOCK=4]: %NAME%
+//ItemDisplay[(WP7 OR WP8) NMAG !RW SOCK=4]: %NAME%
 //Spirit Swords
 ItemDisplay[(crs OR fla) (NMAG !RW) (SOCK=4 OR SOCK=5) (STAT91>-11 AND STAT91<-7)]: %NAME%
 //Helms - Barb/Druid helm
