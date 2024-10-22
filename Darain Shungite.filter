@@ -3,8 +3,8 @@
 /////////////////////////////
 Attribute[Author]: *Darain
 Attribute[Name]: Darain's Vanilla+ Filter
-Attribute[Version]: 1.21.22
-Attribute[Date]: 14/06/2024 17:30 UTC8
+Attribute[Version]: 1.21.23
+Attribute[Date]: 22/10/2024 14:30 UTC8
 
 //Rename filterlevel
 FilterLevel[1]: Reset
@@ -727,7 +727,7 @@ ItemDisplay[cm3 MAG ILVL>90]: %NOTIFYSOUND(OOC)%%MAPICON(19,3)%%NOTIFY(ITEM)%%NA
 
 //PoD-only Items
 ItemDisplay[SYNTH]: %MAPICON(26,1)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%GOLD%%NAME%
-ItemDisplay[cx5 OR cx7]: %NL%%NOTIFYSOUND(OOC)%%MAPICON(33,1)%%NOTIFY(ITEM)%%RED%> %PURPLE%%NAME%%RED% < %NL% %NL% 
+ItemDisplay[cx5 OR cx7 OR cx9]: %NL%%NOTIFYSOUND(OOC)%%MAPICON(33,1)%%NOTIFY(ITEM)%%RED%> %PURPLE%%NAME%%RED% < %NL% %NL% 
 ItemDisplay[MAP]: %NOTIFYSOUND(MAP)%%MAPICON(92)%%NOTIFY(ITEM)%%NAME% %GRAY%[%DARK_GREEN%~ %PURPLE%MAP %DARK_GREEN%~%GRAY%] %WHITE%[%ILVL%]
 
 //high runes
