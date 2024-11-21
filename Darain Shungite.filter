@@ -4,7 +4,7 @@
 Attribute[Author]: *Darain
 Attribute[Name]: Darain's Vanilla+ Filter
 Attribute[Version]: 1.21.24
-Attribute[Date]: 21/11/2024 18:30 UTC8
+Attribute[Date]: 21/11/2024 19:30 UTC8
 
 //Rename filterlevel
 FilterLevel[1]: Reset
@@ -918,7 +918,13 @@ ItemDisplay[FILTERLVL=1 WP12 MAG ID FCR=20 CLVL<41]: %NOTIFY(ITEM)%%RED%°°°°
 ItemDisplay[FILTERLVL=1 WEAPON TABSK34>2]: %NOTIFY(ITEM)%%PURPLE%>> >> >> >> %TEAL%3BO %NAME%%PURPLE% << << << << //+3bo weapons 
 
 //Always show ALL Identified items, runewords and Lem+ rune
-ItemDisplay[(((MAG OR RARE OR SET OR UNI OR CRAFT) ID) OR RW) !(ID MAG zlb OR zvb OR ulc OR uvc OR ci0 OR ci1 OR ci2 OR ci3 OR CL1 OR CL2 OR xlg OR ulg OR xvg OR uvg OR xmg OR umg)]: %NAME%
+//Craftable Shoppables - always IDed so always show. Add details.
+ItemDisplay[(zlb OR zvb OR ulc OR uvc) ID MAG]: %NAME% %ORANGE%[%GRAY%craft%ORANGE%] {%PURPLE% Ith + Amethyst > FCR Belt%NL% %RED% Tal + Ruby > Open Wounds Belt}//caster and blood belt
+ItemDisplay[(ci0 OR ci1 OR ci2 OR ci3 OR CL1 OR CL2) ID MAG]: %NAME% %ORANGE%[%GRAY%craft%ORANGE%] {%RED% Ral + Ruby > Merc Helm Leech %NL% %PURPLE% Nef + Ameth > Caster Helm%NL% %WHITE%Hold ALT and Check Affix Level >=71 %NL% %WHITE%Craft and Hope for +2|20FCR or +5 skills} //blood&caster helm
+ItemDisplay[(xlg OR ulg OR xvg OR uvg OR xmg OR umg) ID MAG]: %NAME% %ORANGE%[%GRAY%craft%ORANGE%]{%PURPLE% Ort + Amethyst > 3 Mana per kill Glove%NL%%RED% Nef + Ruby > CB glove}//caster/blood gloves
+ItemDisplay[7wa OR 7gd ID MAG]: %NAME% %ORANGE%[%GRAY%craft%ORANGE%]{%RED% Ort + Ruby > %ED Axe}//blood axe
+
+ItemDisplay[(((MAG OR RARE OR SET OR UNI OR CRAFT) ID) OR RW)]: %NAME%
 ItemDisplay[RUNETIER>14]: %RUNENAME% %WHITE%[%RUNETIER%]
 //Hide everything else for FILTERLVL=5
 ItemDisplay[FILTERLVL>4 !FILTERLVL=6 ((NMAG !RW) OR !ID)]:
