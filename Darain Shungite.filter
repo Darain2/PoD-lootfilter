@@ -836,7 +836,7 @@ ItemDisplay[WP13 !RW NMAG SK117>0]: %MAPICON(26)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM
 ItemDisplay[(obf OR oba OR ob5) NMAG !RW (SOCK=3 OR SOCK=0) ((SK62>0 (SK58=3 OR SK50>0 OR SK56=3 OR SK61>0)) OR (SK63>0 (SK57=3 OR SK49=3 OR SK48=3 OR SK53=3)) OR (SK65>0 (SK469=3 OR SK59=3 OR SK44=3 OR SK64=3)))]:  %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME%{%GOLD%Plague:%ORANGE%ChamFalUm} //Light/Fire/Cold Tree main damage abilities and their mastery
 //Plague Scepter
 //ItemDisplay[(wsp OR 9ws OR 7ws) (SK121=3 (SK101>0 OR SK123>0 OR SK125>0 OR SK112>0)) ((!SUP SOCK=0) OR SOCK=3 OR SOCK=4) (NMAG !RW)]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME%%PURPLE%°°° %GRAY%pm darain //FOH+HB/Convic/Salv/
-ItemDisplay[NMAG !RW (wsp OR 9ws OR 7ws) SK121>1 ((!SUP SOCK=0) OR SOCK=4)]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME%%PURPLE%°°° %GRAY%pm darain {%GOLD%Plague %RED%(3):%ORANGE%ChamFalUm || %GOLD%Phoenix %RED%(4):%ORANGE%VexVexLoJah} //3FOH
+//ItemDisplay[NMAG !RW (wsp OR 9ws OR 7ws) SK121>1 ((!SUP SOCK=0) OR SOCK=4)]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME%%PURPLE%°°° %GRAY%pm darain {%GOLD%Plague %RED%(3):%ORANGE%ChamFalUm || %GOLD%Phoenix %RED%(4):%ORANGE%VexVexLoJah} //3FOH
 //White
 ItemDisplay[WP12 (SK84=3 (SK87>0 OR SK79>0 OR SK68>0 OR SK93>2)) !(wnd ywn 9wn) (SOCK=0 OR SOCK=2) (NMAG !RW)]: %NAME% //BoneSpear+BoneArmor/Decrep/BoneSpirit/Convocation
 //Memory
@@ -852,7 +852,7 @@ ItemDisplay[(amd OR ame) ETH (NMAG !RW) (SOCK=0 OR SOCK=6) ED=15 TABSK2=3]: %MAP
 //Bows
 ItemDisplay[(6lw OR 6l7 OR ((amc OR amb) TABSK0=3)) (NMAG !RW) SOCK=4 ED>9]: %NAME%
 //Claws
-ItemDisplay[SK258=3 (SOCK=0 OR SOCK=3) NMAG !RW]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME%%PURPLE%°°° %GRAY%pm darain //3 bos
+//ItemDisplay[SK258=3 (SOCK=0 OR SOCK=3) NMAG !RW]: %MAPICON(19,0)%%NOTIFYSOUND(TINK)%%NOTIFY(ITEM)%%NAME%%PURPLE%°°° %GRAY%pm darain //3 bos
 ItemDisplay[(9tw OR 7tw) NMAG !RW (SK269=3 OR (SK269>1 (SK274>1 OR SK259>1 OR SK263>1 OR SK258>1 OR SK275>0)))]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NOTIFYSOUND(TINK)%%NAME%{%GOLD%Mosaic:%ORANGE%MalGulAmn%NL%%GOLD%Plague:%ORANGE%ChamFalUm} //3claw of thunder Runic/Greater Talon
 ItemDisplay[CL5 NMAG !RW ((SK269=3 (SK274>1 OR SK275>0 OR SK278>0 OR SK268>0 OR SK264>0)) OR (SK277=3 (SK276>0 OR SK262>1 OR SK274=3 OR SK275>0))) (SOCK=0 OR SOCK=3)]: %MAPICON(19,0)%%NOTIFY(ITEM)%%NOTIFYSOUND(OOC)%%NAME%{%GOLD%Mosaic:%ORANGE%MalGulAmn%NL%%GOLD%Plague:%ORANGE%ChamFalUm} //MUST HAVE***3claw of thunder*** and either +BOI, Dflight, SWarr, SMast, Cloak of Shadow OR (3BS+DS/WoF/BoI/DF)
 //Infi/Insi/Pride and Obedience/Doom
