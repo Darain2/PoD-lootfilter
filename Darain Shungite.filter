@@ -918,7 +918,7 @@ ItemDisplay[FILTERLVL=1 WP12 MAG ID FCR=20 CLVL<41]: %NOTIFY(ITEM)%%RED%°°°°
 ItemDisplay[FILTERLVL=1 WEAPON TABSK34>2]: %NOTIFY(ITEM)%%PURPLE%>> >> >> >> %TEAL%3BO %NAME%%PURPLE% << << << << //+3bo weapons 
 
 //Always show ALL Identified items, runewords and Lem+ rune
-ItemDisplay[((MAG OR RARE OR SET OR UNI OR CRAFT) ID) OR RW]: %NAME%
+ItemDisplay[(((MAG OR RARE OR SET OR UNI OR CRAFT) ID) OR RW) !(ID MAG zlb OR zvb OR ulc OR uvc OR ci0 OR ci1 OR ci2 OR ci3 OR CL1 OR CL2 OR xlg OR ulg OR xvg OR uvg OR xmg OR umg)]: %NAME%
 ItemDisplay[RUNETIER>14]: %RUNENAME% %WHITE%[%RUNETIER%]
 //Hide everything else for FILTERLVL=5
 ItemDisplay[FILTERLVL>4 !FILTERLVL=6 ((NMAG !RW) OR !ID)]:
