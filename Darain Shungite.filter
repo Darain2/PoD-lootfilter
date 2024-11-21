@@ -4,7 +4,7 @@
 Attribute[Author]: *Darain
 Attribute[Name]: Darain's Vanilla+ Filter
 Attribute[Version]: 1.21.24
-Attribute[Date]: 21/11/2024 18:30 UTC8 - Updated for Minium. Feedback by magescape.
+Attribute[Date]: 21/11/2024 18:30 UTC8
 
 //Rename filterlevel
 FilterLevel[1]: Reset
@@ -1096,8 +1096,6 @@ ItemDisplay[hp5]:%RED%!%WHITE%HP5
 ItemDisplay[mp5]:%BLUE%!%WHITE%MP5
 
 //Craftables
-//ItemDisplay[(xvg OR uvg) MAG]: %NAME% %RED%[nef]{%RED% Nef + Ruby > CB glove}//blood glove
-//ItemDisplay[(zmb OR umc) MAG]: %NAME% %RED%[tal]{%RED% Tal + Ruby > OW Belt}//blood belt
 ItemDisplay[(zlb OR zvb OR ulc OR uvc) MAG]: %NAME% %ORANGE%[%GRAY%craft%ORANGE%] {%PURPLE% Ith + Amethyst > FCR Belt%NL% %RED% Tal + Ruby > Open Wounds Belt}//caster and blood belt
 ItemDisplay[(ci0 OR ci1 OR ci2 OR ci3 OR CL1 OR CL2) MAG]: %NAME% %ORANGE%[%GRAY%craft%ORANGE%] {%RED% Ral + Ruby > Merc Helm Leech %NL% %PURPLE% Nef + Ameth > Caster Helm%NL% %WHITE%Hold ALT and Check Affix Level >=71 %NL% %WHITE%Craft and Hope for +2|20FCR or +5 skills} //blood&caster helm
 ItemDisplay[(xlg OR ulg OR xvg OR uvg OR xmg OR umg) MAG]: %NAME% %ORANGE%[%GRAY%craft%ORANGE%]{%PURPLE% Ort + Amethyst > 3 Mana per kill Glove%NL%%RED% Nef + Ruby > CB glove}//caster/blood gloves
