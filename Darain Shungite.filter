@@ -1145,6 +1145,7 @@ ItemDisplay[(cst OR bst OR 8cs OR 8bs OR 6cs OR 6bs) (NMAG !RW) (SK58>1 OR SK49>
 ItemDisplay[(wst OR 8ws OR 6ws) (NMAG !RW) (SK58=3 OR SK49=3) ((SOCK=0 (!INF !SUP)) OR SOCK=4) ]: %NAME%{%GOLD%Memory:%ORANGE%LumIoSolEth}
 //Polearms Insight
 ItemDisplay[(WP7 OR WP8) !(7o7 OR 7sr OR 7s7 OR 7pi OR 7ja OR CL7) !INF ELT (NMAG !RW) (SOCK=0 OR SOCK=4 OR SOCK=5)]: %NAME%
+ItemDisplay[(((scy OR pax OR hal OR wsc) SOCK=4) OR (vou (SOCK=0 OR SOCK=4))) (NMAG !RW)]: %NAME% {Insight for Meph Runs - no suicide to dolls}
 //Claws
 ItemDisplay[btl NMAG !RW SOCK=3 CLVL<40]: %NAME% {%TAN%Pattern: %ORANGE%Tal Ort Tir}
 ItemDisplay[CL5 NMAG !RW SOCK=3 CLVL<50]: %NAME% {%TAN%Pattern: %ORANGE%Tal Ort Tir}
